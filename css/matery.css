@@ -39,7 +39,9 @@ body {
     color: #34495e;
     overflow-x: hidden;
     overflow-y: auto; */
-    background: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)) 0% 0% / cover, url("https://ae01.alicdn.com/kf/H18a4b998752a4ae68b8e85d432a5aef0l.png"), url("https://ae01.alicdn.com/kf/H21b5f6b8496141a1979a33666e1074d9x.jpg") 0px 0px;
+    /* https://ae01.alicdn.com/kf/H21b5f6b8496141a1979a33666e1074d9x.jpg */
+    background: linear-gradient(60deg, rgba(255, 166, 150, 0.24) 5%, rgba(0, 229, 255, 0.137)) 0% 0% / cover, url("https://ae01.alicdn.com/kf/H18a4b998752a4ae68b8e85d432a5aef0l.png"), url("../medias/featureimages/0.jpg") 0px 0px;
+    background-size: cover;
     background-attachment: fixed;
     margin: 0;
     color: #7F95D1;
@@ -259,7 +261,7 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right,#2ef0c62d 100%,#e679463f 0%);
+    background-image: linear-gradient(to right,#7753a11a 100%,#e6ce461c 0%);
     opacity: 1;
 }
 
@@ -901,6 +903,8 @@ article a:hover {
 .articles .row {
     margin-left: 0;
     margin-right: 0;
+    display: flex;
+    flex: 1;
 }
 
 article .card {
@@ -1003,7 +1007,7 @@ article .article-tags .chip {
 
 .paging .page-info {
     font-size: 1.4rem;
-    color: #888;
+    color: rgb(54, 52, 52);
     padding-top: 1rem;
 }
 
