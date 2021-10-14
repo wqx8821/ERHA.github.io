@@ -198,6 +198,31 @@
     
     
     <entry>
+      <title>性能优化之强缓存</title>
+      <link href="/2021/09/29/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+      <url>/2021/09/29/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
+      
+        <content type="html"><![CDATA[<h1 id="什么是性能"><a href="#什么是性能" class="headerlink" title="什么是性能"></a>什么是性能</h1><p>从浏览器开启的那一刻，到代码运行起消耗的一切资源（浏览器，服务器，文件网络）的一切都是性能</p><p>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</p><h2 id="性能优化好处"><a href="#性能优化好处" class="headerlink" title="性能优化好处"></a>性能优化好处</h2><ul><li>提高用户体验</li><li>节约资源</li></ul><h1 id="如何优化-浏览器层面"><a href="#如何优化-浏览器层面" class="headerlink" title="如何优化(浏览器层面)"></a>如何优化(浏览器层面)</h1><h2 id="浏览器缓存策略"><a href="#浏览器缓存策略" class="headerlink" title="浏览器缓存策略"></a>浏览器缓存策略</h2><h3 id="1、-强缓存"><a href="#1、-强缓存" class="headerlink" title="1、 强缓存"></a>1、 强缓存</h3><p>特点<br>强缓存中，当请求再次发出时，浏览器会判断目标资源是否 “命中” 强缓存，如果命中则直接从缓存中获取资源，不会再与服务端发生通信。</p><p>在 Chrome 中，命中强缓存的情况下， Network 中显示的 HTTP 状态码是 200</p><h4 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h4><p>强制缓存的请求结果有两种情况：</p><ul><li>命中缓存</li><li>未命中缓存<br><img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/tyimg/202110121952153.png"></li></ul><p>是否强缓存由以下 3 个 Header 属性共同来控制：</p><p>Expires<br>Expires 的值是一个 HTTP 日期，当服务器返回响应时，在 Response Headers 中将过期时间写入 Expires 字段。</p><p>在浏览器发起请求时，会根据系统时间和 Expires 的值进行比较，如果系统时间超过了 Expires 的值，缓存失效，会继续从服务器获取资源</p><h4 id="Cache-Control（重点）"><a href="#Cache-Control（重点）" class="headerlink" title="==Cache-Control（重点）=="></a>==Cache-Control（重点）==</h4><p>是 HTTP 1.1 中新增的属性，为了弥补 Expires 缺陷提出的，提供了更精确细致的缓存功能。Cache-Control 在请求头和响应头中都可以使用</p><p>Pragma<br>Pragma 只有一个属性值，就是 no-cache ，效果和 Cache-Control 中的 no-cache 一致，不使用强缓存，需要与服务器验证缓存是否新鲜，在 3 个头部属性中的优先级最高。</p><h2 id="2、-协商缓存"><a href="#2、-协商缓存" class="headerlink" title="2、 协商缓存"></a>2、 协商缓存</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 优化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于ts</title>
       <link href="/2021/09/27/%E5%85%B3%E4%BA%8Ets/"/>
       <url>/2021/09/27/%E5%85%B3%E4%BA%8Ets/</url>
