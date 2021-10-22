@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="劝退指南, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="性能优化之强缓存, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="若有诗书藏在心，岁月从不败美人">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>劝退指南 | 小羊站</title>
+    <title>性能优化之强缓存 | 小羊站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -318,7 +318,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">劝退指南</h1>
+                    <h1 class="description center-align post-title">性能优化之强缓存</h1>
                 </div>
             </div>
         </div>
@@ -437,14 +437,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">笔记</span>
+                            <a href="/tags/%E4%BC%98%E5%8C%96/">
+                                <span class="chip bg-color">优化</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -453,21 +462,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-29
+                    2021-10-21
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-29
+                    2021-10-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    496
+                    403
                 </div>
                 
 
@@ -489,34 +498,25 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2012/10/javascript_module.html">Javascript模块化编程（一）：模块的写法</a><br><a target="_blank" rel="noopener" href="https://juejin.im/post/5aaa37c8f265da23945f365c">前端模块化：CommonJS,AMD,CMD,ES6</a></p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
-<li><p>图片分为banner（大图）、普通图片（需要压缩）、小图和图标(可以制作雪碧图、base64等)，所以都需要单独建目录针对处理。</p>
-</li>
-<li><p>样式分为公共和模块独有，公共部分又分common.less、variable.less、reset.less，其中common.less又可以单独拆分：比如常见的容器、整体布局可以分为一类，重置UI框架的样式可以分为一类。然后按序引入一个文件。variable.less可以使用插件。  </p>
-</li>
-<li><p>API可以根据需要分为url和method，配制成对象。常用的也可以封装成方法。  </p>
-</li>
-<li><p>项目中使用的正则全部统一管理，表单验证规则、提示语等根据UI框架设置成json。  </p>
-</li>
-<li><p>常用方法放到util目录。  </p>
-</li>
-<li><p>assets：静态文件目录，可以使用webpack’卓一些处理；static：静态文件，不用做处理；  </p>
-</li>
-<li><p>常用的一些前后端对接的变量：数据字典，单独存储。</p>
-</li>
-<li><p>先讲清楚需求，客户端兼容性，移动端还是PC端，客户端对数据持久化的程度要求，路由切换动效，全局或者局部loading，默认字体及其大小颜色、主题色等。后台数据缺省值，数据模型、名称尽量统一。</p>
-</li>
-<li><p>写详细设计：需求文档中的需求说明、原型、前端交互及数据交互的流程图、接口文档（请求体：报文、method、request，响应体：报文、data、status、message），需求及原型评审、UI评审、详设评审、接口文档评审。  </p>
-</li>
-<li><p>组件一般只解决交互、数据传递、数据通用转换等需求，页面才处理数据请求分发等业务。</p>
-</li>
-<li><p>约定大于大于配置，不要在某些问题上纠结，好的习惯变成约定以配置实现。  </p>
-</li>
-<li><p>与后台约定好接口的status、message，数据不要嵌套太深。  </p>
-</li>
-</ol>
-
+                <h1 id="什么是性能"><a href="#什么是性能" class="headerlink" title="什么是性能"></a>什么是性能</h1><p>从浏览器开启的那一刻，到代码运行起消耗的一切资源（浏览器，服务器，文件网络）的一切都是性能</p>
+<p>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</p>
+<h2 id="性能优化好处"><a href="#性能优化好处" class="headerlink" title="性能优化好处"></a>性能优化好处</h2><ul>
+<li>提高用户体验</li>
+<li>节约资源</li>
+</ul>
+<h1 id="如何优化-浏览器层面"><a href="#如何优化-浏览器层面" class="headerlink" title="如何优化(浏览器层面)"></a>如何优化(浏览器层面)</h1><h2 id="浏览器缓存策略"><a href="#浏览器缓存策略" class="headerlink" title="浏览器缓存策略"></a>浏览器缓存策略</h2><h3 id="1、-强缓存"><a href="#1、-强缓存" class="headerlink" title="1、 强缓存"></a>1、 强缓存</h3><p>特点<br>强缓存中，当请求再次发出时，浏览器会判断目标资源是否 “命中” 强缓存，如果命中则直接从缓存中获取资源，不会再与服务端发生通信。</p>
+<p>在 Chrome 中，命中强缓存的情况下， Network 中显示的 HTTP 状态码是 200</p>
+<h4 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h4><p>强制缓存的请求结果有两种情况：</p>
+<ul>
+<li>命中缓存</li>
+<li>未命中缓存<br><img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/tyimg/202110121952153.png"></li>
+</ul>
+<p>是否强缓存由以下 3 个 Header 属性共同来控制：</p>
+<p>Expires<br>Expires 的值是一个 HTTP 日期，当服务器返回响应时，在 Response Headers 中将过期时间写入 Expires 字段。</p>
+<p>在浏览器发起请求时，会根据系统时间和 Expires 的值进行比较，如果系统时间超过了 Expires 的值，缓存失效，会继续从服务器获取资源</p>
+<h4 id="Cache-Control（重点）"><a href="#Cache-Control（重点）" class="headerlink" title="==Cache-Control（重点）=="></a>==Cache-Control（重点）==</h4><p>是 HTTP 1.1 中新增的属性，为了弥补 Expires 缺陷提出的，提供了更精确细致的缓存功能。Cache-Control 在请求头和响应头中都可以使用</p>
+<p>Pragma<br>Pragma 只有一个属性值，就是 no-cache ，效果和 Cache-Control 中的 no-cache 一致，不使用强缓存，需要与服务器验证缓存是否新鲜，在 3 个头部属性中的优先级最高。</p>
+<h2 id="2、-协商缓存"><a href="#2、-协商缓存" class="headerlink" title="2、 协商缓存"></a>2、 协商缓存</h2>
                 
             </div>
             <hr/>
@@ -542,7 +542,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/29/%E5%8A%9D%E9%80%80%E6%8C%87%E5%8D%97/">http://example.com/2021/09/29/%E5%8A%9D%E9%80%80%E6%8C%87%E5%8D%97/</a>
+                    <a href="http://example.com/2021/10/21/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">http://example.com/2021/10/21/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -580,8 +580,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">笔记</span>
+                                <a href="/tags/%E4%BC%98%E5%8C%96/">
+                                    <span class="chip bg-color">优化</span>
                                 </a>
                             
                         </div>
@@ -892,13 +892,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/29/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93/">
+                <a href="/2021/10/22/mongodb%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/007173302f8141de8741690833971124.png" class="responsive-img" alt="总结常用的一些类库">
+                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/dd4aee16880411ebb6edd017c2d2eca2.jpg" class="responsive-img" alt="mongdb基本语法">
                         
-                        <span class="card-title">总结常用的一些类库</span>
+                        <span class="card-title">mongdb基本语法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -909,14 +909,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-29
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-22
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
+                            <a href="/categories/node/" class="post-category">
+                                    node
                                 </a>
                             
                             
@@ -941,13 +941,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/29/%E6%AD%A3%E5%88%99%E8%AE%B0%E5%BD%95/">
+                <a href="/2021/10/09/npm%E8%AE%B0%E5%BD%95/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/202110141145481.jpg" class="responsive-img" alt="ES6入门学习">
+                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/c0b418d39a3444e997791a823bc6bea3.jpg" class="responsive-img" alt="npm相关">
                         
-                        <span class="card-title">ES6入门学习</span>
+                        <span class="card-title">npm相关</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -958,7 +958,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-09
                             </span>
                         <span class="publish-author">
                             
@@ -975,8 +975,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
+                    <a href="/tags/npm/">
+                        <span class="chip bg-color">npm</span>
                     </a>
                     
                 </div>
