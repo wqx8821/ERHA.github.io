@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="移动端总结, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="总结常用的一些类库, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="若有诗书藏在心，岁月从不败美人">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>移动端总结 | 小羊站</title>
+    <title>总结常用的一些类库 | 小羊站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -319,7 +319,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">移动端总结</h1>
+                    <h1 class="description center-align post-title">总结常用的一些类库</h1>
                 </div>
             </div>
         </div>
@@ -463,28 +463,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-29
+                    2021-09-25
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-29
+                    2021-10-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    401
+                    633
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -499,17 +499,58 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="H5移动端开发总结"><a href="#H5移动端开发总结" class="headerlink" title="H5移动端开发总结"></a>H5移动端开发总结</h1><h4 id="移动端一般会为了美观给html、body加统一样式，再用iScorll、betterScroll等"><a href="#移动端一般会为了美观给html、body加统一样式，再用iScorll、betterScroll等" class="headerlink" title="移动端一般会为了美观给html、body加统一样式，再用iScorll、betterScroll等"></a>移动端一般会为了美观给html、body加统一样式，再用iScorll、betterScroll等</h4><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span>,<span class="selector-tag">body</span>{</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">overflow</span>:hidden;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这有个问题：body或者html依旧不是相对屏幕固定的，上下滑动会造成背景图位移等(Safari)，以下可解决：</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span>,<span class="selector-tag">body</span>{</span><br><span class="line">    <span class="attribute">position</span>:fixed;</span><br><span class="line">    <span class="attribute">top</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>:<span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>但是在移动端输入时，软键盘弹起解决页面被隐藏或者被顶起时，会有副作用。</p>
-<h4 id="适配一般选择动态计算根字体尺寸，rem为单位。当心有些安卓机型会根据系统设置字体大小修改webview的根字体大小，一般找原生端设置"><a href="#适配一般选择动态计算根字体尺寸，rem为单位。当心有些安卓机型会根据系统设置字体大小修改webview的根字体大小，一般找原生端设置" class="headerlink" title="适配一般选择动态计算根字体尺寸，rem为单位。当心有些安卓机型会根据系统设置字体大小修改webview的根字体大小，一般找原生端设置"></a>适配一般选择动态计算根字体尺寸，rem为单位。当心有些安卓机型会根据系统设置字体大小修改webview的根字体大小，一般找原生端设置</h4><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</span></span><br><span class="line"><span class="javascript">        <span class="comment">// 注意这里是100倍，因为一般除不尽，多取几位缩小误差。所以应该有个css单位变量是htmlFontsize*1/100</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">// spa完全可以放到body尾部</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> htmlFontSize = <span class="built_in">document</span>.documentElement.clientWidth / <span class="number">375</span> * <span class="number">100</span> + <span class="string">'px'</span>;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> bodyFontSize = <span class="string">'16px'</span>;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> styleDom = <span class="built_in">document</span>.createElement(<span class="string">'style'</span>);</span></span><br><span class="line"><span class="javascript">        styleDom.innerHTML = <span class="string">'html{font-size:'</span> + htmlFontSize + <span class="string">'!important;}body{font-size:'</span> + bodyFontSize + <span class="string">'!important;}'</span>;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>].appendChild(styleDom)</span></span><br><span class="line"><span class="javascript">    })();</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h4 id="禁止缩放和双击放大（包括Safari）"><a href="#禁止缩放和双击放大（包括Safari）" class="headerlink" title="禁止缩放和双击放大（包括Safari）"></a>禁止缩放和双击放大（包括Safari）</h4><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> lastTouchEnd = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'touchstart'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>{</span><br><span class="line">    <span class="keyword">if</span> (event.touches.length &gt; <span class="number">1</span>) {</span><br><span class="line">        event.preventDefault();</span><br><span class="line">    }</span><br><span class="line">});</span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'touchend'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>{</span><br><span class="line">    <span class="keyword">var</span> now = (<span class="keyword">new</span> <span class="built_in">Date</span>()).getTime();</span><br><span class="line">    <span class="keyword">if</span> (now - lastTouchEnd &lt;= <span class="number">300</span>) {</span><br><span class="line">        event.preventDefault();</span><br><span class="line">    }</span><br><span class="line">    lastTouchEnd = now;</span><br><span class="line">}, <span class="literal">false</span>);</span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'gesturestart'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>{</span><br><span class="line">    event.preventDefault();</span><br><span class="line">});</span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'dblclick'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>{</span><br><span class="line">    event.preventDefault();</span><br><span class="line">})</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<h4 id="Safari滚动到动态列表时滑动出问题"><a href="#Safari滚动到动态列表时滑动出问题" class="headerlink" title="Safari滚动到动态列表时滑动出问题"></a>Safari滚动到动态列表时滑动出问题</h4><p>动态创建的列表高度没有预设高度，在动态创建列表（ajax等）后，浏览器没有计算好，导致滚动失败。解决办法：设置需要滚动的容器的(min-)height，撑起容器。  </p>
+                <h1 id="总结常用的一些类库"><a href="#总结常用的一些类库" class="headerlink" title="总结常用的一些类库"></a>总结常用的一些类库</h1><h2 id="1-JS模板引擎"><a href="#1-JS模板引擎" class="headerlink" title="1. JS模板引擎"></a>1. JS模板引擎</h2><p>1.1 <a target="_blank" rel="noopener" href="https://handlebarsjs.com/zh/">handlebars.js</a><br>1.2 <a target="_blank" rel="noopener" href="https://ejs.bootcss.com/">ejs.js</a>  </p>
+<blockquote>
+<p>服务端和客户端都可以，捕获异常准确调试方便  </p>
+</blockquote>
+<p>1.3 <a target="_blank" rel="noopener" href="https://aui.github.io/art-template/zh-cn/index.html">art-template.js</a>  </p>
+<blockquote>
+<p>分客户端（兼容IE8+，IE8需要加补丁），node端：express、koa，webpack端  </p>
+</blockquote>
+<h2 id="2-JS库"><a href="#2-JS库" class="headerlink" title="2. JS库"></a>2. JS库</h2><h3 id="1-jQuery，zepto-js"><a href="#1-jQuery，zepto-js" class="headerlink" title="1. jQuery，zepto.js"></a>1. <a target="_blank" rel="noopener" href="https://jquery.com/">jQuery</a>，<a target="_blank" rel="noopener" href="http://www.zeptojs.cn/">zepto.js</a></h3><blockquote>
+<p>jQuery兼容许多老浏览器版本，1.x兼容到IE6，2.x只是相较于1.x移除了IE6/7/8的兼容，3.x相较于2.x增加了许多新特性。可以参照<a target="_blank" rel="noopener" href="https://www.hangge.com/blog/cache/detail_2228.html">jQuery - 不同版本的差异汇总（版本选择建议</a>、<a target="_blank" rel="noopener" href="https://www.hangge.com/blog/cache/detail_2235.html">jQuery - jQuery3的新特性汇总（附样例）</a><br>zepto相较于jQuery，则是针对Chrome和safria，更加轻量<br><a target="_blank" rel="noopener" href="https://jqueryvalidation.org/documentation/">jquery-validation</a>表单验证插件。(jQuery, tested with 1.7.2, 1.8.3, 1.9.1, 1.11.1, 3.1.1)</p>
+</blockquote>
+<h3 id="2-backbone-js"><a href="#2-backbone-js" class="headerlink" title="2. backbone.js"></a>2. <a target="_blank" rel="noopener" href="http://www.zeptojs.cn/">backbone.js</a></h3><blockquote>
+<p>MVC前端框架<a target="_blank" rel="noopener" href="https://github.com/the5fire/backbonejs-learning-note">Backbone.js入门教程第二版</a>  </p>
+</blockquote>
+<h3 id="3-popper-js"><a href="#3-popper-js" class="headerlink" title="3. popper.js"></a>3. <a target="_blank" rel="noopener" href="https://popper.js.org/">popper.js</a></h3><blockquote>
+<p>元素定位类库，许多UI框架都在使用。</p>
+</blockquote>
+<h2 id="koa2"><a href="#koa2" class="headerlink" title="koa2"></a>koa2</h2><h3 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h3><p>koa-views,koa-swig,ejs,handlebars,art-template<br>模板引擎也分服务端和客户端，node端得搭配koa-views、koa-swig、koa-ejs等使用。这里只讲<a href="mailto:koa-views@6.2.1">koa-views@6.2.1</a>使用中路径问题,其内部使用get-paths(path, relPath, extension)这个库解析路径。</p>
+<p><img src="./images/koa2_demo_koa-views_path.jpg" alt="项目路径"></p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> Koa <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"koa"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> Router <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"@koa/router"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> views <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"koa-views"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Koa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// views方法第一个参数就是get-paths接收的第一个参数，还可以是绝/相对路径，extension就是第三个参数。路由中render的第一个参数就是get-paths第二个参数(这是个坑，不是路径,可以有后缀名)。解析到文件会找下面的index文件。</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">views</span><span class="token punctuation">(</span><span class="token string">'views'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    extension<span class="token punctuation">:</span> <span class="token string">"ejs"</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+router<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">"/users"</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> next<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">await</span> ctx<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">"users"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        title<span class="token punctuation">:</span> <span class="token string">"用户管理"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+router<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">"/users/admin"</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> next<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">await</span> ctx<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'users/admin'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        title<span class="token punctuation">:</span> <span class="token string">"admin"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>ejs  </p>
+<blockquote>
+<p>服务端：npm i ejs<br>客户端：Go to the <a target="_blank" rel="noopener" href="https://github.com/mde/ejs/releases/latest">Latest Release</a>, download<br><code>./ejs.js</code> or <code>./ejs.min.js</code>. Alternately, you can compile it yourself by cloning<br>the repository and running <code>jake build</code> (or <code>$(npm bin)/jake build</code> if jake is<br>not installed globally).也可以<code>npx jake buld</code></p>
+</blockquote>
+<h3 id="静态文件"><a href="#静态文件" class="headerlink" title="静态文件"></a>静态文件</h3><p>koa-static，koa-static-cache  </p>
+<h2 id="3-打包工具"><a href="#3-打包工具" class="headerlink" title="3 打包工具"></a>3 打包工具</h2><h3 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a><a target="_blank" rel="noopener" href="https://www.webpackjs.com/">webpack</a></h3><h3 id="parceljs"><a href="#parceljs" class="headerlink" title="parceljs"></a><a target="_blank" rel="noopener" href="https://parceljs.org/">parceljs</a></h3><h3 id="gulp-v4-x"><a href="#gulp-v4-x" class="headerlink" title="gulp v4.x"></a><a target="_blank" rel="noopener" href="https://www.gulpjs.com.cn/">gulp v4.x</a></h3><h3 id="Rollup-js"><a href="#Rollup-js" class="headerlink" title="Rollup.js"></a><a target="_blank" rel="noopener" href="https://www.rollupjs.com/">Rollup.js</a></h3><h2 id="node"><a href="#node" class="headerlink" title="node"></a>node</h2><h3 id="dotenv"><a href="#dotenv" class="headerlink" title="dotenv"></a><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/dotenv">dotenv</a></h3><p>识别文件(.env)中的变量，并添加到process.env中  </p>
+<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><h4 id="sequelize"><a href="#sequelize" class="headerlink" title="sequelize"></a><a target="_blank" rel="noopener" href="https://github.com/demopark/sequelize-docs-Zh-CN">sequelize</a></h4><p>Sequelize 是一个基于 promise 的 Node.js ORM, 目前支持 Postgres, MySQL, SQLite 和 Microsoft SQL Server. 它具有强大的事务支持, 关联关系, 预读和延迟加载,读取复制等功能.</p>
+<h3 id="node端生成、操作DOMjsdom"><a href="#node端生成、操作DOMjsdom" class="headerlink" title="node端生成、操作DOMjsdom"></a>node端生成、操作DOM<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/jsdom">jsdom</a></h3><h2 id="富文本编辑器"><a href="#富文本编辑器" class="headerlink" title="富文本编辑器"></a>富文本编辑器</h2><h3 id="tinymce（无依赖）"><a href="#tinymce（无依赖）" class="headerlink" title="tinymce（无依赖）"></a><a target="_blank" rel="noopener" href="https://www.tiny.cloud/docs/">tinymce</a>（无依赖）</h3><h3 id="ckeditor（无依赖）"><a href="#ckeditor（无依赖）" class="headerlink" title="ckeditor（无依赖）"></a><a target="_blank" rel="noopener" href="https://ckeditor.com/">ckeditor</a>（无依赖）</h3><h3 id="draft-js（react，facebook开源）"><a href="#draft-js（react，facebook开源）" class="headerlink" title="draft.js（react，facebook开源）"></a><a target="_blank" rel="noopener" href="https://draftjs.org/docs/getting-started">draft.js</a>（react，facebook开源）</h3><h3 id="Lin-CMS"><a href="#Lin-CMS" class="headerlink" title="Lin CMS"></a><a target="_blank" rel="noopener" href="http://doc.cms.7yue.pro/">Lin CMS</a></h3><p>可以用koa、flask、spring-boot搭建  </p>
+<h2 id="4-popper-js弹窗"><a href="#4-popper-js弹窗" class="headerlink" title="4 popper.js弹窗"></a>4 <a target="_blank" rel="noopener" href="https://popper.js.org/">popper.js弹窗</a></h2><h2 id="5-网站运行状态管理"><a href="#5-网站运行状态管理" class="headerlink" title="5 网站运行状态管理"></a>5 网站运行状态管理</h2><p>不过一般来说有后台监视系统</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://github.com/juliomrqz/statusfy">statusfy</a>  </li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CachetHQ/Cachet">Cachet</a></li>
+</ol>
 
                 
             </div>
@@ -536,7 +577,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/29/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B8%80%E4%BA%9B/">http://example.com/2021/09/29/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B8%80%E4%BA%9B/</a>
+                    <a href="http://example.com/2021/09/25/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93/">http://example.com/2021/09/25/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -886,13 +927,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/29/%E6%AD%A3%E5%88%99%E8%AE%B0%E5%BD%95/">
+                <a href="/2021/09/26/%E5%85%B3%E4%BA%8Ets/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/202110141145481.jpg" class="responsive-img" alt="ES6入门学习">
+                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/202110141145481.jpg" class="responsive-img" alt="关于ts">
                         
-                        <span class="card-title">ES6入门学习</span>
+                        <span class="card-title">关于ts</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -903,7 +944,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-29
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-26
                         </span>
                         <span class="publish-author">
                             
@@ -932,16 +973,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/27/%E5%85%B3%E4%BA%8Ets/">
+                <a href="/2021/09/25/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/202110141145481.jpg" class="responsive-img" alt="关于ts">
+                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/007173302f8141de8741690833971124.png" class="responsive-img" alt="总结常用的一些类库">
                         
-                        <span class="card-title">关于ts</span>
+                        <span class="card-title">总结常用的一些类库</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -952,7 +993,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-25
                             </span>
                         <span class="publish-author">
                             
@@ -966,6 +1007,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1210,7 +1252,7 @@
             <br> -->
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">32.7k</span>&nbsp;字
+                class="white-color">32.4k</span>&nbsp;字
             
             
             

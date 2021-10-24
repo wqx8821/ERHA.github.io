@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ES6入门学习, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="移动端总结, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="若有诗书藏在心，岁月从不败美人">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ES6入门学习 | 小羊站</title>
+    <title>移动端总结 | 小羊站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -319,7 +319,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ES6入门学习</h1>
+                    <h1 class="description center-align post-title">移动端总结</h1>
                 </div>
             </div>
         </div>
@@ -463,28 +463,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-29
+                    2021-10-05
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-29
+                    2021-10-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    915
+                    394
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -499,117 +499,56 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="RegExp"><a href="#RegExp" class="headerlink" title="RegExp"></a>RegExp</h1><p><a target="_blank" rel="noopener" href="https://tool.oschina.net/uploads/apidocs/jquery/regexp.html">正则表达式手册</a></p>
-<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">MDN</a></p>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903487155732494">JS 正则表达式完整教程（略长）</a></p>
-<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/chapter/13619">腾讯云文档</a></p>
-<h2 id="1-1-匹配标志"><a href="#1-1-匹配标志" class="headerlink" title="1.1 匹配标志"></a>1.1 匹配标志</h2><table>
-<thead>
-<tr>
-<th>标志</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>g</td>
-<td>全局搜索</td>
-</tr>
-<tr>
-<td>m</td>
-<td>多行匹配</td>
-</tr>
-<tr>
-<td>i</td>
-<td>忽略大小写</td>
-</tr>
-<tr>
-<td>y</td>
-<td>执行“粘性(<code>sticky</code>)”搜索,匹配从目标字符串的当前位置开始(lastIndex)</td>
-</tr>
-<tr>
-<td>s</td>
-<td>允许<code>.</code> 匹配换行符</td>
-</tr>
-<tr>
-<td>u</td>
-<td>使用 unicode 码的模式进行匹配</td>
-</tr>
-</tbody></table>
-<ul>
-<li>正则对象都有个 lastIndex 属性，只读（但是 js 没有严格语法限制，可以修改），只有正则使用了 global 标志才会在匹配成功是修改 lastIndex 的值，失败置 0。使用 sticky 标志，只会从正则的 lastIndex 开始匹配，但是不会修改它的值。</li>
-<li>多行匹配只有在字符串中有换行符时才有意义，有换行符时^、$表示每行开头结尾，如果不使用^或$那么也没必要使用 m 标志。</li>
-<li>除了 i，其他基本没使用过。</li>
-</ul>
-<h2 id="1-2-匹配模式"><a href="#1-2-匹配模式" class="headerlink" title="1.2 匹配模式"></a>1.2 匹配模式</h2><p>匹配字符或者匹配位置。</p>
-<h2 id="1-3-RegExp-和-String-的一些常用方法"><a href="#1-3-RegExp-和-String-的一些常用方法" class="headerlink" title="1.3 RegExp 和 String 的一些常用方法"></a>1.3 RegExp 和 String 的一些常用方法</h2><p>String：</p>
-<blockquote>
-<p>replace<br>search<br>match<br>matchAll<br>split</p>
-</blockquote>
-<p>RegExp：</p>
-<blockquote>
-<p>test<br>exec<br>compile</p>
-</blockquote>
-<p>正则实际匹配结果看 match 和 matchAll，test 只是判断字符串是否满足正则要求。<br>search 相当于 indexOf 于 Array，找到满足正则的第一个字符集首字符位置，否则返回-1。<br>exec 开启 g 或 y 每次调用会修改 lastIndex。<br>matchAll 返回的是迭代器。</p>
-<p>重点说 replace：str.replace(regexp|substr, newSubStr|function)</p>
-<blockquote>
-<p>第一个参数：可以使正则，会处理全部匹配的字符。可以使字符串，只处理第一个相等字符。<br>第二个参数：可以使特殊字符串，$&amp;表示被整个正则匹配到的字符，可以修饰字符串；$n 表示每个子表达式匹配的字符，可以重新组合或者提取字符串（子表达式没匹配到的会被忽略）；$`、$‘表示匹配字符左边、右边全部类容，可以修饰字符串。可以使函数，参数是[match 的字符，…子表达式匹配的结果,位置，输入值]，返回值替换匹配字符，如果开启 g 或 m 会多次调用。</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>变量名</th>
-<th>代表值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>$$</td>
-<td>插入一个 “$”</td>
-</tr>
-</tbody></table>
-<h2 id="1-4-问题"><a href="#1-4-问题" class="headerlink" title="1.4 问题"></a>1.4 问题</h2><ol>
-<li><p>一道面试题<br>![一道面试题][reg_g]</p>
-<details>
-  <summary><font color="#56b6a7">答案</font></summary>
-  <pre><code>  
-true
-true
-false
-true
-// 在设置g或y模式，RegExp 对象是有状态的。他们会将上次成功匹配后的位置记录在 lastIndex 属性中。
-// 全局匹配会记录上次匹配到的位置，然后下一次从上一次的位置开始匹配，失败时会重置lastIndex为0。
-  </code></pre>
-</details></li>
-<li><p>一道面试题：使用正则实现 String.trim()</p>
-<details>
-  <summary><font color="#56b6a7">答案</font></summary>
-  <pre><code>  
-String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
-  </code></pre>
-</details></li>
-<li><p>实现一个正则：不能以空白字符开头和结束，至少一个字符</p>
-<details>
-  <summary><font color="#56b6a7">我的</font></summary>
-  <pre><code>  
- /^\S(.*\S)?$/
- /^\S{1}$|^\S+.*\S+$/g
-  </code></pre>
-</details></li>
-<li><p>一道面试题：使用正则实现 String.trim()</p>
-</li>
-<li><p>不同系统换行符的区：windows：\n\r，mac：\r，Unix：\n。不同系统处理文件时要注意。</p>
-</li>
-<li><p>表达式里，有些特殊符号要在前面加\转义。比如：根据一个字符串生成一个正则，就需要转义正则里的全部特殊符号，不然直接生成正则是按转移后的字符生成的。</p>
-</li>
-<li><p>讲解两个正则：</p>
-</li>
-</ol>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 手机号</span></span><br><span class="line">/^((\+|<span class="number">00</span>)<span class="number">86</span>)?<span class="number">1</span>((<span class="number">3</span>[\d])|(<span class="number">4</span>[<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">9</span>])|(<span class="number">5</span>[<span class="number">0</span>-<span class="number">3</span>,<span class="number">5</span>-<span class="number">9</span>])|(<span class="number">6</span>[<span class="number">5</span>-<span class="number">7</span>])|(<span class="number">7</span>[<span class="number">0</span>-<span class="number">8</span>])|(<span class="number">8</span>[\d])|(<span class="number">9</span>[<span class="number">1</span>,<span class="number">8</span>,<span class="number">9</span>]))\d{<span class="number">8</span>}$/</span><br><span class="line"><span class="comment">// 密码强度校验：最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符</span></span><br><span class="line"><span class="regexp">/^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&amp;*? ]).*$/</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>1.5 总结</p>
-<ol>
-<li>与：/ppp/，或：/p|p|p/，非：/[^ppp]/。</li>
-<li>正则终究匹配的是字符或者位置。</li>
-</ol>
+                <h1 id="H5移动端开发总结"><a href="#H5移动端开发总结" class="headerlink" title="H5移动端开发总结"></a>H5移动端开发总结</h1><h4 id="移动端一般会为了美观给html、body加统一样式，再用iScorll、betterScroll等"><a href="#移动端一般会为了美观给html、body加统一样式，再用iScorll、betterScroll等" class="headerlink" title="移动端一般会为了美观给html、body加统一样式，再用iScorll、betterScroll等"></a>移动端一般会为了美观给html、body加统一样式，再用iScorll、betterScroll等</h4><pre class="line-numbers language-css"><code class="language-css"><span class="token selector">html,body</span><span class="token punctuation">{</span>
+    <span class="token property">height</span><span class="token punctuation">:</span><span class="token number">100%</span><span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">100%</span><span class="token punctuation">;</span>
+    <span class="token property">overflow</span><span class="token punctuation">:</span>hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这有个问题：body或者html依旧不是相对屏幕固定的，上下滑动会造成背景图位移等(Safari)，以下可解决：</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">html,body</span><span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span>fixed<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>但是在移动端输入时，软键盘弹起解决页面被隐藏或者被顶起时，会有副作用。</p>
+<h4 id="适配一般选择动态计算根字体尺寸，rem为单位。当心有些安卓机型会根据系统设置字体大小修改webview的根字体大小，一般找原生端设置"><a href="#适配一般选择动态计算根字体尺寸，rem为单位。当心有些安卓机型会根据系统设置字体大小修改webview的根字体大小，一般找原生端设置" class="headerlink" title="适配一般选择动态计算根字体尺寸，rem为单位。当心有些安卓机型会根据系统设置字体大小修改webview的根字体大小，一般找原生端设置"></a>适配一般选择动态计算根字体尺寸，rem为单位。当心有些安卓机型会根据系统设置字体大小修改webview的根字体大小，一般找原生端设置</h4><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+    <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 注意这里是100倍，因为一般除不尽，多取几位缩小误差。所以应该有个css单位变量是htmlFontsize*1/100</span>
+        <span class="token comment" spellcheck="true">// spa完全可以放到body尾部</span>
+        <span class="token keyword">var</span> htmlFontSize <span class="token operator">=</span> document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>clientWidth <span class="token operator">/</span> <span class="token number">375</span> <span class="token operator">*</span> <span class="token number">100</span> <span class="token operator">+</span> <span class="token string">'px'</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> bodyFontSize <span class="token operator">=</span> <span class="token string">'16px'</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> styleDom <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'style'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        styleDom<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">'html{font-size:'</span> <span class="token operator">+</span> htmlFontSize <span class="token operator">+</span> <span class="token string">'!important;}body{font-size:'</span> <span class="token operator">+</span> bodyFontSize <span class="token operator">+</span> <span class="token string">'!important;}'</span><span class="token punctuation">;</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'head'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>styleDom<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="禁止缩放和双击放大（包括Safari）"><a href="#禁止缩放和双击放大（包括Safari）" class="headerlink" title="禁止缩放和双击放大（包括Safari）"></a>禁止缩放和双击放大（包括Safari）</h4><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">var</span> lastTouchEnd <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'touchstart'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>event<span class="token punctuation">.</span>touches<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'touchend'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> now <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>now <span class="token operator">-</span> lastTouchEnd <span class="token operator">&lt;=</span> <span class="token number">300</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    lastTouchEnd <span class="token operator">=</span> now<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'gesturestart'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'dblclick'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="Safari滚动到动态列表时滑动出问题"><a href="#Safari滚动到动态列表时滑动出问题" class="headerlink" title="Safari滚动到动态列表时滑动出问题"></a>Safari滚动到动态列表时滑动出问题</h4><p>动态创建的列表高度没有预设高度，在动态创建列表（ajax等）后，浏览器没有计算好，导致滚动失败。解决办法：设置需要滚动的容器的(min-)height，撑起容器。  </p>
 
                 
             </div>
@@ -636,7 +575,7 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/29/%E6%AD%A3%E5%88%99%E8%AE%B0%E5%BD%95/">http://example.com/2021/09/29/%E6%AD%A3%E5%88%99%E8%AE%B0%E5%BD%95/</a>
+                    <a href="http://example.com/2021/10/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B8%80%E4%BA%9B/">http://example.com/2021/10/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B8%80%E4%BA%9B/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -986,13 +925,13 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/29/%E5%8A%9D%E9%80%80%E6%8C%87%E5%8D%97/">
+                <a href="/2021/10/08/%E6%AD%A3%E5%88%99%E8%AE%B0%E5%BD%95/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/c0b418d39a3444e997791a823bc6bea3.jpg" class="responsive-img" alt="劝退指南">
+                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/202110141145481.jpg" class="responsive-img" alt="ES6入门学习">
                         
-                        <span class="card-title">劝退指南</span>
+                        <span class="card-title">ES6入门学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1003,12 +942,16 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-29
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-08
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            ERHA
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -1031,13 +974,13 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/29/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B8%80%E4%BA%9B/">
+                <a href="/2021/09/29/%E7%8E%8B%E7%A7%8B%E9%9C%9E/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/dd4aee16880411ebb6edd017c2d2eca2.jpg" class="responsive-img" alt="移动端总结">
+                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/202110121945263.jpg" class="responsive-img" alt="王秋霞">
                         
-                        <span class="card-title">移动端总结</span>
+                        <span class="card-title">王秋霞</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1054,8 +997,8 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
+                            <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
+                                    生活
                                 </a>
                             
                             
@@ -1065,8 +1008,8 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
+                    <a href="/tags/%E7%88%B1/">
+                        <span class="chip bg-color">爱</span>
                     </a>
                     
                 </div>
@@ -1306,7 +1249,7 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
             <br> -->
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">32.7k</span>&nbsp;字
+                class="white-color">32.4k</span>&nbsp;字
             
             
             

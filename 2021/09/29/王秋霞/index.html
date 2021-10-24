@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ES6入门学习, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="王秋霞, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="若有诗书藏在心，岁月从不败美人">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ES6入门学习 | 小羊站</title>
+    <title>王秋霞 | 小羊站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -319,7 +319,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ES6入门学习</h1>
+                    <h1 class="description center-align post-title">王秋霞</h1>
                 </div>
             </div>
         </div>
@@ -438,8 +438,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">笔记</span>
+                            <a href="/tags/%E7%88%B1/">
+                                <span class="chip bg-color">爱</span>
                             </a>
                         
                     </div>
@@ -450,8 +450,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                前端
+                            <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
+                                生活
                             </a>
                         
                     </div>
@@ -470,21 +470,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-29
+                    2021-10-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    72
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    1 分
                 </div>
                 
 
@@ -499,58 +499,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="ES6标准入门学习总结"><a href="#ES6标准入门学习总结" class="headerlink" title="ES6标准入门学习总结"></a>ES6标准入门学习总结</h1><h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><h2 id="2-let和const"><a href="#2-let和const" class="headerlink" title="2. let和const"></a>2. let和const</h2><p>const申明的常量只是在内存中的地址不变，指针不变。如果常量是个复杂类型，依然可以修改。如果把一个常量再次赋值给新变量，再覆盖新变量，常量是不会修改的。  </p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = { <span class="attr">age</span>: <span class="number">29</span> };</span><br><span class="line"><span class="keyword">let</span> b =  a;</span><br><span class="line">b.age = <span class="number">30</span>;  <span class="comment">// a.age === b.age === 30</span></span><br><span class="line">b = <span class="number">31</span>;  <span class="comment">// a依然是{ age: 30 }</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="3-变量解构赋值"><a href="#3-变量解构赋值" class="headerlink" title="3. 变量解构赋值"></a>3. 变量解构赋值</h2><h2 id="4-字符串扩展"><a href="#4-字符串扩展" class="headerlink" title="4. 字符串扩展"></a>4. 字符串扩展</h2><h3 id="4-1-ES6前常用的方法"><a href="#4-1-ES6前常用的方法" class="headerlink" title="4.1 ES6前常用的方法"></a>4.1 ES6前常用的方法</h3><p>4.1.1 String.fromCharCode(Unicode1,Unicode2,…,Unicoden)是String静态方法，参数是至少一个Unicode码，返回所有参数对应的字符组成的字符串。<br>4.1.2 stringObject.indexOf(searchvalue[,fromindex])默认从首字符开始检索，返回某个指定的字符串值在字符串中首次出现的位置，没有返回-1。<br>4.1.3 stringObject.lastIndexOf(searchvalue,fromindex)  </p>
-<p>字符串新增方法  </p>
-<p>正则扩展  </p>
-<p>数值的扩展  </p>
-<p>函数的扩展  </p>
-<p>数组的扩展  </p>
-<p>对象的扩展  </p>
-<p>对象新增的方法  </p>
-<p>Symbol  </p>
-<p>set和map  </p>
-<p>Proxy  </p>
-<p>Reflect  </p>
-<p>Promise  </p>
-<p>Iterator和for…of  </p>
-<p>Generatore  </p>
-<p>Generator 的异步应用  </p>
-<p>async  </p>
-<p>class</p>
-<p>  ES6之前实现一个类一般是通过工厂函数，修改原型链实现类的继承。ES6提供classAPI，使用extends继承。<br>  子类必须在constructor中首先调用super否则会报错(新建子类实例时)，因为子类自己的this对象，必须先通过父类的构造函数完成塑造，得到与父类同样的实例属性和方法，然后再对其进行加工，加上子类自己的实例属性和方法。如果不调用super方法，子类就得不到this对象。<br>  ES5 的继承，实质是先创造子类的实例对象this，然后再将父类的方法添加到this上面（Parent.apply(this)）。ES6 的继承机制完全不同，实质是先将父类实例对象的属性和方法，加到this上面（所以必须先调用super方法），然后再用子类的构造函数修改this<br>  super表示父类的构造函数，但是返回的是子类<br>  类中无this，只有实例才有</p>
-<p>super指向父类（不是实例哦），constuctor默认返回的是实例，也可手动返回其他对象<br>如果父类constructor有参数，子类必须调用super，并且传入指定参数：既子类的constructor的参数必须包括父类constructor的参数，且子类必须调用super传入这些参数  </p>
-<h2 id="22-class的继承"><a href="#22-class的继承" class="headerlink" title="22. class的继承"></a>22. class的继承</h2><p>  class语法本身是es5构造函数的语法上塘，定义的类的方法(非静态方法)本身是在原型链上添加方法  </p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>{</span><br><span class="line">    <span class="function"><span class="title">somemethord</span>(<span class="params"></span>)</span> {}</span><br><span class="line">    <span class="function"><span class="title">othermethord</span>(<span class="params"></span>)</span> {}</span><br><span class="line">}</span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line"><span class="built_in">Object</span>.asign(A.prototype,{</span><br><span class="line">    <span class="function"><span class="title">somemethord</span>(<span class="params"></span>)</span> {}</span><br><span class="line">    <span class="function"><span class="title">othermethord</span>(<span class="params"></span>)</span> {}</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
-
-<p>  constructor方法是类的默认方法，通过new命令生成对象实例时，自动调用该方法。一个类必须有constructor方法，如果没有显式定义，一个空的constructor方法会被默认添加。constructor默认返回当前类的实例(this)，也可以返回指定上下文</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>{}</span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>{</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span> {}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>  如果有父类，还必须在constructor中调用super  </p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span> </span>{</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">x</span>)</span> {</span><br><span class="line">        <span class="built_in">this</span>.x = x</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Son</span> <span class="keyword">extends</span> <span class="title">Parent</span> </span>{</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">x,y</span>)</span> {</span><br><span class="line">        <span class="built_in">super</span>(x)</span><br><span class="line">        <span class="built_in">this</span>.y = y</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>  在new一个类时，先调用constructor方法，如果是子类，必须在constructor内先调用super(接受全部父类需要的参数)，先创建父类上下文，再创建子类上下文<br>  class内的方法不需要加function,可以在constructor中绑定this或使用箭头函数，否则经过赋值后的方法会改变this  </p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span> </span>{</span><br><span class="line">    <span class="function"><span class="title">say</span>(<span class="params"></span>)</span> {</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>.name)</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">static</span> <span class="function"><span class="title">text</span>(<span class="params"></span>)</span> {</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>.name)</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="keyword">const</span> {say} = <span class="keyword">new</span> Parent()</span><br><span class="line">say() <span class="comment">// Uncaught TypeError: Cannot read property 'firstname' of undefined</span></span><br><span class="line"><span class="keyword">const</span> {text} = Parent</span><br><span class="line">text() <span class="comment">// Uncaught TypeError: Cannot read property 'firstname' of undefined</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 修改之后</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span> </span>{</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span> {</span><br><span class="line">        <span class="built_in">this</span>.say = <span class="built_in">this</span>.say.bind(<span class="built_in">this</span>)</span><br><span class="line">    }</span><br><span class="line">    say = <span class="function">() =&gt;</span> {</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>.name)</span><br><span class="line">    }</span><br><span class="line">    <span class="function"><span class="title">say</span>(<span class="params"></span>)</span> {</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>.name)</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">static</span> username = <span class="string">'nothing'</span></span><br><span class="line">    <span class="keyword">static</span> text1 = <span class="function">()=&gt;</span> {</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>.username)</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="keyword">const</span> {say} = <span class="keyword">new</span> Parent()</span><br><span class="line">say() <span class="comment">// 'Parent'</span></span><br><span class="line"><span class="keyword">const</span> {text} = Parent</span><br><span class="line">text() <span class="comment">// 'nothing'wqwqsdfsdf</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>  第二种情况，super作为对象时，在普通方法中，指向父类的原型对象；在静态方法中，指向父类。</p>
-<p>module  </p>
-<p>module的加载实现  </p>
-<p>编程风格  </p>
-<p>读懂规格  </p>
-<p>异步遍历器  </p>
-<p>ArrayBuffer  </p>
-<p>Decorator</p>
-<p>作用域  </p>
-<h3 id="全局作用域"><a href="#全局作用域" class="headerlink" title="全局作用域"></a>全局作用域</h3><p>在函数、模块外申明的变量全局都可以访问。</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// inde.html</span></span><br><span class="line"><span class="comment">// 重点在type，如果是module，这段脚本就是es6module</span></span><br><span class="line">...</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"./index.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">...</span><br><span class="line"><span class="comment">// index.js</span></span><br><span class="line"><span class="keyword">var</span> a=<span class="number">12</span>; <span class="comment">// 全局作用域</span></span><br><span class="line">b=<span class="number">13</span>; <span class="comment">// 使用效果如上，他实际上是挂到window上，可以被删除，但是a却不能</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="函数-局部作用域"><a href="#函数-局部作用域" class="headerlink" title="函数/局部作用域"></a>函数/局部作用域</h3><p>在函数内申明的变量只能在函数内访问（可以访问上一级变量；module也是函数）</p>
-<h3 id="动态作用域"><a href="#动态作用域" class="headerlink" title="动态作用域"></a>动态作用域</h3><p>this  </p>
-<h3 id="块状作用域"><a href="#块状作用域" class="headerlink" title="块状作用域"></a>块状作用域</h3><p>{}中的代码；let、const</p>
-<h2 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h2><p>for…in…针对object（array是object，arr.name=122,也会被遍历）,for针对array，for…of…都可以  </p>
-<h2 id="帮你彻底搞懂JS中的prototype、-proto-与constructor（图解）"><a href="#帮你彻底搞懂JS中的prototype、-proto-与constructor（图解）" class="headerlink" title="帮你彻底搞懂JS中的prototype、__proto__与constructor（图解）"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/cc18868876837/article/details/81211729">帮你彻底搞懂JS中的prototype、__proto__与constructor（图解）</a></h2><h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><p>普通函数的this，谁调用只想谁，非严格模式找不到就指向window。箭头函数是绑定的父级的作用域，如果父级也是箭头函数，那就继续晚上找。obj={fn(){}},这是obj={fn:fucntion(){}}的简写，而不是箭头函数。  </p>
+                <p>大爷今年六十花甲，穿着皮裤叼着雪茄，精神抖擞红光满颊，钞票大把塞满皮夹，欲求一女共度晚霞，诚心征婚就在当下，愿那女子年纪不大，做事温柔不像三八。唠唠家常说说闲话</p>
 
                 
             </div>
@@ -577,7 +526,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/29/es6%E5%88%9D%E5%A7%8B%E7%AC%94%E8%AE%B0/">http://example.com/2021/09/29/es6%E5%88%9D%E5%A7%8B%E7%AC%94%E8%AE%B0/</a>
+                    <a href="http://example.com/2021/09/29/%E7%8E%8B%E7%A7%8B%E9%9C%9E/">http://example.com/2021/09/29/%E7%8E%8B%E7%A7%8B%E9%9C%9E/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -615,8 +564,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">笔记</span>
+                                <a href="/tags/%E7%88%B1/">
+                                    <span class="chip bg-color">爱</span>
                                 </a>
                             
                         </div>
@@ -927,13 +876,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/29/git%E7%9B%B8%E5%85%B3/">
+                <a href="/2021/10/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B8%80%E4%BA%9B/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/c0b418d39a3444e997791a823bc6bea3.jpg" class="responsive-img" alt="Git笔记">
+                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/dd4aee16880411ebb6edd017c2d2eca2.jpg" class="responsive-img" alt="移动端总结">
                         
-                        <span class="card-title">Git笔记</span>
+                        <span class="card-title">移动端总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -944,14 +893,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-29
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-05
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/git/" class="post-category">
-                                    git
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
                             
@@ -976,13 +925,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/29/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93/">
+                <a href="/2021/09/28/%E5%8A%9D%E9%80%80%E6%8C%87%E5%8D%97/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/007173302f8141de8741690833971124.png" class="responsive-img" alt="总结常用的一些类库">
+                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/c0b418d39a3444e997791a823bc6bea3.jpg" class="responsive-img" alt="劝退指南">
                         
-                        <span class="card-title">总结常用的一些类库</span>
+                        <span class="card-title">劝退指南</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -993,16 +942,12 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-28
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ERHA
                             
                         </span>
                     </div>
@@ -1251,7 +1196,7 @@
             <br> -->
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">32.7k</span>&nbsp;字
+                class="white-color">32.4k</span>&nbsp;字
             
             
             
