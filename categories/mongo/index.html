@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="分类: mongo, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="若有诗书藏在心，岁月从不败美人">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签 | 小羊站</title>
+    <title>分类: mongo | 小羊站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -335,7 +335,7 @@
     // 每天切换 banner 图.  Switch banner image every day.
     var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
     // $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-    // $('.bg-cover').css('background-image', 'url(https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/792a4b6934fc491b81342206e3192e59.png)');
+    // $('.bg-cover').css('background-image', 'url(https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/4f6bb6dd573d422ea9e798ecf62d4e1a.png)');
 
 </script>
 
@@ -347,82 +347,234 @@
 
     
 
-<div id="tags" class="container chip-container">
+<div id="category-cloud" class="container chip-container">
     <div class="card">
         <div class="card-content">
             <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
             </div>
             <div class="tag-chips">
                 
                 
-                <a href="/tags/%E7%AC%94%E8%AE%B0/" title="笔记: 12">
+                
+                <a href="/categories/%E5%89%8D%E7%AB%AF/" title="前端: 8">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="笔记" style="background-color: #F9EBEA;">笔记
-                        <span class="tag-length">12</span>
+                            style="background-color: #F9EBEA;">前端
+                        <span class="tag-length">8</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E7%88%B1/" title="爱: 1">
+                <a href="/categories/git/" title="git: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="爱" style="background-color: #F5EEF8;">爱
+                            style="background-color: #F5EEF8;">git
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/npm/" title="npm: 1">
+                <a href="/categories/%E7%94%9F%E6%B4%BB/" title="生活: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="npm" style="background-color: #D5F5E3;">npm
+                            style="background-color: #D5F5E3;">生活
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E4%BC%98%E5%8C%96/" title="优化: 1">
+                <a href="/categories/node/" title="node: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="优化" style="background-color: #E8F8F5;">优化
+                            style="background-color: #E8F8F5;">node
                         <span class="tag-length">1</span>
                     </span>
                 </a>
+                
+                
+                <a href="/categories/mongo/" title="mongo: 3">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            style="background-color: #FEF9E7;">mongo
+                        <span class="tag-length">3</span>
+                    </span>
+                </a>
+                
                 
             </div>
         </div>
     </div>
 </div>
 
-    
-    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-wordcloud" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
-<script type="text/javascript">
-    
-
-    $('#tag-wordcloud').jQCloud([{"text":"笔记","weight":12,"link":"/tags/笔记/"},{"text":"爱","weight":1,"link":"/tags/爱/"},{"text":"npm","weight":1,"link":"/tags/npm/"},{"text":"优化","weight":1,"link":"/tags/优化/"}], {
-        autoResize: true
-    });
-</script>
 
     
 
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/10/27/mongo%E9%AB%98%E7%BA%A7/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/202110121945263.jpg" class="responsive-img" alt="mongo聚合管道">
+                            
+                            <span class="card-title">mongo聚合管道</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                mongodb高级aggregate聚合管道使用聚合管道可以对集合中的文档进行变换和组合。 
+实际项目：表关联查询、数据的统计。
+MongoDB 中使用 db.COLLECTION_NAME.aggregate([{},…]) 方法 来构建
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-27
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/mongo/" class="post-category">
+                                    mongo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                            <span class="chip bg-color">笔记</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/10/23/mongo%E8%B6%85%E7%BA%A7%E7%94%A8%E6%88%B7%E8%AE%BE%E7%BD%AE/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/dd4aee16880411ebb6edd017c2d2eca2.jpg" class="responsive-img" alt="mongodb用户权限设置">
+                            
+                            <span class="card-title">mongodb用户权限设置</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                mongo用户权限配置1、启动 mongo
+2、 进入数据库 use admin
+3、 创建用户 
+db.createUser({
+    user:'admin', 
+    pwd:'123456', 
+    roles:[{role
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-23
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/mongo/" class="post-category">
+                                    mongo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                            <span class="chip bg-color">笔记</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/10/22/mongodb%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/007173302f8141de8741690833971124.png" class="responsive-img" alt="mongodb基本语法">
+                            
+                            <span class="card-title">mongodb基本语法</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                
+命令行(终端)启动命令
+mongod : 运行服务端
+mongo: 启动客户端
+
+
+查看帮助命令,默认端口,日志位置
+
+查看帮助：mongod –help
+查看是否启动成功：ps ajx|grep mongod
+默认端⼝：27017
+日志
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/mongo/" class="post-category">
+                                    mongo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                            <span class="chip bg-color">笔记</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
+
 
 
     <footer class="page-footer bg-color">
