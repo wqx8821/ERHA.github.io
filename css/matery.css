@@ -40,7 +40,7 @@ body {
     overflow-x: hidden;
     overflow-y: auto; */
     /* https://ae01.alicdn.com/kf/H21b5f6b8496141a1979a33666e1074d9x.jpg */
-    background: linear-gradient(60deg, rgba(255, 166, 150, 0.04) 5%, rgba(0, 229, 255, 0.037)) 0% 0% / cover, url("https://ae01.alicdn.com/kf/H18a4b998752a4ae68b8e85d432a5aef0l.png"), url("https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/202110121945263.jpg") 0px 0px;
+    background: linear-gradient(60deg, rgba(255, 166, 150, 0.04) 5%, rgba(0, 229, 255, 0.037)) 0% 0% / cover,url("https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/202110121945263.jpg") 0px 0px;
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
