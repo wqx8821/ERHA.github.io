@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="前端小白记, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="如何搭建青龙面板, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="若有诗书藏在心，岁月从不败美人">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>前端小白记 | 小羊站</title>
+    <title>如何搭建青龙面板 | 小羊站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -319,7 +319,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">前端小白记</h1>
+                    <h1 class="description center-align post-title">如何搭建青龙面板</h1>
                 </div>
             </div>
         </div>
@@ -450,8 +450,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                前端
+                            <a href="/categories/docker/" class="post-category">
+                                docker
                             </a>
                         
                     </div>
@@ -477,14 +477,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    903
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -499,7 +499,106 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <pre><code>建议:服务器大家用腾讯的轻量云就可以 现在优惠力度大 1h2g2m轻量云 50r一年 推荐用2h4g8m的 74r一年 还可以用来搭建v2免流
+购买地址 https://curl.qcloud.com/mZF3xXoO```
+
+教程开始了
+第一步
+```下载finalshell 连接服务器 相信这个大家都会```
+
+第二步
+搭建青龙面板的前提条件 安装docker
+```1.检查yum源且更新
+sudo yum check-update
+2.下载docker
+curl -sSL https://get.daocloud.io/docker | sh
+如果出现错误或者下载不了的换这个
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+3.启动docker
+sudo systemctl start docker
+4.查看docker状态
+sudo systemctl status docker
+启动成功的话 会有绿色的active(running)
+5.设置开机自启
+sudo systemctl enable docker```
+
+第三步
+搭建青龙面板
+1.拉取镜像
+```连接服务器后执行以下代码
+5700为面板端口 可以自己更改 两个都要改
+docker run -dit
+-v $pwd/ql/config:/ql/config
+-v $pwd/ql/log:/ql/log
+-v $pwd/ql/db:/ql/db
+-v $pwd/ql/scripts:/ql/scripts
+-v $pwd/ql/jbot:/ql/jbot
+-p 5700:5700
+-e ENABLE_HANGUP=true
+-e ENABLE_WEB_PANEL=true
+–name ql
+–hostname ql
+–restart always
+whyour/qinglong:latest```
+2.放行端口 修改密码
+```去服务器管理界面防火墙 有的是安全组放行5700端口，你自己改的什么就放行什么。
+下载winscp连接服务器 找到ql文件夹里面config打开 找到auth.json文件 修改密码 password后面是密码 自己修改```
+
+第四步
+```登录青龙面板
+浏览器打开http://ip:5700
+ip为你的服务器ip地址 端口根据自己修改的填写```
+
+第五步
+添加脚本 也就是所为的拉库
+1.点击青龙面板左侧的定时任务，点击右上角“添加定时”
+2.名称随便填
+```faker库
+命令
+ql repo https://ghproxy.com/https://github.com/shufflewzc/faker2.git “jd_|jx_|gua_|jddj_|getJDCookie” “activity|backUp” “jd[_]|USER|utils|ZooFaker_Necklace.js|JDJRValidator_Pure|sign_graphics_validate”
+定时规则
+30 2,8,14,20,23 * * *```
+3.点击运行按钮 就可以了
+
+第六步
+添加账号
+```1.点击左上角三道杠
+2.点击环境变量
+3.点击右上角添加变量
+名称：JD_COOKIE 名称不可更改
+
+值填写cookie
+pt_key=*******************;pt_pin=********;
+注意：分号是英文的，中间没有空格。
+最后怎么教大家抓cookie```
+
+第七步
+安装依赖环境 必须安装 否则有些脚本运行不了 ，以下命令一个一个跑。跑完之后全选所有脚本 点击批量运行 就可以了。
+
+```docker exec -it ql bash -c “apk add --no-cache build-base g++ cairo-dev pango-dev giflib-dev &amp;&amp; cd scripts &amp;&amp; npm install canvas --build-from-source”```
+2.
+```docker exec -it ql bash -c “cd scripts &amp;&amp; npm i -S png-js”```
+3.
+```docker exec -it ql bash -c “npm install axios date-fns”```
+4.
+```docker exec -it ql bash -c “npm install png-js”```
+5.
+```docker exec -it ql bash -c “pnpm i png-js”```
+6.
+```docker exec -it ql bash -c “pip3 install requests”```
+7.
+```docker exec -it ql bash -c “apk add --no-cache build-base g++ cairo-dev pango-dev giflib-dev &amp;&amp; cd scripts &amp;&amp; npm install canvas --build-from-source”```
+8.
+```docker exec -it ql bash -c “apk add python3 zlib-dev gcc jpeg-dev python3-dev musl-dev freetype-dev”```
+9.
+```docker exec -it ql bash -c “cd /ql/scripts/ &amp;&amp; apk add --no-cache build-base g++ cairo-dev pango-dev giflib-dev &amp;&amp; npm i &amp;&amp; npm i -S ts-node typescript @types/node date-fns axios png-js canvas --build-from-source”```
+10.
+yum install wget unzip -y cd root/ql/scripts wget https://ghproxy.com/https://github.com/shufflewzc/faker2/releases/download/0.0.1/utils.zip &amp;&amp; unzip utils.zip
+
+如何抓cookie
+手机用户 下载alook浏览器 登录jd官网，登陆之后 点击 菜单 工具箱 开发者工具 cookies获取 安卓 苹果通用 然后按照上面的教程 输入就好了
+</code></pre>
+
                 
             </div>
             <hr/>
@@ -1199,7 +1298,7 @@
             <br> -->
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.8k</span>&nbsp;字
+                class="white-color">34.7k</span>&nbsp;字
             
             
             

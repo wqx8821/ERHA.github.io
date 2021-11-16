@@ -29,16 +29,16 @@
     
     
     <entry>
-      <title>前端小白记</title>
+      <title>如何搭建青龙面板</title>
       <link href="/2021/11/16/%E5%BF%83de/"/>
       <url>/2021/11/16/%E5%BF%83de/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<pre><code>建议:服务器大家用腾讯的轻量云就可以 现在优惠力度大 1h2g2m轻量云 50r一年 推荐用2h4g8m的 74r一年 还可以用来搭建v2免流购买地址 https://curl.qcloud.com/mZF3xXoO```教程开始了第一步```下载finalshell 连接服务器 相信这个大家都会```第二步搭建青龙面板的前提条件 安装docker```1.检查yum源且更新sudo yum check-update2.下载dockercurl -sSL https://get.daocloud.io/docker | sh如果出现错误或者下载不了的换这个curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun3.启动dockersudo systemctl start docker4.查看docker状态sudo systemctl status docker启动成功的话 会有绿色的active(running)5.设置开机自启sudo systemctl enable docker```第三步搭建青龙面板1.拉取镜像```连接服务器后执行以下代码5700为面板端口 可以自己更改 两个都要改docker run -dit-v $pwd/ql/config:/ql/config-v $pwd/ql/log:/ql/log-v $pwd/ql/db:/ql/db-v $pwd/ql/scripts:/ql/scripts-v $pwd/ql/jbot:/ql/jbot-p 5700:5700-e ENABLE_HANGUP=true-e ENABLE_WEB_PANEL=true–name ql–hostname ql–restart alwayswhyour/qinglong:latest```2.放行端口 修改密码```去服务器管理界面防火墙 有的是安全组放行5700端口，你自己改的什么就放行什么。下载winscp连接服务器 找到ql文件夹里面config打开 找到auth.json文件 修改密码 password后面是密码 自己修改```第四步```登录青龙面板浏览器打开http://ip:5700ip为你的服务器ip地址 端口根据自己修改的填写```第五步添加脚本 也就是所为的拉库1.点击青龙面板左侧的定时任务，点击右上角“添加定时”2.名称随便填```faker库命令ql repo https://ghproxy.com/https://github.com/shufflewzc/faker2.git “jd_|jx_|gua_|jddj_|getJDCookie” “activity|backUp” “jd[_]|USER|utils|ZooFaker_Necklace.js|JDJRValidator_Pure|sign_graphics_validate”定时规则30 2,8,14,20,23 * * *```3.点击运行按钮 就可以了第六步添加账号```1.点击左上角三道杠2.点击环境变量3.点击右上角添加变量名称：JD_COOKIE 名称不可更改值填写cookiept_key=*******************;pt_pin=********;注意：分号是英文的，中间没有空格。最后怎么教大家抓cookie```第七步安装依赖环境 必须安装 否则有些脚本运行不了 ，以下命令一个一个跑。跑完之后全选所有脚本 点击批量运行 就可以了。```docker exec -it ql bash -c “apk add --no-cache build-base g++ cairo-dev pango-dev giflib-dev &amp;&amp; cd scripts &amp;&amp; npm install canvas --build-from-source”```2.```docker exec -it ql bash -c “cd scripts &amp;&amp; npm i -S png-js”```3.```docker exec -it ql bash -c “npm install axios date-fns”```4.```docker exec -it ql bash -c “npm install png-js”```5.```docker exec -it ql bash -c “pnpm i png-js”```6.```docker exec -it ql bash -c “pip3 install requests”```7.```docker exec -it ql bash -c “apk add --no-cache build-base g++ cairo-dev pango-dev giflib-dev &amp;&amp; cd scripts &amp;&amp; npm install canvas --build-from-source”```8.```docker exec -it ql bash -c “apk add python3 zlib-dev gcc jpeg-dev python3-dev musl-dev freetype-dev”```9.```docker exec -it ql bash -c “cd /ql/scripts/ &amp;&amp; apk add --no-cache build-base g++ cairo-dev pango-dev giflib-dev &amp;&amp; npm i &amp;&amp; npm i -S ts-node typescript @types/node date-fns axios png-js canvas --build-from-source”```10.yum install wget unzip -y cd root/ql/scripts wget https://ghproxy.com/https://github.com/shufflewzc/faker2/releases/download/0.0.1/utils.zip &amp;&amp; unzip utils.zip如何抓cookie手机用户 下载alook浏览器 登录jd官网，登陆之后 点击 菜单 工具箱 开发者工具 cookies获取 安卓 苹果通用 然后按照上面的教程 输入就好了</code></pre>]]></content>
       
       
       <categories>
           
-          <category> 前端 </category>
+          <category> docker </category>
           
       </categories>
       
