@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ES6入门学习, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="面试之js基础, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="若有诗书藏在心，岁月从不败美人">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ES6入门学习 | 小羊站</title>
+    <title>面试之js基础 | 小羊站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -319,7 +319,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ES6入门学习</h1>
+                    <h1 class="description center-align post-title">面试之js基础</h1>
                 </div>
             </div>
         </div>
@@ -438,23 +438,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">笔记</span>
+                            <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                <span class="chip bg-color">面试</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                前端
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -463,28 +454,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-08
+                    2021-12-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-24
+                    2021-12-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    914
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    8 分
                 </div>
                 
 
@@ -499,120 +490,241 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="RegExp"><a href="#RegExp" class="headerlink" title="RegExp"></a>RegExp</h1><p><a target="_blank" rel="noopener" href="https://tool.oschina.net/uploads/apidocs/jquery/regexp.html">正则表达式手册</a></p>
-<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">MDN</a></p>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903487155732494">JS 正则表达式完整教程（略长）</a></p>
-<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/chapter/13619">腾讯云文档</a></p>
-<h2 id="1-1-匹配标志"><a href="#1-1-匹配标志" class="headerlink" title="1.1 匹配标志"></a>1.1 匹配标志</h2><table>
-<thead>
-<tr>
-<th>标志</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>g</td>
-<td>全局搜索</td>
-</tr>
-<tr>
-<td>m</td>
-<td>多行匹配</td>
-</tr>
-<tr>
-<td>i</td>
-<td>忽略大小写</td>
-</tr>
-<tr>
-<td>y</td>
-<td>执行“粘性(<code>sticky</code>)”搜索,匹配从目标字符串的当前位置开始(lastIndex)</td>
-</tr>
-<tr>
-<td>s</td>
-<td>允许<code>.</code> 匹配换行符</td>
-</tr>
-<tr>
-<td>u</td>
-<td>使用 unicode 码的模式进行匹配</td>
-</tr>
-</tbody></table>
-<ul>
-<li>正则对象都有个 lastIndex 属性，只读（但是 js 没有严格语法限制，可以修改），只有正则使用了 global 标志才会在匹配成功是修改 lastIndex 的值，失败置 0。使用 sticky 标志，只会从正则的 lastIndex 开始匹配，但是不会修改它的值。</li>
-<li>多行匹配只有在字符串中有换行符时才有意义，有换行符时^、$表示每行开头结尾，如果不使用^或$那么也没必要使用 m 标志。</li>
-<li>除了 i，其他基本没使用过。</li>
-</ul>
-<h2 id="1-2-匹配模式"><a href="#1-2-匹配模式" class="headerlink" title="1.2 匹配模式"></a>1.2 匹配模式</h2><p>匹配字符或者匹配位置。</p>
-<h2 id="1-3-RegExp-和-String-的一些常用方法"><a href="#1-3-RegExp-和-String-的一些常用方法" class="headerlink" title="1.3 RegExp 和 String 的一些常用方法"></a>1.3 RegExp 和 String 的一些常用方法</h2><p>String：</p>
-<blockquote>
-<p>replace<br>search<br>match<br>matchAll<br>split</p>
-</blockquote>
-<p>RegExp：</p>
-<blockquote>
-<p>test<br>exec<br>compile</p>
-</blockquote>
-<p>正则实际匹配结果看 match 和 matchAll，test 只是判断字符串是否满足正则要求。<br>search 相当于 indexOf 于 Array，找到满足正则的第一个字符集首字符位置，否则返回-1。<br>exec 开启 g 或 y 每次调用会修改 lastIndex。<br>matchAll 返回的是迭代器。</p>
-<p>重点说 replace：str.replace(regexp|substr, newSubStr|function)</p>
-<blockquote>
-<p>第一个参数：可以使正则，会处理全部匹配的字符。可以使字符串，只处理第一个相等字符。<br>第二个参数：可以使特殊字符串，$&amp;表示被整个正则匹配到的字符，可以修饰字符串；$n 表示每个子表达式匹配的字符，可以重新组合或者提取字符串（子表达式没匹配到的会被忽略）；$`、$‘表示匹配字符左边、右边全部类容，可以修饰字符串。可以使函数，参数是[match 的字符，…子表达式匹配的结果,位置，输入值]，返回值替换匹配字符，如果开启 g 或 m 会多次调用。</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>变量名</th>
-<th>代表值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>$$</td>
-<td>插入一个 “$”</td>
-</tr>
-</tbody></table>
-<h2 id="1-4-问题"><a href="#1-4-问题" class="headerlink" title="1.4 问题"></a>1.4 问题</h2><ol>
-<li><p>一道面试题<br>![一道面试题][reg_g]</p>
-<details>
-  <summary><font color="#56b6a7">答案</font></summary>
-  <pre><code>  
-true
-true
-false
-true
-// 在设置g或y模式，RegExp 对象是有状态的。他们会将上次成功匹配后的位置记录在 lastIndex 属性中。
-// 全局匹配会记录上次匹配到的位置，然后下一次从上一次的位置开始匹配，失败时会重置lastIndex为0。
-  </code></pre>
-</details></li>
-<li><p>一道面试题：使用正则实现 String.trim()</p>
-<details>
-  <summary><font color="#56b6a7">答案</font></summary>
-  <pre><code>  
-String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
-  </code></pre>
-</details></li>
-<li><p>实现一个正则：不能以空白字符开头和结束，至少一个字符</p>
-<details>
-  <summary><font color="#56b6a7">我的</font></summary>
-  <pre><code>  
- /^\S(.*\S)?$/
- /^\S{1}$|^\S+.*\S+$/g
-  </code></pre>
-</details></li>
-<li><p>一道面试题：使用正则实现 String.trim()</p>
-</li>
-<li><p>不同系统换行符的区：windows：\n\r，mac：\r，Unix：\n。不同系统处理文件时要注意。</p>
-</li>
-<li><p>表达式里，有些特殊符号要在前面加\转义。比如：根据一个字符串生成一个正则，就需要转义正则里的全部特殊符号，不然直接生成正则是按转移后的字符生成的。</p>
-</li>
-<li><p>讲解两个正则：</p>
-</li>
-</ol>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 手机号</span>
-<span class="token regex">/^((\+|00)86)?1((3[\d])|(4[5,6,7,9])|(5[0-3,5-9])|(6[5-7])|(7[0-8])|(8[\d])|(9[1,8,9]))\d{8}$/</span>
-<span class="token comment" spellcheck="true">// 密码强度校验：最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符</span>
-<span class="token regex">/^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&amp;*? ]).*$/</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>1.5 总结</p>
+                <h1 id="面试—js"><a href="#面试—js" class="headerlink" title="面试—js"></a>面试—js</h1><h2 id="1、堆栈内存及闭包作用域"><a href="#1、堆栈内存及闭包作用域" class="headerlink" title="1、堆栈内存及闭包作用域"></a>1、堆栈内存及闭包作用域</h2><h3 id="js的8种数据类型及区别"><a href="#js的8种数据类型及区别" class="headerlink" title="js的8种数据类型及区别"></a>js的8种数据类型及区别</h3><p> （函数的变量提升高于var）==对象的属性值  数字和字符串不能相等（数字会被隐式转换为字符串）==</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 值类型（基本类型）  —— 栈内存</span>
+字符串（String）
+数字（Number）
+布尔（Boolean）
+空（<span class="token keyword">null</span>）
+未定义（Undefined）
+创建唯一值（Symbol）
+<span class="token comment" spellcheck="true">// 引用数据类型   ——堆内存</span>
+对象 （Object）
+数组（Array）
+函数（Function）
+
+<span class="token comment" spellcheck="true">// 简单数据类型没有修改的说法，只能被替代（原先数据在栈中被回收）</span>
+<span class="token comment" spellcheck="true">// 引用数据类型没有自己的值 引用数据类型的数据是公共的（堆内存中）</span>
+<span class="token comment" spellcheck="true">// 栈中放的是值 对于引用数据类型放的 指针</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="和-的区别"><a href="#和-的区别" class="headerlink" title="== 和===的区别"></a>== 和===的区别</h3><p>==    与 ===是不同的,一个是判断值是否相等,一个是判断值及类型是否完全相等</p>
+<p>== 比较时会进行强制转换 ： 转换规则如下</p>
+<pre><code>null == undefined 相等 但与其他值都不想等
+对象 == 字符串 ， 对象会toString（）变为字符串
+NaN == NaN 不相等
+其他的都会转换为数字
+</code></pre>
+<h3 id="变量提升机制（预编译）"><a href="#变量提升机制（预编译）" class="headerlink" title="变量提升机制（预编译）"></a>变量提升机制（预编译）</h3><p>全局预编译</p>
 <ol>
-<li>与：/ppp/，或：/p|p|p/，非：/[^ppp]/。</li>
-<li>正则终究匹配的是字符或者位置。</li>
+<li>创建GO对象</li>
+<li>找声明变量 将<code>函数名</code>作为<code>GO对象的属性名</code>  值为undefined</li>
+<li>寻找函数声明 将值赋予函数体 </li>
 </ol>
+<p>函数预编译</p>
+<ol>
+<li>创建AO对象</li>
+<li>找 <code>形参和变量声明</code> 将变量和形参名 当作 AO对象的属性 值为undefined</li>
+<li>实参形参统一</li>
+<li>在函数体里寻找 函数声明 将值赋予函数体</li>
+</ol>
+<h3 id="作用域和作用域链"><a href="#作用域和作用域链" class="headerlink" title="作用域和作用域链"></a>作用域和作用域链</h3><p>作用域： AO(函数作用域)　GO(全局作用域)</p>
+<p>作用域链: AO, GO，　AO和GO的集合</p>
+<p>​        作用域都有上下级关系，上下级关系确定函数在哪个作用域下创建，变量取值都会在当前作用域中查找，如果没有查到就会像上级作用域查找，直到查到全局作用域，这个查找的过程叫做作用域链</p>
+<p>扩展：nodejs中的作用域</p>
+<h3 id="为什么需要闭包"><a href="#为什么需要闭包" class="headerlink" title="为什么需要闭包"></a>为什么需要闭包</h3><p>​    ==闭包的两大作用 ： 保护/保存==</p>
+<p>​        由于垃圾回收机制 ，局部变量无法共享和长久的保存，全局变量又可能造成变量污染，于是我们希望出现一种机制可以长久的保存局部变量，又不会造成变量污染，</p>
+<p>​        闭包就能解决这样的问题(闭包出现的 原因)，能够长久的保存局部变量在内存，而不会造成全居污染（闭包，函数内返回的是一个函数，并且该函数对局部变量进行的引用，并在外部被赋为全局变量==不会被回收的原因==）</p>
+<p>​    不必要的闭包会增加内存的消耗</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 经典的闭包</span>
+<span class="token keyword">function</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+   <span class="token keyword">function</span> <span class="token function">f2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       a<span class="token operator">++</span><span class="token punctuation">;</span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+   <span class="token punctuation">}</span>
+   <span class="token keyword">return</span> f2<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> f <span class="token operator">=</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 11</span>
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 12</span>
+
+<span class="token comment" spellcheck="true">// 经典闭包简写</span>
+<span class="token keyword">function</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+   <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       a<span class="token operator">++</span><span class="token punctuation">;</span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> f <span class="token operator">=</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="防抖节流"><a href="#防抖节流" class="headerlink" title="防抖节流"></a>防抖节流</h3><p>​      防抖： 当持续触发事件，一定时间内没有再触发事件，事件才会执行一次，如果设定的时间来到之前 又一次触发事件 就重新进行延时；例：</p>
+<ul>
+<li>如果在200ms内没有再次触发滚动事件，那么就执行函数</li>
+<li>如果在200ms内再次触发滚动事件，那么当前的计时取消，重新开始计时</li>
+</ul>
+<p><strong>效果</strong>：如果短时间内大量触发同一事件，只会执行一次函数。</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 防抖类似王者荣耀回城 打断重新计时</span>
+
+<span class="token keyword">function</span>                 <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'show'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> debounce <span class="token punctuation">(</span>func<span class="token punctuation">,</span> time<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      func<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> time<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> debounceShowLog <span class="token operator">=</span> <span class="token function">debounce</span><span class="token punctuation">(</span>showLog<span class="token punctuation">,</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">debounceShowLog</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>​    <strong>节流</strong>：在规定时间内函数不会触发，必须等够时间才能触发</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 类似于王者英雄技能，释放过后必须冷却结束才可以再次触发</span>
+
+<span class="token keyword">function</span> canRun <span class="token punctuation">(</span>func<span class="token punctuation">,</span> time<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      func<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      flag <span class="token operator">=</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> time<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> canRunShowLog <span class="token operator">=</span> <span class="token function">canRun</span><span class="token punctuation">(</span>showLog<span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">canRunShowLog</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="浅拷贝深拷贝"><a href="#浅拷贝深拷贝" class="headerlink" title="浅拷贝深拷贝"></a>浅拷贝深拷贝</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 浅拷贝与赋值的区别</span>
+赋值：当我们把一个对象赋值给一个新的变量，赋的是该对象在栈中的地址，而不是栈中的数据。两个对象指向同一个存储空间。
+浅拷贝： 重新堆中创建内存，拷贝前后对象的<span class="token template-string"><span class="token string">`基本数据类型`</span></span>互不影响，但对象若有深层次的（<span class="token template-string"><span class="token string">`引用数据类型`</span></span>）拷贝的仍然是地址，由于共享同一块内存会互相影响。
+深拷贝：在堆中重新开辟一个区域存放对象，对对象的更深层次的对象进行<span class="token template-string"><span class="token string">`递归拷贝`</span></span>，完成后两个对象互不影响。
+<span class="token comment" spellcheck="true">// 浅拷贝</span>
+在多维数据处理拷贝中，浅拷贝只为第一层开辟了新的内存空间，拷贝后的对象操作更深层次的数据时会改变原数据。因此需要进行深拷贝
+<span class="token function">原始数据</span><span class="token punctuation">(</span>三层数据<span class="token punctuation">)</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name： <span class="token string">"lcy"</span><span class="token punctuation">,</span>
+    NAN<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    dx<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        age<span class="token punctuation">:</span> <span class="token number">18</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// 简单浅拷贝实现 </span>
+<span class="token comment" spellcheck="true">// let obj2 = {...obj}</span>
+<span class="token comment" spellcheck="true">// Object.assgin() </span>
+<span class="token comment" spellcheck="true">// Array.prototype.concat() </span>
+<span class="token comment" spellcheck="true">// Array.peototype.slice()</span>
+<span class="token comment" spellcheck="true">// es5方法</span>
+<span class="token keyword">let</span> obj2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>obj<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+    obj2<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 深拷贝 </span>
+方法一：JSON<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token punctuation">)</span>将字符串改变为对象 JSON<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token punctuation">)</span>将对象转变为字符串
+<span class="token keyword">let</span> obj2 <span class="token operator">=</span> JSON<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>JSON<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//问题： 原始数据内若有函数，日期对象，正则表达式会出现问题，无法拷贝copyObj对象原型链上的属性和方法，当数据的层次很深，会栈溢出，函数和正则表达式会替换为空对象，日期对象会变为字符串（理想的是变为标准日期对象）</span>
+
+方法二：因此采用递归的方法更为合适
+<span class="token keyword">function</span> <span class="token function">deepClone</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 过滤特殊情况</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>obj <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> obj <span class="token operator">!=</span> <span class="token string">'object'</span><span class="token punctuation">)</span> <span class="token keyword">return</span> obj<span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>obj <span class="token keyword">instanceof</span> <span class="token class-name">RegExp</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>obj <span class="token keyword">instanceof</span> <span class="token class-name">Date</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 不直接创建对象的目的：克隆的结果和之前的保存相同的所属类</span>
+    <span class="token keyword">let</span> newobj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">obj<span class="token punctuation">.</span>constructor</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">hasOwnproperty</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            newobj<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">deepClone</span><span class="token punctuation">(</span>obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> newobj<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="2、面向对象（oop）和this处理"><a href="#2、面向对象（oop）和this处理" class="headerlink" title="2、面向对象（oop）和this处理"></a>2、面向对象（oop）和this处理</h2><p>单例设计模式</p>
+<p>类和实例</p>
+<h3 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h3><h4 id="原型和原型链的概念"><a href="#原型和原型链的概念" class="headerlink" title="原型和原型链的概念"></a><strong>原型和原型链的概念</strong></h4><p>每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，于是就这样一直找下去</p>
+<h4 id="原型和原型链的关系"><a href="#原型和原型链的关系" class="headerlink" title="原型和原型链的关系"></a><strong>原型和原型链的关系</strong></h4><pre><code>instance.constructor.prototype = instance.__proto__
+复制代码
+</code></pre>
+<h4 id="原型和原型链的特点"><a href="#原型和原型链的特点" class="headerlink" title="原型和原型链的特点"></a><strong>原型和原型链的特点</strong></h4><p>JavaScript对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本。当我们修改原型时，与之相关的对象也会继承这一改变</p>
+<p>当我们需要一个属性的时，Javascript引擎会先看当前对象中是否有这个属性， 如果没有的</p>
+<p>就会查找他的Prototype对象是否有这个属性，如此递推下去，一直检索到 Object 内建对象</p>
+<p>new 运算符的实现机制</p>
+<p>call/apply/bind</p>
+<p>constructor构造函数模式</p>
+<h3 id="this对象"><a href="#this对象" class="headerlink" title="this对象"></a>this对象</h3><p>​    this总是指向函数的直接调用者（而非间接调用者）</p>
+<p>​    如果有new关键字，this指向new出来的那个对象</p>
+<p>​    在事件中，this指向触发这个事件的对象，特殊的是，IE中的attachEvent中的this总是指向全局对象Window</p>
+<p>js的四大数据类型的检测方案</p>
+<p>js的四大继承方案（深浅拷贝）</p>
+<h2 id="3、DOM-BOM及事件处理机制"><a href="#3、DOM-BOM及事件处理机制" class="headerlink" title="3、DOM/BOM及事件处理机制"></a>3、DOM/BOM及事件处理机制</h2><p>DOM事件级别</p>
+<ul>
+<li>DOM0   element.onclick = function() {}</li>
+<li>DOM2  element.addEventListener(‘click’, function(){})</li>
+<li>DOM3  element.addEventListener(‘click’, function(){}) </li>
+<li>DOM3 相比于DOM2多了很多事件类型（如鼠标）</li>
+</ul>
+<p><code>addEventListener(‘onclick’,function(){}, false)</code>  第三个参数默认为false 表示冒泡执行阶段， 改为true则为捕获阶段</p>
+<p>DOM事件模型</p>
+<p>​            <code>捕获/冒泡</code></p>
+<p>DOM事件流</p>
+<p>​            <code>用户操作-&gt; （捕获）-&gt; (目标阶段) -&gt; (冒泡)</code>  三个阶段</p>
+<p>事件传播机制（dom事件的捕获流程）</p>
+<p>​            获取html标签的方法： document.documentElement</p>
+<p>​            window   -&gt;  document -&gt; html -&gt; body -&gt;  …  -&gt; 目标对象</p>
+<p>事件代理 （事件委托）</p>
+<p>​            事件委托就是利用事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件</p>
+<p>​            使用  将事件监听绑定到父元素上    .target() 表示被点击的子元素</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span>ul<span class="token operator">></span>
+<span class="token operator">&lt;</span>li<span class="token operator">></span><span class="token number">1</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>  
+<span class="token operator">&lt;</span>li<span class="token operator">></span><span class="token number">2</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>  
+<span class="token operator">&lt;</span>li<span class="token operator">></span><span class="token number">3</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>  
+<span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+
+ul<span class="token punctuation">.</span>oncllick <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e <span class="token operator">=</span> e <span class="token operator">||</span> window<span class="token punctuation">.</span>event<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// e.target 表示被点击的元素</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>innerHTML<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Event常见事件对象</p>
+<ol>
+<li>event.preventDefault()  阻止默认事件</li>
+<li>event.stopPropagation()  阻止冒泡</li>
+<li>event.stoplmmediatePropagation()  </li>
+<li>event.currentTarget  当前被点击的元素</li>
+<li>event.target 当前被绑定的事件</li>
+</ol>
+<p>自定义事件</p>
+<ul>
+<li>通过 let eve = new Event(‘事件名’) 自定义事件</li>
+<li>使用 ev.addEventListener(‘事件名’，处理函数function)</li>
+<li>.dispatchEvent(eve)触发事件</li>
+</ul>
+<p>DOM/BOM的核心操作</p>
+<p>拖拽和拖拽插件</p>
+<p>发布者订阅者模式</p>
+<p>浏览器底层渲染机制</p>
+<p>DOM的回流渲染机制</p>
 
                 
             </div>
@@ -639,7 +751,7 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/10/08/%E6%AD%A3%E5%88%99%E8%AE%B0%E5%BD%95/">http://example.com/2021/10/08/%E6%AD%A3%E5%88%99%E8%AE%B0%E5%BD%95/</a>
+                    <a href="http://example.com/2021/12/19/%E9%9D%A2%E8%AF%95%E4%B9%8Bjs%E5%9F%BA%E7%A1%80/">http://example.com/2021/12/19/%E9%9D%A2%E8%AF%95%E4%B9%8Bjs%E5%9F%BA%E7%A1%80/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -677,8 +789,8 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">笔记</span>
+                                <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                    <span class="chip bg-color">面试</span>
                                 </a>
                             
                         </div>
@@ -722,17 +834,18 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/10/11/es6%E5%88%9D%E5%A7%8B%E7%AC%94%E8%AE%B0/">
+                <a href="/2021/12/19/%E9%9D%A2%E8%AF%95%E4%B9%8Bjs%E5%9F%BA%E7%A1%80/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/202110141145051.jpg" class="responsive-img" alt="ES6入门学习">
+                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/202110141145377.jpg" class="responsive-img" alt="面试之js基础">
                         
-                        <span class="card-title">ES6入门学习</span>
+                        <span class="card-title">面试之js基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -742,26 +855,23 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-19
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ERHA
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
                     </a>
                     
                 </div>
@@ -775,13 +885,13 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/10/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B8%80%E4%BA%9B/">
+                <a href="/2021/12/19/%E9%9D%A2%E8%AF%95%E4%B9%8Bcss/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/202110141145481.jpg" class="responsive-img" alt="移动端总结">
+                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/202110141153207.jpg" class="responsive-img" alt="面试之css">
                         
-                        <span class="card-title">移动端总结</span>
+                        <span class="card-title">面试之css</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -792,16 +902,12 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-19
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ERHA
                             
                         </span>
                     </div>
@@ -809,8 +915,8 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
                     </a>
                     
                 </div>
