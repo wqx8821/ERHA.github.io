@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="node操作mongo, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="面试之http, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="若有诗书藏在心，岁月从不败美人">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>node操作mongo | 小羊站</title>
+    <title>面试之http | 小羊站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -319,7 +319,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">node操作mongo</h1>
+                    <h1 class="description center-align post-title">面试之http</h1>
                 </div>
             </div>
         </div>
@@ -438,23 +438,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">笔记</span>
+                            <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                <span class="chip bg-color">面试</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/node/" class="post-category">
-                                node
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -463,28 +454,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-28
+                    2021-11-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-16
+                    2021-12-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    611
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    6 分
                 </div>
                 
 
@@ -499,147 +490,224 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="node操作mongodb"><a href="#node操作mongodb" class="headerlink" title="node操作mongodb"></a>node操作mongodb</h2><h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><pre class="line-numbers language-js"><code class="language-js">npm install mongodb <span class="token operator">--</span>save 
-<span class="token comment" spellcheck="true">// 或者</span>
-cnpm install mongodb <span class="token operator">--</span>save 
-<span class="token comment" spellcheck="true">// 或者</span>
-yarn add mongodb
+                <h2 id="网络协议"><a href="#网络协议" class="headerlink" title="网络协议"></a>网络协议</h2><h3 id="网络分层"><a href="#网络分层" class="headerlink" title="网络分层"></a>网络分层</h3><ul>
+<li>目前网络分层可分为两种：OSI 模型和 TCP/IP 模型</li>
+</ul>
+<p>OSI七层模型</p>
+<p>​    <code>物理层——数据链路层——网络层——传输层——会话层——表示层——应用层</code></p>
+<p>TCP的层级</p>
+<p>​    <code>应用层——TCP传输控制层——IP网络层——链路层</code></p>
+<h3 id="常见状态码"><a href="#常见状态码" class="headerlink" title="常见状态码"></a>常见状态码</h3><p><strong>区分状态码</strong><br>     1××开头  - 信息提示<br>     2××开头  - 请求成功<br>     3××开头  - 请求被重定向<br>     4××开头  - 请求错误<br>     5××开头  - 服务器错误</p>
+<p><strong>常见状态码</strong><br>     200 - 请求成功，Ajax 接受到信息了<br>     400 - 服务器不理解请求<br>     403 - 服务器拒绝请求<br>     404 - 请求页面错误<br>     500 - 服务器内部错误，无法完成请求</p>
+<h2 id="HTTP协议类"><a href="#HTTP协议类" class="headerlink" title="HTTP协议类"></a>HTTP协议类</h2><h3 id="主要特点（半双工）"><a href="#主要特点（半双工）" class="headerlink" title="主要特点（半双工）"></a>主要特点（半双工）</h3><ul>
+<li>无连接： 连接一次就会断开 不会保持连接</li>
+<li>无状态 ：客户端和服务端是独立的 http协议只帮忙连接传输 （引出token，cookie，session）（引出本地存储）</li>
+<li>简单快速 </li>
+<li>灵活 ： 通过配置头部信息可以控制不同数据的传输</li>
+</ul>
+<p>报文： 请求报文 ： 请求行- 请求头- 空行- 请求体</p>
+<p>​              响应报文： 状态行- 响应头- 空行- 响应体</p>
+<h3 id="http方法"><a href="#http方法" class="headerlink" title="http方法"></a>http方法</h3><ul>
+<li>GET            获取资源</li>
+<li>POST          传输资源</li>
+<li>PUT             更新资源</li>
+<li>DELETE      删除资源</li>
+<li>HEAD          获取报文首部</li>
+</ul>
+<h3 id="GET和POST的主要区别"><a href="#GET和POST的主要区别" class="headerlink" title="GET和POST的主要区别"></a>GET和POST的主要区别</h3><ul>
+<li>GET在浏览器回退是无害的，POST则会重新请求</li>
+<li>GET产生的URL地址可以被收藏， POST不行</li>
+<li>GET请求会被浏览器主动缓存，POST不会</li>
+<li>GET请求参数会保存在浏览器历史记录中，POST中参数不会保留</li>
+<li>参数传递的位置不同，GET在URL中，POST在请求体中</li>
+</ul>
+<h3 id="什么时候用post"><a href="#什么时候用post" class="headerlink" title="什么时候用post"></a>什么时候用post</h3><p>​        post一般用于修改服务器上的资源，对所发送的信息没有限制。比如</p>
+<p>​        1、无法使用缓存文件（更新服务器上的文件或数据库）<br>​        2、向服务器发送大量数据（POST 没有数据量限制）<br>​        3、发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠</p>
+<h2 id="TCP-UDP"><a href="#TCP-UDP" class="headerlink" title="TCP/ UDP"></a>TCP/ UDP</h2><p>TCP三握手四挥手</p>
+<h2 id="浏览器如何运作"><a href="#浏览器如何运作" class="headerlink" title="浏览器如何运作"></a>浏览器如何运作</h2><h2 id="跨域解决方案"><a href="#跨域解决方案" class="headerlink" title="跨域解决方案"></a>跨域解决方案</h2><p>同源策略</p>
+<h3 id="CORS跨域资源共享"><a href="#CORS跨域资源共享" class="headerlink" title="CORS跨域资源共享"></a>CORS跨域资源共享</h3><pre class="line-numbers language-js"><code class="language-js">会问；项目是怎么部署的
+<span class="token comment" spellcheck="true">// CORS跨域资源共享</span>
+官方跨域解决方案，特点是不需要客户端做任何特殊操作，完全在服务器中进行处理，支持<span class="token keyword">get</span>和post请求。跨域资源共享标准新增一组HTTP首部字段，
+CORS怎么工作的？
+    CORS是通过设置一个响应头来告诉浏览器，该请求允许跨域，浏览器收到响应后会对响应放行。
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="node引入连接mongodb"><a href="#node引入连接mongodb" class="headerlink" title="node引入连接mongodb"></a>node引入连接mongodb</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 引入 mongodb</span>
-<span class="token keyword">const</span> <span class="token punctuation">{</span>MongoClient<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongodb'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h3 id="前台使用-proxy"><a href="#前台使用-proxy" class="headerlink" title="前台使用 proxy"></a>前台使用 proxy</h3><p><code>vue.config.js</code>中 ==注意写完后重启项目==</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 定义一个对象</span>
+<span class="token keyword">let</span> proxyObj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// 在指定路径下配置不同的 配置  如 ‘/’下</span>
 
-<span class="token comment" spellcheck="true">// 定义数据库连接的地址</span>
-<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'mongodb://localhost:27017'</span><span class="token punctuation">;</span> 
-<span class="token comment" spellcheck="true">// const url = 'mongodb://admin:123456@localhost:27017/'; 有密码连接方式 admin 表示用户名，123456 表示密码</span>
-
-<span class="token comment" spellcheck="true">// 定义要操作的数据库</span>
-<span class="token keyword">const</span> dbName <span class="token operator">=</span> <span class="token string">'itying'</span><span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">// 连接数据库</span>
-MongoClient<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span> useUnifiedTopology<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>client<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-  <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token keyword">return</span><span class="token punctuation">;</span> 
-  <span class="token punctuation">}</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"连接成功"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token comment" spellcheck="true">// 获取 db 对象 </span>
-  <span class="token keyword">const</span> db <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">db</span><span class="token punctuation">(</span>dbName<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-
-  <span class="token comment" spellcheck="true">// 操作完数据库后，一定要记得关闭</span>
-  client<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="node-对数据进行增删改查"><a href="#node-对数据进行增删改查" class="headerlink" title="node 对数据进行增删改查"></a>node 对数据进行增删改查</h3><h4 id="Nodejs-查找-MongoDb-数据库的数据"><a href="#Nodejs-查找-MongoDb-数据库的数据" class="headerlink" title="Nodejs 查找 MongoDb 数据库的数据"></a>Nodejs 查找 MongoDb 数据库的数据</h4><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span>MongoClient<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongodb'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'mongodb://localhost:27017'</span><span class="token punctuation">;</span> 
-<span class="token comment" spellcheck="true">// const url = 'mongodb://admin:123456@localhost:27017/'; 有密码连接方式 admin 表示用户名，123456 表示密码</span>
-<span class="token comment" spellcheck="true">// 定义要操作的数据库</span>
-<span class="token keyword">const</span> dbName <span class="token operator">=</span> <span class="token string">'itying'</span><span class="token punctuation">;</span>
-
-MongoClient<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span> useUnifiedTopology<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>client<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-  <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token keyword">return</span><span class="token punctuation">;</span> 
-  <span class="token punctuation">}</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"连接成功"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token comment" spellcheck="true">// 获取 db 对象 </span>
-  <span class="token keyword">const</span> db <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">db</span><span class="token punctuation">(</span>dbName<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-
-  <span class="token comment" spellcheck="true">// 查找数据</span>
-  db<span class="token punctuation">.</span><span class="token function">collection</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"age"</span><span class="token punctuation">:</span><span class="token number">12</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>data<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+proxyObj<span class="token punctuation">[</span><span class="token string">'/'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// websoket 不开启websoket</span>
+    ws<span class="token punctuation">:</span> <span class="token boolean">false</span>
+    <span class="token comment" spellcheck="true">// 代理的目标地址</span>
+    target： ‘http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>loaclhost：<span class="token number">8000</span>’
+    <span class="token comment" spellcheck="true">// 发送请求头host会被设置target</span>
+    changeOrigin<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
     
-    <span class="token comment" spellcheck="true">// 操作完数据库后，一定要记得关闭</span>
-    client<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">// 重写请求地址</span>
+    pathReWrite： <span class="token punctuation">{</span>
+    <span class="token string">'^/'</span><span class="token punctuation">:</span> <span class="token string">'/'</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    host<span class="token punctuation">:</span> <span class="token string">'localhost'</span><span class="token punctuation">,</span>
+    post<span class="token punctuation">:</span> <span class="token number">8080</span><span class="token punctuation">,</span>
+    proxy<span class="token punctuation">:</span> proxyObj
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="AJAX核心步骤"><a href="#AJAX核心步骤" class="headerlink" title="AJAX核心步骤"></a>AJAX核心步骤</h2><h3 id="GET请求"><a href="#GET请求" class="headerlink" title="GET请求"></a>GET请求</h3><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span>点击发送<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>result<span class="token punctuation">'</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+    <span class="token keyword">const</span> btn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> result <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#result'</span><span class="token punctuation">)</span>
+    btn<span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// ajax 四个步骤 1、创建对象</span>
+      <span class="token keyword">const</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">// 2、初始化 设置请求方法和 url</span>
+      xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'GET'</span><span class="token punctuation">,</span> <span class="token string">'http://localhost:8080/server'</span><span class="token punctuation">)</span>
+      <span class="token comment" spellcheck="true">// 3、 发送</span>
+      xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">// 4、 事件绑定</span>
+      <span class="token comment" spellcheck="true">/*
+        on 当...时候
+        readystate 是xhr的一个属性 表示状态
+        有 0（未初始化） 1（open方法调用完毕） 
+        2（send方法调用完毕） 3（服务端返回部分结果） 
+        4（服务端返回所有结果）五个状态（一般用4）
+        change 改变
+      */</span>
+      xhr<span class="token punctuation">.</span>onreadystatechange <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 判断readyState状态</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">===</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment" spellcheck="true">// 判断响应状态码</span>
+          <span class="token comment" spellcheck="true">// 2XX 二开头的表示成功</span>
+          <span class="token keyword">if</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status <span class="token operator">>=</span> <span class="token number">200</span> <span class="token operator">&amp;&amp;</span> xhr<span class="token punctuation">.</span>status <span class="token operator">&lt;</span><span class="token number">300</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 处理结果 行 头 空行 体</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 状态码</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>statusText<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 状态字符串</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>getAllResponseHeaders<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 头</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 响应体</span>
+            result<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> xhr<span class="token punctuation">.</span>response<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="post请求"><a href="#post请求" class="headerlink" title="post请求"></a>post请求</h3><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>result<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+    <span class="token keyword">const</span> result <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.result'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    result<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'mouseover'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+      <span class="token comment" spellcheck="true">// ajax 创建对象</span>
+      <span class="token keyword">const</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'POST'</span><span class="token punctuation">,</span> <span class="token string">'http://localhost:8080/server'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">// post请求是在send()设置参数</span>
+      xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'a=1&amp;b=2&amp;c=3'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      xhr<span class="token punctuation">.</span>onreadystatechange <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 状态判断</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>radyState <span class="token operator">===</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment" spellcheck="true">// 状态码</span>
+          <span class="token keyword">if</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status <span class="token operator">>=</span> <span class="token number">200</span> <span class="token operator">&amp;&amp;</span> xhr<span class="token punctuation">.</span>status <span class="token operator">&lt;</span> <span class="token number">300</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 处理返回结果</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            result<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> xhr<span class="token punctuation">.</span>response<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如何设置请求头</p>
+<p>​    <code>在open方法后追加一个 xhr.setRequestHeader()方法</code></p>
+<ol>
+<li>两个参数 头的名称 头的信息</li>
+<li>例如    xhr.setRequestHeader(‘Content-Type’,’application/x-www-form’)</li>
+</ol>
+<p>服务端响应json数据</p>
+<p>网络超时与异常处理</p>
+<ul>
+<li>(超时设置 xhr.timeout == 2000）若超时则请求取消</li>
+<li>超时回调 xhr.ontimeout =function() {alert(网络超时，请刷新后重试)}</li>
+<li>网络异常回调 xhr.onerror = function() { alert(宁的网络似乎出了点问题)}</li>
+</ul>
+<p>重复请求问题解决 节流阀</p>
+<h3 id="axios请求"><a href="#axios请求" class="headerlink" title="axios请求"></a>axios请求</h3><pre class="line-numbers language-js"><code class="language-js"> axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'http://127.0.0.1:8080/server'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// url参数</span>
+      params<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        id<span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+        vip<span class="token punctuation">:</span> <span class="token number">1</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token comment" spellcheck="true">// 请求头信息</span>
+      Headers<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        size<span class="token punctuation">:</span> <span class="token string">'ii'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 请求体</span>
+        username<span class="token punctuation">:</span> admin<span class="token punctuation">,</span>
+        password<span class="token punctuation">:</span> <span class="token number">123456</span>
+      <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// axios基于Promise 可用then链式调用</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// post请求</span>
+ axios<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'http://127.0.0.1:8080/server'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 请求体</span>
+        username<span class="token punctuation">:</span> admin<span class="token punctuation">,</span>
+        password<span class="token punctuation">:</span> <span class="token number">123456</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+       <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// url参数</span>
+      params<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        id<span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+        vip<span class="token punctuation">:</span> <span class="token number">1</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token comment" spellcheck="true">// 请求头信息</span>
+      Headers<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        size<span class="token punctuation">:</span> <span class="token string">'ii'</span>
+      <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// axios基于Promise 可用then链式调用</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>axios通用方法请求</p>
+<pre class="line-numbers language-js"><code class="language-js">axios<span class="token punctuation">.</span>defaults<span class="token punctuation">.</span>baseURL <span class="token operator">=</span> <span class="token string">'http://loaclhost:8080'</span>
+<span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// method: 'POAT' 不写默认为GET请求</span>
+    url<span class="token punctuation">:</span> <span class="token string">'/server'</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// url参数</span>
+    params<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        vip： <span class="token number">1</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// 请求头信息</span>
+    Headers<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        a<span class="token punctuation">:</span> <span class="token number">100</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// 请求体参数</span>
+    data： <span class="token punctuation">{</span>
+        a<span class="token punctuation">:</span> <span class="token number">1</span>，
+        b： <span class="token number">2</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>status<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 响应状态码</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>statusText<span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 状态码字符串</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>headers<span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 响应头信息</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 响应体</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="Nodejs-给-MongoDb-增加数据"><a href="#Nodejs-给-MongoDb-增加数据" class="headerlink" title="Nodejs 给 MongoDb 增加数据"></a>Nodejs 给 MongoDb 增加数据</h4><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span>MongoClient<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongodb'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'mongodb://localhost:27017'</span><span class="token punctuation">;</span> 
-<span class="token comment" spellcheck="true">// const url = 'mongodb://admin:123456@localhost:27017/'; 有密码连接方式 admin 表示用户名，123456 表示密码</span>
-<span class="token comment" spellcheck="true">// 定义要操作的数据库</span>
-<span class="token keyword">const</span> dbName <span class="token operator">=</span> <span class="token string">'itying'</span><span class="token punctuation">;</span>
-
-MongoClient<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span> useUnifiedTopology<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>client<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-  <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token keyword">return</span><span class="token punctuation">;</span> 
-  <span class="token punctuation">}</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"连接成功"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token comment" spellcheck="true">// 获取 db 对象 </span>
-  <span class="token keyword">const</span> db <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">db</span><span class="token punctuation">(</span>dbName<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-
-  <span class="token comment" spellcheck="true">// 增加数据</span>
-  db<span class="token punctuation">.</span><span class="token function">collection</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">insertOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span><span class="token string">"测试者"</span><span class="token punctuation">,</span><span class="token string">"age"</span><span class="token punctuation">:</span><span class="token number">17</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>result<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">return</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    client<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="Nodejs-修改-MongoDb-数据"><a href="#Nodejs-修改-MongoDb-数据" class="headerlink" title="Nodejs 修改 MongoDb 数据"></a>Nodejs 修改 MongoDb 数据</h4><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span> MongoClient <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongodb'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'mongodb://localhost:27017'</span><span class="token punctuation">;</span> 
-<span class="token comment" spellcheck="true">// const url = 'mongodb://admin:123456@localhost:27017/'; 有密码连接方式 admin 表示用户名，123456 表示密码</span>
-<span class="token comment" spellcheck="true">// 定义要操作的数据库</span>
-<span class="token keyword">const</span> dbName <span class="token operator">=</span> <span class="token string">'itying'</span><span class="token punctuation">;</span>
-
-MongoClient<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span> useUnifiedTopology<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>client<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-  <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token keyword">return</span><span class="token punctuation">;</span> 
-  <span class="token punctuation">}</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"连接成功"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token comment" spellcheck="true">// 获取 db 对象 </span>
-  <span class="token keyword">const</span> db <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">db</span><span class="token punctuation">(</span>dbName<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-
-  <span class="token comment" spellcheck="true">// 修改数据</span>
-  db<span class="token punctuation">.</span><span class="token function">collection</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">updateOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"xiaoming"</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>$<span class="token keyword">set</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"age"</span><span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>result<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">return</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    client<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="Nodejs-删除-MongoDb-数据"><a href="#Nodejs-删除-MongoDb-数据" class="headerlink" title="Nodejs 删除 MongoDb 数据"></a>Nodejs 删除 MongoDb 数据</h4><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span> MongoClient <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongodb'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'mongodb://localhost:27017'</span><span class="token punctuation">;</span> 
-<span class="token comment" spellcheck="true">// const url = 'mongodb://admin:123456@localhost:27017/'; 有密码连接方式 admin 表示用户名，123456 表示密码</span>
-<span class="token comment" spellcheck="true">// 定义要操作的数据库</span>
-<span class="token keyword">const</span> dbName <span class="token operator">=</span> <span class="token string">'itying'</span><span class="token punctuation">;</span>
-
-MongoClient<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span> useUnifiedTopology<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>client<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-  <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token keyword">return</span><span class="token punctuation">;</span> 
-  <span class="token punctuation">}</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"连接成功"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token comment" spellcheck="true">// 获取 db 对象 </span>
-  <span class="token keyword">const</span> db <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">db</span><span class="token punctuation">(</span>dbName<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-
-  <span class="token comment" spellcheck="true">// 删除一条数据</span>
-  db<span class="token punctuation">.</span><span class="token function">collection</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">deleteOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"xiaoming"</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>result<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">return</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    client<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token comment" spellcheck="true">// 删除多条数据</span>
-  db<span class="token punctuation">.</span><span class="token function">collection</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">deleteMany</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"设计者"</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>result<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">return</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    client<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="ajax优缺点"><a href="#ajax优缺点" class="headerlink" title="ajax优缺点"></a>ajax优缺点</h3><p><strong>ajax的优点</strong></p>
+<p>1、无刷新更新数据（在不刷新整个页面的情况下维持与服务器通信）<br> 2、异步与服务器通信（使用异步的方式与服务器通信，不打断用户的操作）<br> 3、前端和后端负载均衡（将一些后端的工作交给前端，减少服务器与宽度的负担）<br> 4、界面和应用相分离（ajax将界面和应用分离也就是数据与呈现相分离）</p>
+<p><strong>ajax的缺点</strong></p>
+<p>1、ajax不支持浏览器back按钮<br> 2、安全问题 Aajax暴露了与服务器交互的细节<br> 3、对搜索引擎的支持比较弱<br> 4、破坏了Back与History后退按钮的正常行为等浏览器机制</p>
 
                 
             </div>
@@ -666,7 +734,7 @@ MongoClient<span class="token punctuation">.</span><span class="token function">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/10/28/node%E6%93%8D%E4%BD%9CMongo/">http://example.com/2021/10/28/node%E6%93%8D%E4%BD%9CMongo/</a>
+                    <a href="http://example.com/2021/11/19/%E9%9D%A2%E8%AF%95%E4%B9%8B%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/">http://example.com/2021/11/19/%E9%9D%A2%E8%AF%95%E4%B9%8B%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -704,8 +772,8 @@ MongoClient<span class="token punctuation">.</span><span class="token function">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">笔记</span>
+                                <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                    <span class="chip bg-color">面试</span>
                                 </a>
                             
                         </div>
@@ -753,13 +821,13 @@ MongoClient<span class="token punctuation">.</span><span class="token function">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/11/16/%E9%9D%92%E9%BE%99%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA/">
+                <a href="/2021/12/14/%E7%8E%8B%E7%A7%8B%E9%9C%9E/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/202110141145481.jpg" class="responsive-img" alt="如何搭建青龙面板">
+                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/007173302f8141de8741690833971124.png" class="responsive-img" alt="王秋霞">
                         
-                        <span class="card-title">如何搭建青龙面板</span>
+                        <span class="card-title">王秋霞</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -770,14 +838,14 @@ MongoClient<span class="token punctuation">.</span><span class="token function">
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-16
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/docker/" class="post-category">
-                                    docker
+                            <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
+                                    生活
                                 </a>
                             
                             
@@ -787,8 +855,8 @@ MongoClient<span class="token punctuation">.</span><span class="token function">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
+                    <a href="/tags/%E7%88%B1/">
+                        <span class="chip bg-color">爱</span>
                     </a>
                     
                 </div>
@@ -802,13 +870,13 @@ MongoClient<span class="token punctuation">.</span><span class="token function">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/10/27/mongo%E9%AB%98%E7%BA%A7/">
+                <a href="/2021/11/17/%E9%9D%A2%E8%AF%95%E6%89%AB%E7%9B%B2/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/792a4b6934fc491b81342206e3192e59.png" class="responsive-img" alt="mongo聚合管道">
+                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/202110141145481.jpg" class="responsive-img" alt="面试扫盲">
                         
-                        <span class="card-title">mongo聚合管道</span>
+                        <span class="card-title">面试扫盲</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -819,14 +887,14 @@ MongoClient<span class="token punctuation">.</span><span class="token function">
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-17
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/mongo/" class="post-category">
-                                    mongo
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
                             
