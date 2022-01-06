@@ -464,14 +464,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    604
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -486,7 +486,32 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>小程序的生命周期说白了就是指程序从创建、到开始、暂停、唤起、停止、卸载的过程。</p>
+<p>我们大概从三个角度看一下小程序的生命周期。</p>
+<p>（1）：应用生命周期</p>
+<p>（2）：页面生命周期</p>
+<p>（3）：应用生命周期影响页面生命周期</p>
+<p>一：应用生命周期</p>
+<p>1：用户首次打开小程序，触发 onLaunch（全局只触发一次）。:</p>
+<p>2：小程序初始化完成后，触发onShow方法，监听小程序显示。</p>
+<p>3：小程序从前台进入后台，触发 onHide方法。:</p>
+<p>4：小程序从后台进入前台显示，触发 onShow方法。</p>
+<p>5：小程序后台运行一定时间，或系统资源占用过高，会被销毁。</p>
+<p>前台、后台定义： 当用户点击左上角关闭，或者按了设备 Home 键离开微信，小程序并没有直接销毁，而是进入了后台；当再次进入微信或再次打开小程序，又会从后台进入前台。</p>
+<p>最后的效果是这个样子的，微信开发者工具没有办法测试onHide方法</p>
+<p>二：页面生命周期</p>
+<p>1：小程序注册完成后，加载页面，触发onLoad方法。</p>
+<p>2：页面载入后触发onShow方法，显示页面。</p>
+<p>3：首次显示页面，会触发onReady方法，渲染页面元素和样式，一个页面只会调用一次。4：当小程序后台运行或跳转到其他页面（使用wx.navigateTo）时，触发onHide方法。</p>
+<p>5：当小程序有后台进入到前台运行或重新进入页面时，触发onShow方法。</p>
+<p>6：当使用重定向方法wx.redirectTo(OBJECT)或关闭当前页返回上一页wx.navigateBack()，触发onUnload</p>
+<p>具体效果如下图所示：注意看触发onHide和触发onunLoad的时机与方式</p>
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-vQzGquRk-1601105238628)(<a target="_blank" rel="noopener" href="https://api.guanchao.site/ueditor/php/upload/image/20200730/1596103857528168.gif#pic_center)]">https://api.guanchao.site/ueditor/php/upload/image/20200730/1596103857528168.gif#pic_center)]</a></p>
+<p>三：应用生命周期影响页面生命周期</p>
+<p>1：小程序初始化完成后，页面首次加载触发onLoad，只会触发一次。</p>
+<p>2：当小程序进入到后台，先执行页面onHide方法再执行应用onHide方法。</p>
+<p>3：当小程序从后台进入到前台，先执行应用onShow方法再执行页面onShow方法。</p>
+
                 
             </div>
             <hr/>
@@ -904,7 +929,7 @@
             <br> -->
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">41.4k</span>&nbsp;字
+                class="white-color">42k</span>&nbsp;字
             
             
             
