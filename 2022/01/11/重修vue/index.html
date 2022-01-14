@@ -461,21 +461,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-12
+                    2022-01-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    268
+                    642
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -535,10 +535,73 @@ obj2<span class="token punctuation">.</span>x <span class="token operator">=</sp
 
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h2><pre><code> 
-</code></pre>
-<p>KEY</p>
-
+<p>好处 缓存    <code>计算属性中this指向vue的实例</code></p>
+<p>两种写法 例如计算sum属性 </p>
+<pre class="line-numbers language-js"><code class="language-js"> <span class="token comment" spellcheck="true">// 复杂写法——使用配置选项写法 {} （考虑修改属性的时候）</span>
+ computed<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+     sum<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+         <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+         <span class="token keyword">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+     <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>但大多数的情况下是不考虑修改的情况的——简写</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 简写时使用函数写法 可以解为 sum() === get()</span>
+computed<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token function">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 具体的操作</span>
+    <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="监听器-watch"><a href="#监听器-watch" class="headerlink" title="监听器 watch"></a>监听器 watch</h2><p>监听数据的改变，内置了很多的 配置选项 如监听 布尔变量flag</p>
+<pre class="line-numbers language-js"><code class="language-js">watch<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    flag<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 内置handler函数 当flag属性发生变化时 就会自动调用</span>
+        <span class="token comment" spellcheck="true">// 有两个参数 第一个新的值 第二个旧的值</span>
+        <span class="token function">handler</span><span class="token punctuation">(</span>newValue<span class="token punctuation">,</span> oldValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>oldValue<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">// 初始化时 立即执行配置</span>
+        immediate<span class="token punctuation">:</span><span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>另一种写法 通过 <code>实例.$watch('监听的属性', {配置项})</code></p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 监听的 属性要加 “</span>
+vm<span class="token punctuation">.</span><span class="token function">$watch</span><span class="token punctuation">(</span><span class="token string">'flag'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 内置handler函数 当flag属性发生变化时 就会自动调用</span>
+    ai<span class="token comment" spellcheck="true">// 有两个参数 第一个新的值 第二个旧的值</span>
+    <span class="token function">handler</span><span class="token punctuation">(</span>newValue<span class="token punctuation">,</span> oldValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>oldValue<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// 初始化时 立即执行配置</span>
+    immediate<span class="token punctuation">:</span><span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="多级结构监视"><a href="#多级结构监视" class="headerlink" title="多级结构监视"></a>多级结构监视</h3><pre class="line-numbers language-js"><code class="language-js">watch<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// a.b: {} 错误写法</span>
+    <span class="token comment" spellcheck="true">// 正确写法 通过 . 调用是不能使用简写 要写成原始写法加上引号</span>
+    <span class="token string">'a.b'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="深度监视-deep"><a href="#深度监视-deep" class="headerlink" title="深度监视 deep"></a>深度监视 deep</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 当监视的属性是一个多级的对象那个，想监听每个元素时 添加配置项</span>
+obj： <span class="token punctuation">{</span>
+    a<span class="token punctuation">:</span> <span class="token number">1</span>，
+    b<span class="token punctuation">:</span> <span class="token number">2</span>，
+    <span class="token operator">...</span><span class="token operator">...</span>
+<span class="token punctuation">}</span>
+watch<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// obj: {} 直接写是监听不了的 需要开启深度监听</span>
+    obj<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// deep 开启深度监听</span>
+        deep<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token function">handler</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
                 
             </div>
             <hr/>
@@ -972,7 +1035,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <br> -->
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">42.7k</span>&nbsp;字
+                class="white-color">43.1k</span>&nbsp;字
             
             
             
