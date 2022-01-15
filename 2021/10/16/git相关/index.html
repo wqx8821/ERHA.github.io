@@ -470,7 +470,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-16
+                    2022-01-15
                 </div>
                 
 
@@ -500,7 +500,8 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="Git笔记"><a href="#Git笔记" class="headerlink" title="Git笔记"></a>Git笔记</h1><h2 id="1-概念"><a href="#1-概念" class="headerlink" title="1. 概念"></a>1. 概念</h2><p>Git是分布式管理仓库，而SVN是集中式（CVS）管理的代表。CVS是保存文件修改的历史记录（文件变更的列表），Git是记录文件及其修改的快照并存储相应索引。</p>
-<h2 id="2-命令"><a href="#2-命令" class="headerlink" title="2. 命令"></a>2. 命令</h2><h3 id="2-1-安装配置"><a href="#2-1-安装配置" class="headerlink" title="2.1 安装配置"></a>2.1 安装配置</h3><h4 id="2-1-1-安装好Git后先全局配置用户信息：用户名、邮箱。如果在某个项目中需要使用其他用户，可以在项目根目录下去掉’global’单独配置。"><a href="#2-1-1-安装好Git后先全局配置用户信息：用户名、邮箱。如果在某个项目中需要使用其他用户，可以在项目根目录下去掉’global’单独配置。" class="headerlink" title="2.1.1 安装好Git后先全局配置用户信息：用户名、邮箱。如果在某个项目中需要使用其他用户，可以在项目根目录下去掉’global’单独配置。"></a>2.1.1 安装好Git后先全局配置用户信息：用户名、邮箱。如果在某个项目中需要使用其他用户，可以在项目根目录下去掉’global’单独配置。</h4><pre class="line-numbers language-shell"><code class="language-shell">git config --global user.name "John Doe"
+<h2 id="2-命令"><a href="#2-命令" class="headerlink" title="2. 命令"></a>2. 命令</h2><h3 id="2-1-安装配置"><a href="#2-1-安装配置" class="headerlink" title="2.1 安装配置"></a>2.1 安装配置</h3><h4 id="2-1-1-安装好Git后先全局配置用户信息"><a href="#2-1-1-安装好Git后先全局配置用户信息" class="headerlink" title="2.1.1 安装好Git后先全局配置用户信息"></a>2.1.1 安装好Git后先全局配置用户信息</h4><p>用户名、邮箱。如果在某个项目中需要使用其他用户，可以在项目根目录下去掉’global’单独配置。</p>
+<pre class="line-numbers language-shell"><code class="language-shell">git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h4 id="2-1-2-检查配置信息"><a href="#2-1-2-检查配置信息" class="headerlink" title="2.1.2 检查配置信息"></a>2.1.2 检查配置信息</h4><p>如果想要检查你的配置，可以使用 git config –list 命令来列出所有 Git 当时能找到的配置  </p>
