@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="重修vue, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="若有诗书藏在心，岁月从不败美人">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>重修vue | 小羊站</title>
+    <title>小羊站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -319,7 +319,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">重修vue</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -436,13 +436,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                                <span class="chip bg-color">前端</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -461,21 +457,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-18
+                    2022-01-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    704
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    7 分
                 </div>
                 
 
@@ -490,7 +486,12 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="mvvm"><a href="#mvvm" class="headerlink" title="mvvm"></a>mvvm</h2><ul>
+                <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><p>vue中箭头函数</p>
+<pre><code>所有被vue管理的函数最好都写成普通函数
+
+不被vue管理的 如定时器，请求等， 最好使用箭头函数，（这样this的指向才是VM或者组件的实例对象）
+</code></pre>
+<h2 id="mvvm"><a href="#mvvm" class="headerlink" title="mvvm"></a>mvvm</h2><ul>
 <li>M 模型（Model）： 对应data中的数据</li>
 <li>V: 视图（View）： 模板</li>
 <li>VM： 视图模型（）： Vue实例对象</li>
@@ -535,7 +536,7 @@ obj2<span class="token punctuation">.</span>x <span class="token operator">=</sp
 
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>好处 缓存    <code>计算属性中this指向vue的实例</code></p>
+<h2 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h2><p>好处 缓存    <code>计算属性中this指向vue的实例</code></p>
 <p>两种写法 例如计算sum属性 </p>
 <pre class="line-numbers language-js"><code class="language-js"> <span class="token comment" spellcheck="true">// 复杂写法——使用配置选项写法 {} （考虑修改属性的时候）</span>
  computed<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -571,7 +572,7 @@ computed<span class="token punctuation">:</span> <span class="token punctuation"
 <pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 监听的 属性要加 “</span>
 vm<span class="token punctuation">.</span><span class="token function">$watch</span><span class="token punctuation">(</span><span class="token string">'flag'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 内置handler函数 当flag属性发生变化时 就会自动调用</span>
-    ai<span class="token comment" spellcheck="true">// 有两个参数 第一个新的值 第二个旧的值</span>
+    <span class="token comment" spellcheck="true">// 有两个参数 第一个新的值 第二个旧的值</span>
     <span class="token function">handler</span><span class="token punctuation">(</span>newValue<span class="token punctuation">,</span> oldValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span>
         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>oldValue<span class="token punctuation">)</span>
@@ -601,11 +602,148 @@ watch<span class="token punctuation">:</span> <span class="token punctuation">{<
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h1 id="一些技巧"><a href="#一些技巧" class="headerlink" title="一些技巧"></a>一些技巧</h1><h2 id="1、模糊搜索排序"><a href="#1、模糊搜索排序" class="headerlink" title="1、模糊搜索排序"></a>1、模糊搜索排序</h2><pre><code>
+<h2 id="计算属性对比监听器"><a href="#计算属性对比监听器" class="headerlink" title="计算属性对比监听器"></a>计算属性对比监听器</h2><pre class="line-numbers language-tex"><code class="language-tex">1、computed能完成的功能watch都可以完成
+2、watch能完成的，computed不一定能完成， 如watch可以完成异步
+3、watch开销相对较大，一般用在请求 异步时
+4、计算属性具有缓存 性能更好
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="key"><a href="#key" class="headerlink" title="key"></a>key</h2><pre><code>// key使用index时的问题
+逆序添加时的问题（破坏顺序时）
+原因：key是唯一标识，在用户操作dom时，vue使用的是 diff算法对比虚拟dom是否改变，以key为依据。只有发生改变时才会更新视图。
+使用key时，在头部插入数据，原先的元素的key会改变，在diff比对时就会出现问题，导致后续元素的部分内容都要更新，导致页面错误
+</code></pre>
+<p><img src="image-20220112194909744.png" alt="image-20220112194909744"></p>
+<p><img src="image-20220112195354442.png" alt="image-20220112195354442"></p>
+<h2 id="vue是如何监听数据变化的"><a href="#vue是如何监听数据变化的" class="headerlink" title="vue是如何监听数据变化的"></a>vue是如何监听数据变化的</h2><p>尚硅谷vue， P34-P37 ![<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Zy4y1K7SH?p=37&amp;spm_id_from=pageDriver%5D">https://www.bilibili.com/video/BV1Zy4y1K7SH?p=37&amp;spm_id_from=pageDriver]</a></p>
+<p>1、vue会监视data中所有层次的数据，</p>
+<p>2、 如何检测对象的数据</p>
+<pre><code>通过setter实现监视，且在 new_Vue时就传入检测的数据。
+对象后追加的属性 默认是不做响应式的
+可通过Vue.set或者$set实现响应式（三个参数 目标元素，属性/索引，值）
+</code></pre>
+<p>​    3、 监视数组</p>
+<pre><code>通过包装数组方法实现， 本质是做两件事
+1、 调用原生对应方法实现对数组更新。
+2、 重新解析模板更新页面
+
+包装的方法： push(), pop(), shift(), unshift(), sort(), reverse(), splice()
+
+使用Vue.set或者$set也可
+</code></pre>
+<p>注:<code>Vue.set和$set不能给 vm或vm的跟数据对象添加属性 ！！</code></p>
+<h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>重点： mouned  beforeDestroy</p>
+<p><img src="image-20220118151448098.png" alt="image-20220118151448098"></p>
+<h2 id="vue封装的动画过度"><a href="#vue封装的动画过度" class="headerlink" title="vue封装的动画过度"></a>vue封装的动画过度</h2><p><img src="image-20220121154902741.png" alt="image-20220121154902741"></p>
+<p><img src="image-20220121154954232.png" alt="image-20220121154954232"></p>
+<h1 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h1><h2 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h2><p>使用配置对象： directives</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 1、函数写法</span>
+<span class="token operator">&lt;</span>div v<span class="token operator">-</span>big<span class="token operator">=</span>n<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token comment" spellcheck="true">// big函数调用时机， 1、指令和元素成功绑定时 2、指令所在的模板被重新解析时</span>
+directives<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+<span class="token comment" spellcheck="true">// 两个参数， 1、真实的dom元素， 2、绑定</span>
+    <span class="token function">big</span><span class="token punctuation">(</span>element<span class="token punctuation">,</span> binding<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        element<span class="token punctuation">.</span>inberText <span class="token operator">=</span> binding<span class="token punctuation">.</span>value <span class="token operator">*</span> <span class="token number">10</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 2、 配置对象写法</span>
+directives<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    big<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 指令和元素成功绑定时调用</span>
+        <span class="token function">bind</span><span class="token punctuation">(</span>element<span class="token punctuation">,</span> binding<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// 指令所在元素被插入页面时调用</span>
+        <span class="token function">inserted</span><span class="token punctuation">(</span>element<span class="token punctuation">,</span> binding<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// 指令所在的模板被重新解析时调用</span>
+        <span class="token function">update</span><span class="token punctuation">(</span>element<span class="token punctuation">,</span> binding<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>一些坑</p>
+<pre><code>多个单词时由于大小写不敏感，不可以用驼峰命名
+this指向Window
+指令为局部指令， 全局可用 Vue.directive('指令'，{配置项})
+</code></pre>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><p><code>scr/plugins.js</code></p>
+<p>是一个对象 里边必须包含 install()方法 在使用时vue会自动调用</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 可以接受一个Vue构造函数 作为形参</span>
+    <span class="token function">install</span><span class="token punctuation">(</span>Vue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 可定义全局的过滤器</span>
+        <span class="token comment" spellcheck="true">// 可定义全局混入</span>
+        <span class="token comment" spellcheck="true">// 可定义全局自定义指令</span>
+        <span class="token comment" spellcheck="true">// 定义挂载在 vue原型上的方法</span>
+        <span class="token comment" spellcheck="true">// Vue.prototype.call = function(){}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>好处: 可以在插件内 定义<code>全局的过滤器 全局混入 全局自定义指令 以及定义挂载在 vue原型上的方法</code></p>
+<p>使用 在main.js里引入 通过Vue.use()挂载</p>
+<pre class="line-numbers language-js"><code class="language-js">在实例创建之前引入
+<span class="token keyword">import</span> plugins <span class="token keyword">from</span> <span class="token string">'......plugins'</span>
+
+<span class="token comment" spellcheck="true">// 可以在挂载调用时 传递参数</span>
+<span class="token comment" spellcheck="true">// 例如传递 1，2，3</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>plugins<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><p>组件就是一块砖，哪里需要哪里搬</p>
+<p>父子通信 props</p>
+<p>子父通信 ： 采用自定义事件的方式 </p>
+<pre><code>父组件使用的子组件绑定自定义事件 @lcy="demo"
+methods: {demo(传递的数据) {}}
+
+子组件上使用 this.$emit('lcy', '传递的数据') // 数据可以是变量
+
+// 相当于$emit在子组件帮忙触发父组件的回调函数（第二个参数传参）
+</code></pre>
+<p><img src="image-20220120191157055.png" alt="image-20220120191157055"></p>
+<h3 id="全局事件总线"><a href="#全局事件总线" class="headerlink" title="全局事件总线"></a>全局事件总线</h3><p>可实现任意组件间通信</p>
+<pre class="line-numbers language-js"><code class="language-js">原理： 定义一个总线qj，能够被说有组件访问，且具有$on $emit方法
+
+    在组件上自定义事件，事件内总线qj通过$on绑定事件，其他组件内通过总线$emit触发传参（就可以实现任意组件通信）
+    <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$bus<span class="token punctuation">.</span><span class="token function">$on</span><span class="token punctuation">(</span><span class="token string">'事件名'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 挂载</span>
+    <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$bus<span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">'事件名'</span><span class="token punctuation">,</span><span class="token string">'数据'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 触发</span>
+
+总线qj： <span class="token punctuation">(</span>条件<span class="token punctuation">)</span> 
+    <span class="token number">1</span>、全部组件可访问： 通过在入口文件上 在Vue。prototype挂载对象实现
+    <span class="token number">2</span>、具有$on $emit<span class="token punctuation">:</span> 
+    
+具体实现<span class="token punctuation">:</span> 
+    <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        el<span class="token punctuation">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>
+        render<span class="token punctuation">:</span> h <span class="token operator">=</span><span class="token operator">></span> <span class="token function">h</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token function">beforeCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 安装全局事件总线</span>
+            Vue<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>$bus <span class="token operator">=</span> <span class="token keyword">this</span> 
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$bus<span class="token punctuation">.</span><span class="token function">$on</span><span class="token punctuation">(</span><span class="token string">'事件名'</span><span class="token punctuation">,</span><span class="token string">'回调函数'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 挂载</span>
+    <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$bus<span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">'事件名'</span><span class="token punctuation">,</span><span class="token string">'数据'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 触发</span>
+
+注： 使用完事件后最好将全局的事件进行解绑
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h2><p>获取当前的DOM元素</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 真实的DOM上使用 ref进行绑定</span>
+<span class="token operator">&lt;</span>div ref<span class="token operator">=</span><span class="token string">"title"</span><span class="token operator">></span>School<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token comment" spellcheck="true">// 在获取时使用 this.ref..... 进行操作</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>title<span class="token punctuation">.</span>innerHTML
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="image-20220118200438024.png" alt="image-20220118200438024"></p>
+<h2 id="mixin混入"><a href="#mixin混入" class="headerlink" title="mixin混入"></a>mixin混入</h2><p>抽取公共的方法暴露 共享使用</p>
+<h1 id="一些技巧"><a href="#一些技巧" class="headerlink" title="一些技巧"></a>一些技巧</h1><h2 id="1、模糊搜索排序"><a href="#1、模糊搜索排序" class="headerlink" title="1、模糊搜索排序"></a>1、模糊搜索排序</h2><pre><code>
 </code></pre>
 <h2 id="2、-表单收集技巧"><a href="#2、-表单收集技巧" class="headerlink" title="2、 表单收集技巧"></a>2、 表单收集技巧</h2><p>多个多选时， v-model中绑定的数据设为数组，并在html层增加value</p>
 <p><img src="image-20220116155355610.png" alt="image-20220116155355610"></p>
+<h2 id="3、跨域解决方案"><a href="#3、跨域解决方案" class="headerlink" title="3、跨域解决方案"></a>3、跨域解决方案</h2><pre><code>
+</code></pre>
 <h2 id="解决页面闪现问题"><a href="#解决页面闪现问题" class="headerlink" title="解决页面闪现问题"></a>解决页面闪现问题</h2><p>1、 使用 v-cloak指令 配合 css  [cloak] {} 实现</p>
+<h2 id="本地存储"><a href="#本地存储" class="headerlink" title="本地存储"></a>本地存储</h2><p><img src="image-20220120160925095.png" alt="image-20220120160925095"></p>
+<h1 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h1><p>测试一般分为 端到端测试（一般由专业人员测试）  和 单元测试</p>
+<p><img src="image-20220120120139619.png" alt="image-20220120120139619"></p>
+<p><img src="image-20220120120259293.png" alt="image-20220120120259293"></p>
+<h3 id="测试工具-Karma-浏览器测试"><a href="#测试工具-Karma-浏览器测试" class="headerlink" title="测试工具 Karma 浏览器测试"></a>测试工具 Karma 浏览器测试</h3><p><img src="image-20220120122848400.png" alt="image-20220120122848400"></p>
+<h3 id="Mocha"><a href="#Mocha" class="headerlink" title="Mocha"></a>Mocha</h3><p>摩卡 与Vue—cli配合中  Mocha本身是不带断言库的  所以必须先引入断言库（Chai.js）</p>
+<p><img src="image-20220120123230314.png" alt="image-20220120123230314"></p>
 
                 
             </div>
@@ -669,11 +807,7 @@ watch<span class="token punctuation">:</span> <span class="token punctuation">{<
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                                    <span class="chip bg-color">前端</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -724,9 +858,9 @@ watch<span class="token punctuation">:</span> <span class="token punctuation">{<
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="重修vue">
+                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="">
                         
-                        <span class="card-title">重修vue</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -748,14 +882,6 @@ watch<span class="token punctuation">:</span> <span class="token punctuation">{<
                     </div>
                 </div>
 
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                        <span class="chip bg-color">前端</span>
-                    </a>
-                    
-                </div>
                 
             </div>
         </div>
@@ -1040,7 +1166,7 @@ watch<span class="token punctuation">:</span> <span class="token punctuation">{<
             <br> -->
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">43.1k</span>&nbsp;字
+                class="white-color">44.4k</span>&nbsp;字
             
             
             
