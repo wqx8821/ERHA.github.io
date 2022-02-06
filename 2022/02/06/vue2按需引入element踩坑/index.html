@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ES6入门学习, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="vue2按需引入element踩坑, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="若有诗书藏在心，岁月从不败美人">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ES6入门学习 | 小羊站</title>
+    <title>vue2按需引入element踩坑 | 小羊站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -319,7 +319,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ES6入门学习</h1>
+                    <h1 class="description center-align post-title">vue2按需引入element踩坑</h1>
                 </div>
             </div>
         </div>
@@ -438,23 +438,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">笔记</span>
+                            <a href="/tags/%E9%81%BF%E5%9D%91/">
+                                <span class="chip bg-color">避坑</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                前端
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -463,28 +454,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-08
+                    2022-02-06
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-24
+                    2022-02-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    914
+                    162
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -499,120 +490,55 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="RegExp"><a href="#RegExp" class="headerlink" title="RegExp"></a>RegExp</h1><p><a target="_blank" rel="noopener" href="https://tool.oschina.net/uploads/apidocs/jquery/regexp.html">正则表达式手册</a></p>
-<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">MDN</a></p>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903487155732494">JS 正则表达式完整教程（略长）</a></p>
-<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/chapter/13619">腾讯云文档</a></p>
-<h2 id="1-1-匹配标志"><a href="#1-1-匹配标志" class="headerlink" title="1.1 匹配标志"></a>1.1 匹配标志</h2><table>
-<thead>
-<tr>
-<th>标志</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>g</td>
-<td>全局搜索</td>
-</tr>
-<tr>
-<td>m</td>
-<td>多行匹配</td>
-</tr>
-<tr>
-<td>i</td>
-<td>忽略大小写</td>
-</tr>
-<tr>
-<td>y</td>
-<td>执行“粘性(<code>sticky</code>)”搜索,匹配从目标字符串的当前位置开始(lastIndex)</td>
-</tr>
-<tr>
-<td>s</td>
-<td>允许<code>.</code> 匹配换行符</td>
-</tr>
-<tr>
-<td>u</td>
-<td>使用 unicode 码的模式进行匹配</td>
-</tr>
-</tbody></table>
-<ul>
-<li>正则对象都有个 lastIndex 属性，只读（但是 js 没有严格语法限制，可以修改），只有正则使用了 global 标志才会在匹配成功是修改 lastIndex 的值，失败置 0。使用 sticky 标志，只会从正则的 lastIndex 开始匹配，但是不会修改它的值。</li>
-<li>多行匹配只有在字符串中有换行符时才有意义，有换行符时^、$表示每行开头结尾，如果不使用^或$那么也没必要使用 m 标志。</li>
-<li>除了 i，其他基本没使用过。</li>
-</ul>
-<h2 id="1-2-匹配模式"><a href="#1-2-匹配模式" class="headerlink" title="1.2 匹配模式"></a>1.2 匹配模式</h2><p>匹配字符或者匹配位置。</p>
-<h2 id="1-3-RegExp-和-String-的一些常用方法"><a href="#1-3-RegExp-和-String-的一些常用方法" class="headerlink" title="1.3 RegExp 和 String 的一些常用方法"></a>1.3 RegExp 和 String 的一些常用方法</h2><p>String：</p>
-<blockquote>
-<p>replace<br>search<br>match<br>matchAll<br>split</p>
-</blockquote>
-<p>RegExp：</p>
-<blockquote>
-<p>test<br>exec<br>compile</p>
-</blockquote>
-<p>正则实际匹配结果看 match 和 matchAll，test 只是判断字符串是否满足正则要求。<br>search 相当于 indexOf 于 Array，找到满足正则的第一个字符集首字符位置，否则返回-1。<br>exec 开启 g 或 y 每次调用会修改 lastIndex。<br>matchAll 返回的是迭代器。</p>
-<p>重点说 replace：str.replace(regexp|substr, newSubStr|function)</p>
-<blockquote>
-<p>第一个参数：可以使正则，会处理全部匹配的字符。可以使字符串，只处理第一个相等字符。<br>第二个参数：可以使特殊字符串，$&amp;表示被整个正则匹配到的字符，可以修饰字符串；$n 表示每个子表达式匹配的字符，可以重新组合或者提取字符串（子表达式没匹配到的会被忽略）；$`、$‘表示匹配字符左边、右边全部类容，可以修饰字符串。可以使函数，参数是[match 的字符，…子表达式匹配的结果,位置，输入值]，返回值替换匹配字符，如果开启 g 或 m 会多次调用。</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>变量名</th>
-<th>代表值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>$$</td>
-<td>插入一个 “$”</td>
-</tr>
-</tbody></table>
-<h2 id="1-4-问题"><a href="#1-4-问题" class="headerlink" title="1.4 问题"></a>1.4 问题</h2><ol>
-<li><p>一道面试题<br>![一道面试题][reg_g]</p>
-<details>
-  <summary><font color="#56b6a7">答案</font></summary>
-  <pre><code>  
-true
-true
-false
-true
-// 在设置g或y模式，RegExp 对象是有状态的。他们会将上次成功匹配后的位置记录在 lastIndex 属性中。
-// 全局匹配会记录上次匹配到的位置，然后下一次从上一次的位置开始匹配，失败时会重置lastIndex为0。
-  </code></pre>
-</details></li>
-<li><p>一道面试题：使用正则实现 String.trim()</p>
-<details>
-  <summary><font color="#56b6a7">答案</font></summary>
-  <pre><code>  
-String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
-  </code></pre>
-</details></li>
-<li><p>实现一个正则：不能以空白字符开头和结束，至少一个字符</p>
-<details>
-  <summary><font color="#56b6a7">我的</font></summary>
-  <pre><code>  
- /^\S(.*\S)?$/
- /^\S{1}$|^\S+.*\S+$/g
-  </code></pre>
-</details></li>
-<li><p>一道面试题：使用正则实现 String.trim()</p>
-</li>
-<li><p>不同系统换行符的区：windows：\n\r，mac：\r，Unix：\n。不同系统处理文件时要注意。</p>
-</li>
-<li><p>表达式里，有些特殊符号要在前面加\转义。比如：根据一个字符串生成一个正则，就需要转义正则里的全部特殊符号，不然直接生成正则是按转移后的字符生成的。</p>
-</li>
-<li><p>讲解两个正则：</p>
-</li>
-</ol>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 手机号</span>
-<span class="token regex">/^((\+|00)86)?1((3[\d])|(4[5,6,7,9])|(5[0-3,5-9])|(6[5-7])|(7[0-8])|(8[\d])|(9[1,8,9]))\d{8}$/</span>
-<span class="token comment" spellcheck="true">// 密码强度校验：最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符</span>
-<span class="token regex">/^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&amp;*? ]).*$/</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>1.5 总结</p>
-<ol>
-<li>与：/ppp/，或：/p|p|p/，非：/[^ppp]/。</li>
-<li>正则终究匹配的是字符或者位置。</li>
-</ol>
+                <h1 id="按需引入"><a href="#按需引入" class="headerlink" title="按需引入"></a>按需引入</h1><p>借助 <a target="_blank" rel="noopener" href="https://github.com/QingWei-Li/babel-plugin-component">babel-plugin-component</a>，我们可以只引入需要的组件，以达到减小项目体积的目的。</p>
+<p>安装</p>
+<pre class="line-numbers language-js"><code class="language-js">npm install babel<span class="token operator">-</span>plugin<span class="token operator">-</span>component <span class="token operator">-</span>D
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>配置文件 （官方文档中 .babelrc 在新版vue中 为 babel.config.js）</p>
+<p>​        官方文档中配置为下(会出现问题)</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token punctuation">{</span>
+  <span class="token string">"presets"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">"es2015"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token string">"modules"</span><span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">"plugins"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span>
+      <span class="token string">"component"</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">"libraryName"</span><span class="token punctuation">:</span> <span class="token string">"element-ui"</span><span class="token punctuation">,</span>
+        <span class="token string">"styleLibraryName"</span><span class="token punctuation">:</span> <span class="token string">"theme-chalk"</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>踩坑解决（component包更新了配置，但官方文档并未更新）</p>
+<p>​        解决， 在 <code>babel.config.js</code></p>
+<pre class="line-numbers language-js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  presets<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token string">'@vue/cli-plugin-babel/preset'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">"@babel/preset-env"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token string">"modules"</span><span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">"plugins"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span>
+      <span class="token string">"component"</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">"libraryName"</span><span class="token punctuation">:</span> <span class="token string">"element-ui"</span><span class="token punctuation">,</span>
+        <span class="token string">"styleLibraryName"</span><span class="token punctuation">:</span> <span class="token string">"theme-chalk"</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>main.js</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Button<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'element-ui'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App.vue'</span><span class="token punctuation">;</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span>Button<span class="token punctuation">.</span>name<span class="token punctuation">,</span> Button<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  el<span class="token punctuation">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>
+  render<span class="token punctuation">:</span> h <span class="token operator">=</span><span class="token operator">></span> <span class="token function">h</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -639,7 +565,7 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/10/08/%E6%AD%A3%E5%88%99%E8%AE%B0%E5%BD%95/">http://example.com/2021/10/08/%E6%AD%A3%E5%88%99%E8%AE%B0%E5%BD%95/</a>
+                    <a href="http://example.com/2022/02/06/vue2%E6%8C%89%E9%9C%80%E5%BC%95%E5%85%A5element%E8%B8%A9%E5%9D%91/">http://example.com/2022/02/06/vue2%E6%8C%89%E9%9C%80%E5%BC%95%E5%85%A5element%E8%B8%A9%E5%9D%91/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -677,8 +603,8 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">笔记</span>
+                                <a href="/tags/%E9%81%BF%E5%9D%91/">
+                                    <span class="chip bg-color">避坑</span>
                                 </a>
                             
                         </div>
@@ -722,17 +648,18 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/10/11/es6%E5%88%9D%E5%A7%8B%E7%AC%94%E8%AE%B0/">
+                <a href="/2022/02/06/vue2%E6%8C%89%E9%9C%80%E5%BC%95%E5%85%A5element%E8%B8%A9%E5%9D%91/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="ES6入门学习">
+                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="vue2按需引入element踩坑">
                         
-                        <span class="card-title">ES6入门学习</span>
+                        <span class="card-title">vue2按需引入element踩坑</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -742,26 +669,23 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-06
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ERHA
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
+                    <a href="/tags/%E9%81%BF%E5%9D%91/">
+                        <span class="chip bg-color">避坑</span>
                     </a>
                     
                 </div>
@@ -775,13 +699,13 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/10/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B8%80%E4%BA%9B/">
+                <a href="/2022/02/01/vite%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="移动端总结">
+                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="vite如何创建vue项目">
                         
-                        <span class="card-title">移动端总结</span>
+                        <span class="card-title">vite如何创建vue项目</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -792,7 +716,7 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-01
                             </span>
                         <span class="publish-author">
                             
@@ -809,8 +733,8 @@ String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")}
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
+                    <a href="/tags/vite/">
+                        <span class="chip bg-color">vite</span>
                     </a>
                     
                 </div>
