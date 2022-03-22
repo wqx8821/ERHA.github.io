@@ -46,7 +46,7 @@
       <link href="/2022/03/04/vue2%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/"/>
       <url>/2022/03/04/vue2%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/</url>
       
-        <content type="html"><![CDATA[<h1 id="响应式原理"><a href="#响应式原理" class="headerlink" title="响应式原理"></a>响应式原理</h1><p>Object.defineProperty()</p><p>可以设置额外的属性</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="响应式原理"><a href="#响应式原理" class="headerlink" title="响应式原理"></a>响应式原理</h1><p>defineReactive<br>watch<br>dep<br>observe<br>Observe</p><p>数组的响应式<br>pop push shift unshift sort splice reverse</p><p>Object.defineProperty()</p><p>可以设置额外的属性</p>]]></content>
       
       
       
