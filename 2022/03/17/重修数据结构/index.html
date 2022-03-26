@@ -461,21 +461,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-10
+                    2022-03-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    235
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -490,7 +490,45 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><h1 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h1><h1 id="基本数据结构"><a href="#基本数据结构" class="headerlink" title="基本数据结构"></a>基本数据结构</h1><h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><ul>
+                <h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><p>复杂度==&gt; 程序复杂的程度</p>
+<ul>
+<li>概念 程序执行时需要计算量和内存空间（与代码简洁度无关）</li>
+<li>是一个数量级， 并不是一个具体的数</li>
+</ul>
+<ol>
+<li><p>大O表示法：<code>T(n) = O(f(n))</code></p>
+<p>多项式量级：</p>
+<ul>
+<li>常数阶 O(1)</li>
+<li>对数阶 O(logn)</li>
+<li>线性阶 O(n)</li>
+<li>线性对数阶 O(nlogn)</li>
+<li>平方阶 O(n²) O(n³) … O(n^k)</li>
+</ul>
+<p>非多项式量级：(n越多，执行时间急剧上升，性能低)</p>
+<ul>
+<li>指数阶 O(2^n)</li>
+<li>阶乘阶 O(n!)</li>
+</ul>
+<p>加法法则和乘法法则</p>
+<ul>
+<li>加法法则：总复杂度等于量级最大的那段代码的复杂度</li>
+<li>乘法法则：嵌套代码的复杂度等于嵌套内外代码复杂度的乘积</li>
+</ul>
+<p>平均时间复杂度：</p>
+<ul>
+<li>也叫加权平均时间复杂度或者期望时间复杂度。</li>
+<li>要会计算：最好、最坏、平均时间</li>
+</ul>
+<p>均摊时间复杂度</p>
+<ul>
+<li>特殊的平均时间复杂度</li>
+<li>相当于算法有规律可循，计算时间时，可以把一次耗时多的操纵的时间，均摊给多次耗时少的操纵。</li>
+</ul>
+</li>
+</ol>
+<h1 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h1><p>前端开发重时间 轻空间</p>
+<h1 id="基本数据结构"><a href="#基本数据结构" class="headerlink" title="基本数据结构"></a>基本数据结构</h1><h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><ul>
 <li>一个先进后出的数据结构</li>
 </ul>
 <h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><ul>
@@ -533,7 +571,106 @@ e<span class="token punctuation">.</span>next <span class="token operator">=</sp
 a<span class="token punctuation">.</span>next <span class="token operator">=</span> c<span class="token punctuation">;</span>
 b<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h2><p>一个完全二叉树</p>
+<p>js不存在堆的数据结构——使用数组模拟</p>
+<p>————可快速获得第n个 最大最小值</p>
+<h3 id="最小堆的实现"><a href="#最小堆的实现" class="headerlink" title="最小堆的实现"></a>最小堆的实现</h3><p>插入（O(logK)）： 尾部插入，然后上移直到插入值小于或等于堆顶元素（最小堆）</p>
+<p>删除堆顶（O(logK)）： 尾部元素替换堆顶，然后下移直到子节点大于等于这个新堆顶（直接删除堆顶会破坏堆的结构）</p>
+<p>获取堆顶： 返回数组的头部</p>
+<p>获取堆的的大小： 返回数组的长度</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 最小类堆 （堆是一个完全二叉树，且只有最小和最大堆）</span>
+<span class="token keyword">class</span> <span class="token class-name">MinHeap</span> <span class="token punctuation">{</span>
+ <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>heap <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+ <span class="token punctuation">}</span>
+    
+ <span class="token comment" spellcheck="true">// 获取父节点下标的方法</span>
+ <span class="token function">getParentIndex</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 获取父节点的公式 (i-1) / 2</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>i<span class="token number">-1</span><span class="token punctuation">)</span> <span class="token operator">></span><span class="token operator">></span> <span class="token number">1</span>
+ <span class="token punctuation">}</span>
+ <span class="token comment" spellcheck="true">// 获取左侧下标的方法</span>
+ <span class="token function">getLeftIndex</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 获取左侧的公式 i * 2 + 1</span>
+  <span class="token keyword">return</span> i <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span>
+ <span class="token punctuation">}</span>
+ <span class="token comment" spellcheck="true">// 获取右侧下标的方法</span>
+ <span class="token function">getRightIndex</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 获取右侧的公式 i * 2 + 2</span>
+  <span class="token keyword">return</span> i <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">2</span>
+ <span class="token punctuation">}</span>
+    
+ <span class="token comment" spellcheck="true">// 交换的方法封装</span>
+ <span class="token function">swap</span><span class="token punctuation">(</span>i1<span class="token punctuation">,</span> i2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>heap<span class="token punctuation">[</span>i1<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>heap<span class="token punctuation">[</span>i2<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>heap<span class="token punctuation">[</span>i2<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>heap<span class="token punctuation">[</span>i1<span class="token punctuation">]</span><span class="token punctuation">]</span>
+ <span class="token punctuation">}</span>
+ <span class="token comment" spellcheck="true">// 上移操作的封装</span>
+ <span class="token function">shiftUp</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 递归出口</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>index <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// 父节点下标</span>
+  <span class="token keyword">const</span> parentIndex <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getParentIndex</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span>
+  <span class="token comment" spellcheck="true">// 当前值大于父节点就交换</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>heap<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">&lt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>heap<span class="token punctuation">[</span>parentIndex<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token comment" spellcheck="true">// 封装一个交换的方法</span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">swap</span><span class="token punctuation">(</span>parentIndex<span class="token punctuation">,</span> index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token comment" spellcheck="true">// 递归判断</span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">shiftUp</span><span class="token punctuation">(</span>parentIndex<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
 
+ <span class="token comment" spellcheck="true">// 插入操作 将值插入堆的底部 然后上移：与父节点交换直到父节点小于等于插入的值</span>
+ <span class="token comment" spellcheck="true">// 大小为k的堆 复杂度O(log K)</span>
+ <span class="token function">inset</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 将值插入堆的底部</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>heap<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+  <span class="token comment" spellcheck="true">// 封装一个上移的方法</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">shiftUp</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>heap<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+ <span class="token punctuation">}</span>
+
+ <span class="token function">shiftDown</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 获取左右节点</span>
+  <span class="token keyword">const</span> leftIndex <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getLeftIndex</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> rightIndex <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getRightIndex</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// 当前节点大于 左侧节点 就交换</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>heap<span class="token punctuation">[</span>leftIndex<span class="token punctuation">]</span><span class="token operator">&lt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>heap<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">swap</span><span class="token punctuation">(</span>leftIndex<span class="token punctuation">,</span> index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token comment" spellcheck="true">// 递归找寻自己合适的位置</span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">shiftDown</span><span class="token punctuation">(</span>leftIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// 当前节点大于 右侧节点 就交换</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>heap<span class="token punctuation">[</span>rightIndex<span class="token punctuation">]</span><span class="token operator">&lt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>heap<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">swap</span><span class="token punctuation">(</span>rightIndex<span class="token punctuation">,</span> index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token comment" spellcheck="true">// 递归找寻自己合适的位置</span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">shiftDown</span><span class="token punctuation">(</span>rightIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+
+ <span class="token comment" spellcheck="true">// 删除堆顶</span>
+ <span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>heap<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>heap<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// 下移操作</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">shiftDown</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+ <span class="token comment" spellcheck="true">// 获取堆顶</span>
+ <span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>heap<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+ <span class="token punctuation">}</span>
+ <span class="token comment" spellcheck="true">// 获取堆的大小</span>
+ <span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>heap<span class="token punctuation">.</span>length
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 测试</span>
+<span class="token keyword">const</span> h <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MinHeap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+h<span class="token punctuation">.</span><span class="token function">inset</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+h<span class="token punctuation">.</span><span class="token function">inset</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+h<span class="token punctuation">.</span><span class="token function">inset</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+h<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="搜索排序"><a href="#搜索排序" class="headerlink" title="搜索排序"></a>搜索排序</h1>
                 
             </div>
             <hr/>
@@ -963,7 +1100,7 @@ b<span class="token punctuation">.</span>next <span class="token operator">=</sp
             <br> -->
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">63.8k</span>&nbsp;字
+                class="white-color">65k</span>&nbsp;字
             
             
             

@@ -461,21 +461,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-24
+                    2022-03-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    6 分
                 </div>
                 
 
@@ -490,7 +490,39 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="响应式原理"><a href="#响应式原理" class="headerlink" title="响应式原理"></a>响应式原理</h1><p>defineReactive<br>watch<br>dep<br>observe<br>Observe</p>
+                <h1 id="Vue-的总体流程"><a href="#Vue-的总体流程" class="headerlink" title="Vue 的总体流程"></a>Vue 的总体流程</h1><ol>
+<li><p>软文<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903845282185229">https://juejin.cn/post/6844903845282185229</a></p>
+</li>
+<li><p>从Vue的构造函数中可以看到，当我们执行<code>new Vue()</code>的时候，只执行了一个<code>_init</code>方法。<code>_init</code>会根据传入的选项对vue进行初始化。props、data、生命周期，事件机制的初始化都是在此过程中完成的。</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// Vue构造函数</span>
+<span class="token keyword">function</span> Vue <span class="token punctuation">(</span>options<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span>NODE_ENV <span class="token operator">!==</span> <span class="token string">'production'</span> <span class="token operator">&amp;&amp;</span>
+    <span class="token operator">!</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token keyword">instanceof</span> <span class="token class-name">Vue</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">'Vue is a constructor and should be called with the `new` keyword'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// 执行初始化逻辑</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_init</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>Vue是数据双向绑定，当数据改变时会重新渲染更新视图。 它是怎么做到的呢？</p>
+<pre><code>1、 在vue中书写的template模板都会视为字符串
+2、 在底层会先进行AST转换 将模板解析为抽象语法树
+3、 获取AST后会进行优化，（并不是所有的都需要响应式）
+4、 用优化后的AST生成 render渲染函数
+5、 根据渲染函数 抽象出 Vnode
+6、 Vnode 通过diff 获得最小量改变
+7、 patch上树 处理后最新的vnode渲染回真实的dom 
+</code></pre>
+</li>
+<li><p> 初始化 -&gt; 模板 -&gt; AST -&gt; render -&gt; vnode -&gt; 页面</p>
+</li>
+<li><p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/11/4/16e34e818c71943a~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp" alt="img"></p>
+</li>
+</ol>
+<p>​       大体总结起来就是先对选项对象初始化，通过Object.defineProperty建立一套响应式系统，然后将模板解析成render函数，然后使用render函数生成vnode，在渲染前，对vnode进行diff操作，最后进行必要的渲染。</p>
+<h1 id="响应式原理"><a href="#响应式原理" class="headerlink" title="响应式原理"></a>响应式原理</h1><p>defineReactive<br>watch<br>dep<br>observe<br>Observe</p>
 <p>数组的响应式<br>pop push shift unshift sort splice reverse</p>
 <p>Object.defineProperty()</p>
 <p>可以设置额外的属性</p>
@@ -1136,7 +1168,7 @@
             <br> -->
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">63.8k</span>&nbsp;字
+                class="white-color">65k</span>&nbsp;字
             
             
             
