@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="关于ts, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="原生与动画, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="若有诗书藏在心，岁月从不败美人">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>关于ts | 小羊站</title>
+    <title>原生与动画 | 小羊站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -319,7 +319,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">关于ts</h1>
+                    <h1 class="description center-align post-title">原生与动画</h1>
                 </div>
             </div>
         </div>
@@ -438,23 +438,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">笔记</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                前端
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -463,28 +454,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-26
+                    2022-03-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-24
+                    2022-03-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.9k
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    4 分
                 </div>
                 
 
@@ -499,275 +490,153 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="1、TS初见"><a href="#1、TS初见" class="headerlink" title="1、TS初见"></a>1、TS初见</h1><h2 id="1-1、为什么要有-TypeScript"><a href="#1-1、为什么要有-TypeScript" class="headerlink" title="1.1、为什么要有 TypeScript"></a>1.1、为什么要有 TypeScript</h2><p>TypeScript是JavaScript的超集，因为它扩展了JavaScript，有JavaScript没有的东西。硬要以父子类关系来说的话，TypeScript是JavaScript子类，继承的基础上去扩展。</p>
-<p>`TypeScript的初衷就是为了做类型检查，提早发现错误，所以「类型」是其最核心的特性。当然它只是给出你代码可能不会按预期执行的警告，比如你未按照声明的类型传参，你的代码还是可以运行的。这一点与强类型语言还是有本质的区别，强类型语言会直接导致编译不通过，因为TypeScript只是转译。跟JavaScript不同，TypeScript文件后缀使用 .ts扩展名。浏览器是不识别 .ts 文件，所以使用时必须提前把 TS 代码转换成 JavaScript 代码。这个转换过程被称为转译，编译和转译的微小差别在于：</p>
-<p>编译是把源码转变成另一种语言<br>转译是把源码转变另一个相同抽象层级的语言</p>
-<h2 id="1-2、前提准备"><a href="#1-2、前提准备" class="headerlink" title="1.2、前提准备"></a>1.2、前提准备</h2><ul>
-<li>安装 node环境下安装 npm install -g typescript</li>
-<li>手动编译 tsc  **.ts</li>
-<li>vscode自动编译 tsc –init 在tsconfig.js中配置，在终端打开tsc监视即可</li>
-<li>ts语法提示错误，不影响js的编译，因为js是弱类型语言（如类型注解不通过）</li>
-</ul>
-<pre class="line-numbers language-tsx"><code class="language-tsx">// 类型注解 一种轻量级的为函数或变量添加约束
-(() => {
-    function showMsg(str:String) {
-        return str + '123214'
-    }
-    let str = "woshi"
-    console.log(showMsg(str));
-    
-})()
+                <h1 id="常见的DOM操作"><a href="#常见的DOM操作" class="headerlink" title="常见的DOM操作"></a>常见的DOM操作</h1><h2 id="1）DOM-节点的获取"><a href="#1）DOM-节点的获取" class="headerlink" title="1）DOM 节点的获取"></a>1）DOM 节点的获取</h2><p>DOM 节点的获取的API及使用：</p>
+<pre class="line-numbers language-js"><code class="language-js">getElementById <span class="token comment" spellcheck="true">// 按照 id 查询</span>
+getElementsByTagName <span class="token comment" spellcheck="true">// 按照标签名查询</span>
+getElementsByClassName <span class="token comment" spellcheck="true">// 按照类名查询</span>
+querySelectorAll <span class="token comment" spellcheck="true">// 按照 css 选择器查询</span>
 
-// 接口演示 定义接口
-(() => {
-    interface Iperson{
-        fristName:string,
-        lastName:string
-    }
-    // 输出对象
-    function showFullName(person:Iperson) {
-        return person.fristName + person.lastName
-    }
-    // 定义对象
-    const person = {
-        fristName: 'dongfnag',
-        lastName: 'yuechu'
-    }
-    // 打印
-    console.log(showFullName(person))
-})()
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="1-3、基础类型"><a href="#1-3、基础类型" class="headerlink" title="1.3、基础类型"></a>1.3、基础类型</h2><h3 id="1、布尔-数字-字符串"><a href="#1、布尔-数字-字符串" class="headerlink" title="1、布尔 数字 字符串"></a>1、布尔 数字 字符串</h3><pre class="line-numbers language-tsx"><code class="language-tsx">    let a:boolean = true
-    let b:number = 1010
-    let c:string = '字符串'
-    
-    //字符串可与数字拼接 TS中变量一开始是什么类型就只能用这个类型，不允许混用
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="2、undefined-amp-null"><a href="#2、undefined-amp-null" class="headerlink" title="2、undefined &amp; null"></a>2、undefined &amp; null</h3><pre class="line-numbers language-tsx"><code class="language-tsx">    let und:undefined = undefined
-    let nul:null = null
-    // 给其他类型赋予
-    let num:number = null
-    let num:number = undefined
-    
-    // undefined和null 可以作为其他类型的子类型，可以将undef和null赋予其他类型（需关闭ts严格模式）
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="3、-数组和元组"><a href="#3、-数组和元组" class="headerlink" title="3、 数组和元组"></a>3、 数组和元组</h3><pre class="line-numbers language-tsx"><code class="language-tsx">数组定义方式1
-let arr:number[] = [10,20,30]
-数组定义方式2(泛型写法)
-let arr:Array<number> = [1,2,3]
-
-元组Tuple
-let arr:[string,boolean] = ['字符串', true]
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="4、Enum枚举-（ts补充）void"><a href="#4、Enum枚举-（ts补充）void" class="headerlink" title="4、Enum枚举 （ts补充）void"></a>4、Enum枚举 （ts补充）void</h3><p>使用枚举类型可以为一组赋值赋予友好的名字</p>
-<p>void没有返回值的类型，打印undefined</p>
-<h3 id="5、any-amp-unknown"><a href="#5、any-amp-unknown" class="headerlink" title="5、any &amp; unknown"></a>5、any &amp; unknown</h3><p><code>unknown</code>与<code>any</code>的最大区别是：</p>
-<p>unknown是 top type(任何类型都是它的 subtype) , 而 <code>any</code> 既是 <code>top type</code>, 又是 <code>bottom type</code> (它是任何类型的 <code>subtype</code> ) , 这导致 <code>any</code> 基本上就是放弃了任何类型检查。因为<code>any</code>既是<code>top type</code>, 又是 <code>bottom type</code>，所以任何类型的值可以赋值给<code>any</code>，同时<code>any</code>类型的值也可以赋值给任何类型。但<code>unknown</code> 只是 <code>top type</code>，任何类型的值都可以赋值给它，但它只能赋值给<code>unknown</code>和<code>any</code>，因为只有它俩是<code>top type</code>。</p>
-<pre class="line-numbers language-tsx"><code class="language-tsx">// any`会跳过类型检查器对值的检查，任何值都可以赋值给`any`类型，它通常被称为`top type
-let notSure: any = 4;
-notSure = "maybe a string instead"; // OK
-notSure = false; // OK
-// unknown与any一样，所有类型都可以分配给unknown:
-let notSure: unknown = 4;
-notSure = "maybe a string instead"; // OK
-notSure = false; // OK
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="6、object-amp-never"><a href="#6、object-amp-never" class="headerlink" title="6、object &amp; never"></a>6、object &amp; never</h3><p><code>never</code>类型表示的是那些永不存在的值的类型。</p>
-<p>==<code>never</code>与其他类型的联合后，是没有<code>never</code>的==</p>
-<p>值会永不存在的两种情况：</p>
-<ol>
-<li><p>如果一个函数执行时抛出了<strong>异常</strong>，那么这个函数永远不存在返回值（因为抛出异常会直接中断程序运行，这使得程序运行不到返回值那一步，即具有不可达的终点，也就永不存在返回了）；</p>
-</li>
-<li><p>函数中执行无限循环的代码（<strong>死循环</strong>），使得程序永远无法运行到函数返回值那一步，永不存在返回。</p>
-</li>
-<li><p><code>never</code>类型同<code>null</code>和<code>undefined</code>一样，也是任何类型的子类型，也可以赋值给任何类型：</p>
-</li>
-<li><p>但是没有类型是<code>never</code>的子类型或可以赋值给<code>never</code>类型（除了<code>never</code>本身之外），即使<code>any</code>也不可以赋值给<code>never</code>：</p>
-</li>
-</ol>
-<pre class="line-numbers language-tsx"><code class="language-tsx">object
-    function getobj(obj:object):object {
-        console.log(obj)
-        return {
-            name: 'kakaxi'
-        }
-    }
-    console.log(getobj({name: '213'}));
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="1-4、类型（联合-断言-交叉-推断）"><a href="#1-4、类型（联合-断言-交叉-推断）" class="headerlink" title="1.4、类型（联合 断言 交叉 推断）"></a>1.4、类型（联合 断言 交叉 推断）</h2><h3 id="1-1、联合类型"><a href="#1-1、联合类型" class="headerlink" title="1.1、联合类型"></a>1.1、联合类型</h3><p>联合类型表示取值可以为多种类型中的一种，使用 <code>|</code> 分隔每个类型。当任意属性使用联合类型且属性中存在可选属性时，需要联合<code>undefined</code>类型，否则编译报错，原因显而易见，因为可选属性可有可无</p>
-<pre class="line-numbers language-tsx"><code class="language-tsx">    let a: string | number
-    a = 'ok',
-    a = 11
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h3 id="1-2、类型断言"><a href="#1-2、类型断言" class="headerlink" title="1.2、类型断言"></a>1.2、类型断言</h3><p>类型断言好比其它语言里的类型转换，类型转换通常发生在你比<code>TS</code>更了解某个值的详细信息的时候。==(相当于告诉编译器，我知道我是什么类型，知道在干什莫，相信我！按我说的处理)==</p>
-<pre class="line-numbers language-tsx"><code class="language-tsx">// 类型断言两种方法<> he as
-// 例：<>断定变量str为字符串类型
-(<string>str)
-// as方法
-(str as string)
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="1-3、类型推断"><a href="#1-3、类型推断" class="headerlink" title="1.3、类型推断"></a>1.3、类型推断</h3><p>如果没有指定明确的类型，那么TS会按照类型推论的规则推断出一个类型，如果定义的时候没有赋值，不管之后有没有赋值，都会被推断成 <code>any</code> 类型而完全不被类型检查</p>
-<h3 id="1-4、交叉类型"><a href="#1-4、交叉类型" class="headerlink" title="1.4、交叉类型"></a>1.4、交叉类型</h3><p>==交叉类型取的多个类型的并集，但是如果<code>key</code>相同但是类型不同，则该<code>key</code>为<code>never</code>类型==</p>
-<p>交叉类型是将多个类型合并为一个类型。 这让我们可以把现有的多种类型叠加到一起成为一种类型，它包含了所需的所有类型的特性，使用<code>&amp;</code>定义交叉类型。</p>
-<pre class="line-numbers language-tsx"><code class="language-tsx">interface A {
-  name: string,
-  age: number
-}
-interface B {
-  name: string,
-  gender: string
-}
-
-let a: A & B = { // OK
-    name: "兔兔",
-    age: 18,
-    gender: "男"
-};
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="1-5、接口"><a href="#1-5、接口" class="headerlink" title="1.5、接口"></a>1.5、接口</h2><p>接口是对象状态（属性）和行为（方法）的抽象（描述）</p>
-<p>（接口是一种类型 规范 规则 约束 能力）</p>
-<p>可选属性readonly 只读属性？</p>
-<pre class="line-numbers language-tsx"><code class="language-tsx">interface Props { 
-  readonly name: string; 
-  age: number; 
-  money?: number;
-}
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>对于数组，<code>TS</code>还有<code>ReadonlyArray&lt;T&gt;</code>类型，此类型将数组的所有可变方法去掉了，因此可以确保数组创建后再也不能被修改：</p>
-<p>==<code>readonly</code>声明的只读数组类型与<code>ReadonlyArray</code>声明的只读数组类型，二者等价==</p>
-<h3 id="接口的继承"><a href="#接口的继承" class="headerlink" title="接口的继承"></a>接口的继承</h3><p>接口继承接口使用关键字extends ，继承的本质是复制，抽出共同的代码，所以子接口拥有父接口的类型定义</p>
-<pre class="line-numbers language-tsx"><code class="language-tsx">interface Shape {
-    name: string
-}
-interface Square extends Shape {
-    age: number
-}
-let square: Square = {name: '雷'， age: 18} 
-接口可以多继承，大部分语言是不支持多继承的，原因是会引发混乱
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="image-20210907172322403.png" alt="image-20210907172322403"></p>
-<h3 id="接口定义函数"><a href="#接口定义函数" class="headerlink" title="接口定义函数"></a>接口定义函数</h3><p>采用函数表达式接口定义函数的方式时，对等号左侧进行类型限制，可以保证以后对函数名赋值时保证参数个数、参数类型、返回值类型不变。</p>
-<pre class="line-numbers language-tsx"><code class="language-tsx">interface SearchFunc {
-    (source: string, subString:string): boolean
-}
-// 左侧进行限制 限制参数为两个且必须为字符串类型，返回值必须为布尔型
-let mySearch: SearchFunc = function(source: string, subString:string) {
-  let result = source.search(subString);
-  return result >-1;
-}
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="1-6、函数"><a href="#1-6、函数" class="headerlink" title="1.6、函数"></a>1.6、函数</h2><h3 id="1-1、-函数声明-amp-函数表达式"><a href="#1-1、-函数声明-amp-函数表达式" class="headerlink" title="1.1、 函数声明 &amp; 函数表达式"></a>1.1、 函数声明 &amp; 函数表达式</h3><pre class="line-numbers language-tsx"><code class="language-tsx">// 声明
-function sum(x:number, y:number) {
-    return x + y
-}
-// 表达式
-let mysum:(x:number, y:number) => number = function(x;number, y:number):number {
-    return x + y
-}
-// 在 TypeScript 的类型定义中，=> 用来表示函数的定义，左边是输入类型，需要用括号括起来，右边是输出类型。切忌与ES6的箭头函数混淆了。
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="1-2、函数中的this声明"><a href="#1-2、函数中的this声明" class="headerlink" title="1.2、函数中的this声明"></a>1.2、函数中的<code>this</code>声明</h3><p>ts会通过代码流分析出this是属于什么类型，，当然我们也可以明确的指定函数中的this是什么类型，==this类型变量必须放在参数的首位==</p>
-<pre class="line-numbers language-tsx"><code class="language-tsx">interface Obj {
-    fn: (this: Obj, name: string) => void;
-}
-
-let obj: Obj = {
-    fn(name: string) {}
-}
-
-let rab: Obj ={
-    fn(name: string) {}
-}
-
-obj.fn("兔兔"); // OK
-obj.fn.call(rab, "兔兔"); // OK
-obj.fn.call(window, "兔兔"); // Error: this 应该为 Obj 类型
+<span class="token comment" spellcheck="true">// 按照 id 查询</span>
+<span class="token keyword">var</span> imooc <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'imooc'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 查询到 id 为 imooc 的元素</span>
+<span class="token comment" spellcheck="true">// 按照标签名查询</span>
+<span class="token keyword">var</span> pList <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'p'</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 查询到标签为 p 的集合</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>divList<span class="token punctuation">.</span>length<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>divList<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 按照类名查询</span>
+<span class="token keyword">var</span> moocList <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">'mooc'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 查询到类名为 mooc 的集合</span>
+<span class="token comment" spellcheck="true">// 按照 css 选择器查询</span>
+<span class="token keyword">var</span> pList <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'.mooc'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 查询到类名为 mooc 的集合</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="1-3、参数"><a href="#1-3、参数" class="headerlink" title="1.3、参数"></a>1.3、参数</h3><p><code>可选参数</code></p>
-<p>​    参数后加问号（？）注：==可选参数后面不允许再出现必需参数==</p>
-<p><code>参数默认值</code></p>
-<p>​    在函数定义时，参数内直接赋值</p>
-<pre class="line-numbers language-tsx"><code class="language-tsx">function buildName(firstName: string, lastName: string = 'Cat') {
-    return firstName + ' ' + lastName;
-}
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p> <code>剩余参数</code></p>
-<p>同js，用 … 表示</p>
-<pre><code>function push(array: any[], ...items: any[]) {
-    items.forEach(function(item) {
-        array.push(item);
-    });
-}
+<h2 id="2）DOM-节点的创建"><a href="#2）DOM-节点的创建" class="headerlink" title="2）DOM 节点的创建"></a>2）DOM 节点的创建</h2><p><strong>创建一个新节点，并把它添加到指定节点的后面。</strong>已知的 HTML 结构如下：</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>DEMO<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>我是标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>   
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>要求添加一个有内容的 span 节点到 id 为 title 的节点后面，做法就是：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 首先获取父节点</span>
+<span class="token keyword">var</span> container <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'container'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 创建新节点</span>
+<span class="token keyword">var</span> targetSpan <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'span'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 设置 span 节点的内容</span>
+targetSpan<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">'hello world'</span>
+<span class="token comment" spellcheck="true">// 把新创建的元素塞进父节点里去</span>
+container<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>targetSpan<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="3）DOM-节点的删除"><a href="#3）DOM-节点的删除" class="headerlink" title="3）DOM 节点的删除"></a>3）DOM 节点的删除</h2><p><strong>删除指定的 DOM 节点，</strong>已知的 HTML 结构如下：</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>DEMO<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>我是标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>   
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>需要删除 id 为 title 的元素，做法是：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 获取目标元素的父元素</span>
+<span class="token keyword">var</span> container <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'container'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 获取目标元素</span>
+<span class="token keyword">var</span> targetNode <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'title'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 删除目标元素</span>
+container<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>targetNode<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>或者通过子节点数组来完成删除：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 获取目标元素的父元素</span>
+<span class="token keyword">var</span> container <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'container'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 获取目标元素</span>
+<span class="token keyword">var</span> targetNode <span class="token operator">=</span> container<span class="token punctuation">.</span>childNodes<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token comment" spellcheck="true">// 删除目标元素</span>
+container<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>targetNode<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="4）修改-DOM-元素"><a href="#4）修改-DOM-元素" class="headerlink" title="4）修改 DOM 元素"></a>4）修改 DOM 元素</h2><p>修改 DOM 元素这个动作可以分很多维度，比如说移动 DOM 元素的位置，修改 DOM 元素的属性等。</p>
+<p><strong>将指定的两个 DOM 元素交换位置，</strong>已知的 HTML 结构如下：</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>DEMO<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>我是标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>我是内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>   
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>现在需要调换 title 和 content 的位置，可以考虑 insertBefore 或者 appendChild：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 获取父元素</span>
+<span class="token keyword">var</span> container <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'container'</span><span class="token punctuation">)</span>   
+ 
+<span class="token comment" spellcheck="true">// 获取两个需要被交换的元素</span>
+<span class="token keyword">var</span> title <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'title'</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> content <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'content'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 交换两个元素，把 content 置于 title 前面</span>
+container<span class="token punctuation">.</span><span class="token function">insertBefore</span><span class="token punctuation">(</span>content<span class="token punctuation">,</span> title<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="常见的宽高范围"><a href="#常见的宽高范围" class="headerlink" title="常见的宽高范围"></a>常见的宽高范围</h1><h2 id="offsetWidth-获得元素的内容宽度（只读属性）"><a href="#offsetWidth-获得元素的内容宽度（只读属性）" class="headerlink" title="offsetWidth 获得元素的内容宽度（只读属性）"></a>offsetWidth 获得元素的内容宽度（只读属性）</h2><p>与直接.width区别在于获取的是数值，并非字符串，方便js操作</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span>div 
+    style<span class="token operator">=</span>"width<span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    height<span class="token punctuation">:</span>200px<span class="token punctuation">;</span> 
+    border<span class="token punctuation">:</span> 1px<span class="token punctuation">;</span> 
+    padding<span class="token operator">=</span><span class="token string">"10px"</span><span class="token punctuation">;</span>
+<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 
-let a = [];
-push(a, 1, 2, 3);
+<span class="token keyword">let</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// offsetWidth 获得元素的内容高度(样式宽度+边框+padding)</span>
+box<span class="token punctuation">.</span>offsetWidth <span class="token operator">=</span> 222px<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="offsetHeight-获得元素的内容高度（只读属性）"><a href="#offsetHeight-获得元素的内容高度（只读属性）" class="headerlink" title="offsetHeight 获得元素的内容高度（只读属性）"></a>offsetHeight 获得元素的内容高度（只读属性）</h2><pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span>div 
+    style<span class="token operator">=</span>"width<span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    height<span class="token punctuation">:</span>200px<span class="token punctuation">;</span> 
+    border<span class="token punctuation">:</span> 1px<span class="token punctuation">;</span> 
+    padding<span class="token operator">=</span><span class="token string">"10px"</span><span class="token punctuation">;</span>
+<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+<span class="token keyword">let</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// offsetWidth 获得元素的内容高度(样式宽度+边框+padding)</span>
+box<span class="token punctuation">.</span>offsetHeight <span class="token operator">=</span> 222px<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="offsetTop-amp-offsetLeft"><a href="#offsetTop-amp-offsetLeft" class="headerlink" title="offsetTop &amp; offsetLeft"></a>offsetTop &amp; offsetLeft</h2><p>当前元素的上边框到offsetParent元素上边框的距离</p>
+<p>当前元素的上边框到offsetParent元素左边框的距离</p>
+<p>offsetParent：具有定位的 父级元素，如果找不到就以body上边距为准</p>
+<h2 id="client-客户端（当前元素）-大小"><a href="#client-客户端（当前元素）-大小" class="headerlink" title="client 客户端（当前元素） 大小"></a>client 客户端（当前元素） 大小</h2><p>==client当前元素 不包含border margin==</p>
+<p>clientWidth  = width + paddin-left + padding-right</p>
+<p>clientHeight  =  width +  paddin-top+ padding-bottom</p>
+<p>clientLeft = 左边框大小</p>
+<p>clientTop = 上边框大小</p>
+<p>tip：</p>
+<p> ==所有的client属性都是 只读 的==</p>
+<p>==如果元素设为display：none； client获取全为零==</p>
+<p>==大量访问client是非常消耗性能的，要尽量避免重复访问==</p>
+<h2 id="scroll滚动"><a href="#scroll滚动" class="headerlink" title="scroll滚动"></a>scroll滚动</h2><p>在style中 添加 overflow: scroll; 可实现滚动</p>
+<h3 id="scrollHeight-元素总高度"><a href="#scrollHeight-元素总高度" class="headerlink" title="scrollHeight 元素总高度"></a>scrollHeight 元素总高度</h3><pre><code>// 元素的总高度，包含滚动条外的不可见 高度（内容加边框加padding）
+
+// 无滚动条时 scrollHeight 与 clientHeight 是相同的
 </code></pre>
-<h3 id="1-4、重载"><a href="#1-4、重载" class="headerlink" title="1.4、重载"></a>1.4、重载</h3><p>重载允许一个函数接受不同数量或类型的参数时，作出不同的处理。</p>
-<p><code>重载</code>的概念在学<code>JAVA</code>（<a href="https://link.juejin.cn/?target=https://www.runoob.com/java/java-override-overload.html"><code>JAVA中的重载</code></a>）的时候接触到的，<code>JS</code>是没有这个概念的，<code>TS</code>的重载感觉更应该称之为<code>函数签名重载</code>。因为最后函数实现的内部还是依赖判断类型来处理，前面的函数定义只是为了精确表达输入类型对应的输出类型。</p>
-<pre class="line-numbers language-tsx"><code class="language-tsx">function reverse(x: number | string): number | string | void {
-    if (typeof x === 'number') {
-        return Number(x.toString().split('').reverse().join(''));
-    } else if (typeof x === 'string') {
-        return x.split('').reverse().join('');
-    }
-}
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="1-7、-类"><a href="#1-7、-类" class="headerlink" title="1.7、 类"></a>1.7、 类</h2><h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h3><ul>
-<li>public  属性修饰符默认为<code>public</code>公共的，即类的属性、方法可以在外部访问</li>
-<li>private  与<code>public</code>相对，私有修饰符，即类的属性、方法不可以在外部访问</li>
-<li>protected 修饰符与<code>private</code>修饰符的行为很相似，但有一点不同，<code>protected</code>成员在<strong>派生类</strong>中仍然可以访问。注意，这里是<strong>派生类中</strong>，而不是<strong>实例、子类实例</strong>。</li>
-<li>readonly 只读属性修饰符 构造函数中可以对只读属性进行修改  <img src="image-20210910114715199.png" alt="image-20210910114715199"></li>
-<li>发生继承关系后类与类的叫法<img src="image-20210909200925647.png" alt="image-20210909200925647"></li>
-</ul>
-<h3 id="参数属性"><a href="#参数属性" class="headerlink" title="参数属性"></a>参数属性</h3><p>我们也可以在类的内部方法上对参数使用<code>public、private、protected</code>修饰符，它的作用是可以更方便地让我们在一个地方定义并初始化一个成员。</p>
-<pre class="line-numbers language-tsx"><code class="language-tsx">class Animal {
-    constructor(public name: string, private age: number, protected sex: string) {}
-}
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h3 id="接口实现类"><a href="#接口实现类" class="headerlink" title="接口实现类"></a>接口实现类</h3><p><code>TypeScript</code> 也能够用接口来明确的强制一个类去符合某种契约。类去实现接口，这里使用关键字<code>implements</code></p>
-<pre class="line-numbers language-tsx"><code class="language-tsx">// 一个类可以实现多个接口
-interface Age {
-  age: number;
-}
+<h3 id="scrollWidth-元素总宽度"><a href="#scrollWidth-元素总宽度" class="headerlink" title="scrollWidth 元素总宽度"></a>scrollWidth 元素总宽度</h3><pre><code>// 元素的总宽度，包含滚动条外的不可见 宽度（内容加边框加padding）
 
-interface Title{
-  title: string;
-}
-class title implements Title, Age{
-  title: string = '兔兔';
-  age: number = 18;
-}
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h3><p>抽象类做为其它派生类的基类使用, 不允许被实例化。 不同于接口，抽象类可以包含成员的实现细节。 </p>
-<p>抽象类中的抽象方法不包含具体实现并且必须在派生类中实现。 抽象方法的语法与接口方法相似。 两者都是定义方法签名但不包含方法体。 然而，抽象方法必须包含<code>abstract</code>关键字并且可以包含访问修饰符。</p>
-<p><code>abstract</code>关键字是用于定义抽象类和在抽象类内部定义抽象方法。</p>
-<pre class="line-numbers language-tsx"><code class="language-tsx">abstract class Department {
-    constructor(public name: string) {
-    }
-    printName(): void {
-        console.log('Department name: ' + this.name);
-    }
-    abstract printMeeting(): void; // 必须在派生类中实现
-}
-class AccountingDepartment extends Department {
-    constructor() {
-        super('Accounting and Auditing'); // 在派生类的构造函数中必须调用 super()
-    }
-    printMeeting(): void {
-        console.log('The Accounting Department meets each Monday at 10am.');
-    }
-    generateReports(): void {
-        console.log('Generating accounting reports...');
-    }
-}
-let department: Department; // OK：允许创建一个对抽象类型的引用
-department = new Department(); // Error: 不能创建一个抽象类的实例
-department = new AccountingDepartment(); // OK：允许对一个抽象子类进行实例化和赋值
-department.printName(); // OK
-department.printMeeting(); // OK
-department.generateReports(); // Error: 方法在声明的抽象类中不存在
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="1-8、-泛型-lt-gt"><a href="#1-8、-泛型-lt-gt" class="headerlink" title="1.8、 泛型<>"></a>1.8、 泛型&lt;&gt;</h2><p>泛型是指在定义函数、接口或类的时候，不预先指定具体的类型，而在使用的时候再指定类型的一种特性。</p>
+// 无滚动条时 scrollWidth 与 clientWidth 是相同的
+</code></pre>
+<h3 id="scrollTop-可读写-元素被卷起的高度"><a href="#scrollTop-可读写-元素被卷起的高度" class="headerlink" title="scrollTop(可读写) 元素被卷起的高度"></a>scrollTop(可读写) 元素被卷起的高度</h3><pre><code>// 当滚动条滚动到底部时，符合以下公式
+scrollHeight = clientHeight + scrollTop
+</code></pre>
+<h3 id="scrollLeft-可读写-元素被卷起的宽度"><a href="#scrollLeft-可读写-元素被卷起的宽度" class="headerlink" title="scrollLeft(可读写) 元素被卷起的宽度"></a>scrollLeft(可读写) 元素被卷起的宽度</h3><pre><code>// 当滚动条滚动到底部时，符合以下公式
+scrollWhiht = clientwhiht + scrollLeft
+</code></pre>
+<h3 id="scrollTo-方法-快速返回顶部"><a href="#scrollTo-方法-快速返回顶部" class="headerlink" title="scrollTo 方法(快速返回顶部)"></a>scrollTo 方法(快速返回顶部)</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 示例</span>
+btn<span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 写入要返回的坐标</span>
+    <span class="token function">scrollTo</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -794,7 +663,7 @@ department.generateReports(); // Error: 方法在声明的抽象类中不存在
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/26/%E5%85%B3%E4%BA%8Ets/">http://example.com/2021/09/26/%E5%85%B3%E4%BA%8Ets/</a>
+                    <a href="http://example.com/2022/03/30/%E5%8E%9F%E7%94%9F%E4%B8%8E%E5%8A%A8%E7%94%BB/">http://example.com/2022/03/30/%E5%8E%9F%E7%94%9F%E4%B8%8E%E5%8A%A8%E7%94%BB/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -832,8 +701,8 @@ department.generateReports(); // Error: 方法在声明的抽象类中不存在
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">笔记</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
                                 </a>
                             
                         </div>
@@ -881,13 +750,13 @@ department.generateReports(); // Error: 方法在声明的抽象类中不存在
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/27/%E5%89%8D%E7%AB%AF%E4%B8%80%E4%BA%9B%E7%AC%94%E8%AE%B0/">
+                <a href="/2022/04/02/%E5%85%B3%E4%BA%8Ets/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="前端小白记">
+                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="重学TS">
                         
-                        <span class="card-title">前端小白记</span>
+                        <span class="card-title">重学TS</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -898,7 +767,7 @@ department.generateReports(); // Error: 方法在声明的抽象类中不存在
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-27
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-02
                         </span>
                         <span class="publish-author">
                             
@@ -930,13 +799,13 @@ department.generateReports(); // Error: 方法在声明的抽象类中不存在
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/25/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93/">
+                <a href="/2022/03/17/%E9%87%8D%E4%BF%AE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="总结常用的一些类库">
+                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="重修数据结构">
                         
-                        <span class="card-title">总结常用的一些类库</span>
+                        <span class="card-title">重修数据结构</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -947,16 +816,12 @@ department.generateReports(); // Error: 方法在声明的抽象类中不存在
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-17
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ERHA
                             
                         </span>
                     </div>
@@ -964,8 +829,8 @@ department.generateReports(); // Error: 方法在声明的抽象类中不存在
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
+                    <a href="/tags/%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">结构与算法</span>
                     </a>
                     
                 </div>
@@ -1204,7 +1069,7 @@ department.generateReports(); // Error: 方法在声明的抽象类中不存在
             <br> -->
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">65k</span>&nbsp;字
+                class="white-color">66.1k</span>&nbsp;字
             
             
             
