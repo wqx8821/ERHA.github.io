@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="node操作mongo, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="linux&amp;Nginx, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="若有诗书藏在心，岁月从不败美人">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>node操作mongo | 小羊站</title>
+    <title>linux&amp;Nginx | 小羊站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -319,7 +319,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">node操作mongo</h1>
+                    <h1 class="description center-align post-title">linux&amp;Nginx</h1>
                 </div>
             </div>
         </div>
@@ -438,23 +438,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">笔记</span>
+                            <a href="/tags/%E9%83%A8%E7%BD%B2/">
+                                <span class="chip bg-color">部署</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/node/" class="post-category">
-                                node
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -463,28 +454,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-28
+                    2022-04-11
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-16
+                    2022-04-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    611
+                    2.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    11 分
                 </div>
                 
 
@@ -499,147 +490,317 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="node操作mongodb"><a href="#node操作mongodb" class="headerlink" title="node操作mongodb"></a>node操作mongodb</h2><h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><pre class="line-numbers language-js"><code class="language-js">npm install mongodb <span class="token operator">--</span>save 
-<span class="token comment" spellcheck="true">// 或者</span>
-cnpm install mongodb <span class="token operator">--</span>save 
-<span class="token comment" spellcheck="true">// 或者</span>
-yarn add mongodb
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="node引入连接mongodb"><a href="#node引入连接mongodb" class="headerlink" title="node引入连接mongodb"></a>node引入连接mongodb</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 引入 mongodb</span>
-<span class="token keyword">const</span> <span class="token punctuation">{</span>MongoClient<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongodb'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <h1 id="购买阿里云服务器"><a href="#购买阿里云服务器" class="headerlink" title="购买阿里云服务器"></a>购买阿里云服务器</h1><p>购买完毕——》 重置实例密码——》进行远程连接</p>
+<ol>
+<li><p>连接</p>
+<pre><code>$ ssh root@你的ip
+# 然后输入密码，完成登录
 
-<span class="token comment" spellcheck="true">// 定义数据库连接的地址</span>
-<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'mongodb://localhost:27017'</span><span class="token punctuation">;</span> 
-<span class="token comment" spellcheck="true">// const url = 'mongodb://admin:123456@localhost:27017/'; 有密码连接方式 admin 表示用户名，123456 表示密码</span>
+退出链接
+exit;
+</code></pre>
+</li>
+<li><p>查看文件 </p>
+<pre><code>cd / 根目录
+ls 查询
+</code></pre>
+</li>
+<li><p>文件颜色与作用</p>
+<ul>
+<li>蓝色 表示文件夹；</li>
+<li>灰色 表示普通文件；</li>
+<li>绿色 表示可执行文件；</li>
+<li>红色 表示压缩文件；</li>
+<li>天蓝色 表示链接文件（快捷方式）；</li>
+</ul>
+<p>常用目录的作用如下：</p>
+<ul>
+<li><strong>bin：</strong> 存放普通用户可执行的指令，普通用户也可以执行；</li>
+<li><strong>dev ：</strong> 设备目录，所有的硬件设备及周边均放置在这个设备目录中；</li>
+<li><strong>boot ：</strong> 开机引导目录，包括 Linux 内核文件与开机所需要的文件；</li>
+<li><strong>home：</strong> 这里主要存放你的个人数据，具体每个用户的设置文件，用户的桌面文件夹，还有用户的数据都放在这里。每个用户都有自己的用户目录，位置为：<code>/home/用户名</code>。当然，root 用户除外；</li>
+<li><strong>usr：</strong> 应用程序放置目录；</li>
+<li><strong>lib：</strong> 开机时常用的动态链接库，bin 及 sbin 指令也会调用对应的 lib 库；</li>
+<li><strong>tmp：</strong> 临时文件存放目录 ；</li>
+<li><strong>etc：</strong> 各种配置文件目录，大部分配置属性均存放在这里；</li>
+</ul>
+</li>
+</ol>
+<h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="常见操作"><a href="#常见操作" class="headerlink" title="常见操作"></a>常见操作</h3><p>Linux常用命令大全：<a target="_blank" rel="noopener" href="https://blog.csdn.net/lucylily11/article/details/120383489">https://blog.csdn.net/lucylily11/article/details/120383489</a></p>
+<pre class="line-numbers language-shell"><code class="language-shell">vim 文件名  // 编辑某文件
+cat 文件名  // 查看文件内容
+touch 文件名 // 新建文件
 
-<span class="token comment" spellcheck="true">// 定义要操作的数据库</span>
-<span class="token keyword">const</span> dbName <span class="token operator">=</span> <span class="token string">'itying'</span><span class="token punctuation">;</span>
+pwd 显示工作目录所在位置(显示绝对路径)
+mkdir -p 目录名 // 新建目录
 
-<span class="token comment" spellcheck="true">// 连接数据库</span>
-MongoClient<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span> useUnifiedTopology<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>client<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-  <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token keyword">return</span><span class="token punctuation">;</span> 
-  <span class="token punctuation">}</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"连接成功"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token comment" spellcheck="true">// 获取 db 对象 </span>
-  <span class="token keyword">const</span> db <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">db</span><span class="token punctuation">(</span>dbName<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+cp复制文件或目录
+cp [选项] [原文件或目录] [目标目录] 
 
-  <span class="token comment" spellcheck="true">// 操作完数据库后，一定要记得关闭</span>
-  client<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="node-对数据进行增删改查"><a href="#node-对数据进行增删改查" class="headerlink" title="node 对数据进行增删改查"></a>node 对数据进行增删改查</h3><h4 id="Nodejs-查找-MongoDb-数据库的数据"><a href="#Nodejs-查找-MongoDb-数据库的数据" class="headerlink" title="Nodejs 查找 MongoDb 数据库的数据"></a>Nodejs 查找 MongoDb 数据库的数据</h4><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span>MongoClient<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongodb'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'mongodb://localhost:27017'</span><span class="token punctuation">;</span> 
-<span class="token comment" spellcheck="true">// const url = 'mongodb://admin:123456@localhost:27017/'; 有密码连接方式 admin 表示用户名，123456 表示密码</span>
-<span class="token comment" spellcheck="true">// 定义要操作的数据库</span>
-<span class="token keyword">const</span> dbName <span class="token operator">=</span> <span class="token string">'itying'</span><span class="token punctuation">;</span>
+mv 剪切或改名，如果原文件和目标目录在同一目录下，则为改名，否则为剪切
+mv [原文件或目录] [目标目录]
 
-MongoClient<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span> useUnifiedTopology<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>client<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-  <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token keyword">return</span><span class="token punctuation">;</span> 
-  <span class="token punctuation">}</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"连接成功"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token comment" spellcheck="true">// 获取 db 对象 </span>
-  <span class="token keyword">const</span> db <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">db</span><span class="token punctuation">(</span>dbName<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+(rm 删除文件或目录 选项：-r 删除目录；-f 强制执行
+rm -rf [文件或目录]  // 删除文件)
 
-  <span class="token comment" spellcheck="true">// 查找数据</span>
-  db<span class="token punctuation">.</span><span class="token function">collection</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"age"</span><span class="token punctuation">:</span><span class="token number">12</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>data<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
-    
-    <span class="token comment" spellcheck="true">// 操作完数据库后，一定要记得关闭</span>
-    client<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="Nodejs-给-MongoDb-增加数据"><a href="#Nodejs-给-MongoDb-增加数据" class="headerlink" title="Nodejs 给 MongoDb 增加数据"></a>Nodejs 给 MongoDb 增加数据</h4><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span>MongoClient<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongodb'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'mongodb://localhost:27017'</span><span class="token punctuation">;</span> 
-<span class="token comment" spellcheck="true">// const url = 'mongodb://admin:123456@localhost:27017/'; 有密码连接方式 admin 表示用户名，123456 表示密码</span>
-<span class="token comment" spellcheck="true">// 定义要操作的数据库</span>
-<span class="token keyword">const</span> dbName <span class="token operator">=</span> <span class="token string">'itying'</span><span class="token punctuation">;</span>
+| 管道 将前一个命令的结果像管道一样传递给后一个命令 作为输入
 
-MongoClient<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span> useUnifiedTopology<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>client<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-  <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token keyword">return</span><span class="token punctuation">;</span> 
-  <span class="token punctuation">}</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"连接成功"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token comment" spellcheck="true">// 获取 db 对象 </span>
-  <span class="token keyword">const</span> db <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">db</span><span class="token punctuation">(</span>dbName<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+tar命令，用于压缩解压：
+压缩：tar -jcv -f filename.tar.bz2 要被处理的文件或目录名称
+查询：tar -jtv -f filename.tar.bz2
+解压：tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录
 
-  <span class="token comment" spellcheck="true">// 增加数据</span>
-  db<span class="token punctuation">.</span><span class="token function">collection</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">insertOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span><span class="token string">"测试者"</span><span class="token punctuation">,</span><span class="token string">"age"</span><span class="token punctuation">:</span><span class="token number">17</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>result<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">return</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    client<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
+ wget 是从远程下载的工具：
+ wget [参数] [URL地址] // 使用
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="Nodejs-修改-MongoDb-数据"><a href="#Nodejs-修改-MongoDb-数据" class="headerlink" title="Nodejs 修改 MongoDb 数据"></a>Nodejs 修改 MongoDb 数据</h4><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span> MongoClient <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongodb'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'mongodb://localhost:27017'</span><span class="token punctuation">;</span> 
-<span class="token comment" spellcheck="true">// const url = 'mongodb://admin:123456@localhost:27017/'; 有密码连接方式 admin 表示用户名，123456 表示密码</span>
-<span class="token comment" spellcheck="true">// 定义要操作的数据库</span>
-<span class="token keyword">const</span> dbName <span class="token operator">=</span> <span class="token string">'itying'</span><span class="token punctuation">;</span>
+<h3 id="vim编辑器"><a href="#vim编辑器" class="headerlink" title="vim编辑器"></a>vim编辑器</h3><p>通过 <code>vim &lt;文件名&gt;</code> 即可进入对该文件的编辑模式，按下 <code>i</code> 切换到编辑状态。</p>
+<p>想要结束输入，可以按 <code>esc</code> 键，想要退出编辑模式，可以敲下 <code>:wq</code> 或者按快捷键：<code>shift+zz</code>。</p>
+<p>在命令模式下按下 <code>i</code> 就进入了输入模式。</p>
+<p>在输入模式中，可以使用以下按键取消与显示行号：</p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>行号显示</td>
+<td><code>:set nu</code></td>
+</tr>
+<tr>
+<td>行号显示取消</td>
+<td><code>:set nonu</code></td>
+</tr>
+</tbody></table>
+<h3 id="杀死进程"><a href="#杀死进程" class="headerlink" title="杀死进程"></a>杀死进程</h3><p>查看进程：</p>
+<pre class="line-numbers language-shell"><code class="language-shell">$ ps -ef
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>查看到进程中的 <code>PID</code> ，然后执行：</p>
+<pre class="line-numbers language-shell"><code class="language-shell"># 正常杀死
+$ kill -1 2235
+# 强制杀死
+$ kill -9 2235
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="SH-上传-下载文件"><a href="#SH-上传-下载文件" class="headerlink" title="SH 上传/下载文件"></a>SH 上传/下载文件</h2><p>SSH 可以通过 scp 命令来上传文件，是 Linux 系统下基于 SSH 登陆进行安全的远程文件拷贝命令，scp 是 secure copy 的简写，可以使用它上传本地文件夹到远程服务器，也可以从远程服务器上下载文件夹到本地：</p>
+<pre class="line-numbers language-shell"><code class="language-shell"># 打开你的某个项目
 
-MongoClient<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span> useUnifiedTopology<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>client<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-  <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token keyword">return</span><span class="token punctuation">;</span> 
-  <span class="token punctuation">}</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"连接成功"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token comment" spellcheck="true">// 获取 db 对象 </span>
-  <span class="token keyword">const</span> db <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">db</span><span class="token punctuation">(</span>dbName<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+# 上传文件夹到远程服务器
+scp -P port -r /local/dir username@servername:/remote/dir
+# scp -r ./ root@8.130.25.41:/home
 
-  <span class="token comment" spellcheck="true">// 修改数据</span>
-  db<span class="token punctuation">.</span><span class="token function">collection</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">updateOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"xiaoming"</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>$<span class="token keyword">set</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"age"</span><span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>result<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">return</span><span class="token punctuation">;</span>
+# 从远程服务器下载文件夹
+scp -P port -r username@servername:/remote/dir/ /local/dir
+# scp -r root@8.130.25.41:/home ./
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>-r</code> 参数表示递归复制，即复制该目录下面的文件和目录，如果要上传单个文件，只要把 <code>-r</code> 删除。大写的 <code>P</code> 表示的是端口，如果还是默认的 SSH 端口 22 没有更改，则不需要 <code>-P</code>。</p>
+<p>注意：这两行代码要在你本机的终端运行，而不是在阿里云的终端。</p>
+<h2 id="FTP工具上传"><a href="#FTP工具上传" class="headerlink" title="FTP工具上传"></a>FTP工具上传</h2><p>可以使用ftp工具上传，</p>
+<p>如 <a target="_blank" rel="noopener" href="https://www.filezilla.cn/">File Zilla (opens new window)</a> 宝塔</p>
+<p>安装完成后即可拖拽上传文件</p>
+<h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><p>Nginx 是开源、高性能、高可靠的 Web 和反向代理服务器，而且支持热部署，几乎可以做到 7 * 24 小时不间断运行，即使运行几个月也不需要重新启动，还能在不间断服务的情况下对软件版本进行热更新。</p>
+<p>这里我们重点提一下服务器安装Nginx、node及项目打包上线后产生的跨域问题的解决方案。</p>
+<h2 id="快速安装Nginx"><a href="#快速安装Nginx" class="headerlink" title="快速安装Nginx"></a>快速安装Nginx</h2><p>首先，确保自己连接上了服务器 <code>ssh 用户名@公网ip</code>，然后运行：</p>
+<pre class="line-numbers language-shell"><code class="language-shell">yum list | grep nginx
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>接着运行：</p>
+<pre class="line-numbers language-shell"><code class="language-shell">yum install nginx
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>安装好后 <code>nginx -v</code> 可以查看 Nginx 版本信息。并且使用 <code>rpm -ql nginx</code> 可以查看 Nginx 被安装到了什么地方。</p>
+<blockquote>
+<p>这里有两个文件夹要留意：</p>
+<ol>
+<li><code>/etc/nginx/conf.d/</code> 文件夹，是我们进行子配置的配置项存放处，<code>/etc/nginx/nginx.conf</code> 主配置文件会默认把这个文件夹中所有子配置项都引入；</li>
+<li><code>/usr/share/nginx/html/</code> 文件夹，通常静态文件都放在这个文件夹，也可以根据你自己的习惯放其他地方；</li>
+</ol>
+</blockquote>
+<h2 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h2><p>（如无开启过防火墙，直接忽略本步骤）</p>
+<p>安装之后开启 Nginx，如果系统开启了防火墙，那么需要设置一下在防火墙中加入需要开放的端口，下面列举几个常用的防火墙操作（没开启的话不用管这个）：</p>
+<pre class="line-numbers language-shell"><code class="language-shell">systemctl start firewalld  # 开启防火墙
+systemctl stop firewalld   # 关闭防火墙
+systemctl status firewalld # 查看防火墙开启状态，显示running则是正在运行
+firewall-cmd --reload      # 重启防火墙，永久打开端口需要reload一下
+
+# 添加开启端口，--permanent表示永久打开，不加是临时打开重启之后失效
+firewall-cmd --permanent --zone=public --add-port=8888/tcp
+
+# 查看防火墙，添加的端口也可以看到
+firewall-cmd --list-all
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>然后设置 Nginx 的开机启动：</p>
+<pre class="line-numbers language-shell"><code class="language-shell">systemctl enable nginx
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>启动 Nginx ：</p>
+<pre class="line-numbers language-shell"><code class="language-shell">systemctl start nginx 
+
+浏览器访问公网IP 在浏览器输入你的公网IP，无需端口号（默认80），如果看到 `Welcome to nginx` 或 `Welcome to CentOS` 之类的界面，就是Nginx安装并启动成功了。
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>查看Nginx的位置</p>
+<pre><code>rpm -ql nginx
+</code></pre>
+<h2 id="安装-nvm-amp-node-amp-git"><a href="#安装-nvm-amp-node-amp-git" class="headerlink" title="==安装 nvm &amp; node &amp; git=="></a>==安装 nvm &amp; node &amp; git==</h2><pre class="line-numbers language-shell"><code class="language-shell"># 下载 nvm，或者看官网的步骤 https://github.com/nvm-sh/nvm#install--update-script
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+source   ~/.bashrc    # 安装完毕后，更新配置文件即可使用 nvm 命令
+nvm ls-remote         # 查看远程 node 版本
+nvm install v16.14.2  # 选一个你要安装的版本安装，
+nvm list              # 安装完毕查看安装的 node 版本
+node -v               # 查看是否安装好了
+
+yum install git   # git 安装 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Nginx重启"><a href="#Nginx重启" class="headerlink" title="Nginx重启"></a>Nginx重启</h2><pre class="line-numbers language-shell"><code class="language-shell">nginx -s reload  # 向主进程发送信号，重新加载配置文件，热重启
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="Nginx配置文件"><a href="#Nginx配置文件" class="headerlink" title="Nginx配置文件"></a>Nginx配置文件</h2><p>我们一般对Nginx的修改主要就是修改 <code>/etc/nginx/nginx.conf</code> 这个配置文件，<code>nginx.conf</code> 结构图可以这样概括：</p>
+<pre class="line-numbers language-nginx"><code class="language-nginx">main        <span class="token comment" spellcheck="true"># 全局配置，对全局生效</span>
+├── <span class="token keyword">events</span>  <span class="token comment" spellcheck="true"># 配置影响 Nginx 服务器或与用户的网络连接</span>
+├── <span class="token keyword">http</span>    <span class="token comment" spellcheck="true"># 配置代理，缓存，日志定义等绝大多数功能和第三方模块的配置</span>
+│   ├── <span class="token keyword">upstream</span> <span class="token comment" spellcheck="true"># 配置后端服务器具体地址，负载均衡配置不可或缺的部分</span>
+│   ├── <span class="token keyword">server</span>   <span class="token comment" spellcheck="true"># 配置虚拟主机的相关参数，一个 http 块中可以有多个 server 块</span>
+│   ├── <span class="token keyword">server</span>
+│   │   ├── <span class="token keyword">location</span>  <span class="token comment" spellcheck="true"># server 块可以包含多个 location 块，location 指令用于匹配 uri</span>
+│   │   ├── <span class="token keyword">location</span>
+│   │   └── <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+│   └── <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+└── <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>通常我会找到server，然后做如下设置：</p>
+<pre class="line-numbers language-nginx"><code class="language-nginx"><span class="token keyword">server</span> <span class="token punctuation">{</span>
+  <span class="token keyword">listen</span> <span class="token number">80</span><span class="token punctuation">;</span>
+    <span class="token keyword">server_name</span> localhost<span class="token punctuation">;</span>
+
+    <span class="token keyword">location</span> <span class="token operator">/</span> <span class="token punctuation">{</span>
+        <span class="token keyword">root</span>  <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>html<span class="token punctuation">;</span>
+        <span class="token keyword">index</span> <span class="token keyword">index</span><span class="token punctuation">.</span>html <span class="token keyword">index</span><span class="token punctuation">.</span>htm<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    client<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="Nodejs-删除-MongoDb-数据"><a href="#Nodejs-删除-MongoDb-数据" class="headerlink" title="Nodejs 删除 MongoDb 数据"></a>Nodejs 删除 MongoDb 数据</h4><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span> MongoClient <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongodb'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'mongodb://localhost:27017'</span><span class="token punctuation">;</span> 
-<span class="token comment" spellcheck="true">// const url = 'mongodb://admin:123456@localhost:27017/'; 有密码连接方式 admin 表示用户名，123456 表示密码</span>
-<span class="token comment" spellcheck="true">// 定义要操作的数据库</span>
-<span class="token keyword">const</span> dbName <span class="token operator">=</span> <span class="token string">'itying'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这里要确保你在 <code>/usr/local</code> 这个目录下创建了一个 <code>html</code> 文件夹。</p>
+<h2 id="反向代理解决跨域"><a href="#反向代理解决跨域" class="headerlink" title="==反向代理解决跨域=="></a>==反向代理解决跨域==</h2><p>反向代理是工作中最常用的服务器功能，经常被用来解决跨域问题，首先进入 Nginx 的主配置文件：</p>
+<pre class="line-numbers language-shell"><code class="language-shell">vim /etc/nginx/nginx.conf
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>为了看起来方便，把行号显示出来 <code>:set nu</code> ，然后我们去 <code>http</code> 模块的 <code>server</code> 块中的 <code>location /</code> 同级的位置添加：</p>
+<pre class="line-numbers language-nginx"><code class="language-nginx"><span class="token keyword">location</span> <span class="token operator">/</span>api <span class="token punctuation">{</span>
+    <span class="token keyword">proxy_pass</span> 跨域地址的baseURL<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>  
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="开启-gzip-压缩"><a href="#开启-gzip-压缩" class="headerlink" title="==开启 gzip 压缩=="></a>==开启 gzip 压缩==</h2><p>gzip 是一种常用的网页压缩技术，传输的网页经过 gzip 压缩之后大小通常可以变为原来的一半甚至更小。更小的网页体积也就意味着带宽的节约和传输速度的提升，特别是对于访问量巨大大型网站来说，每一个静态资源体积的减小，都会带来可观的流量与带宽的节省。</p>
+<p>这里可以使用 <a target="_blank" rel="noopener" href="http://tool.chinaz.com/Gzips/Default.aspx">站长工具 (opens new window)</a>对一个网站查询是否进行过gzip压缩。</p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008i3skNgy1gt2ttzxq27j30x70cdgmt.jpg"><img src="008i3skNgy1gt2ttzxq27j30x70cdgmt.jpg" alt="image-20210802224537379"></a></p>
+<p>可以看到我的这个ip目前是没有进行过gzip压缩的。然后我们如下操作：</p>
+<pre class="line-numbers language-shell"><code class="language-shell">cd /etc/nginx/conf.d/
+touch gzip.conf
+vim gzip.conf
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>接下来把下面代码粘贴进去：</p>
+<pre class="line-numbers language-nginx"><code class="language-nginx"><span class="token keyword">gzip</span> on<span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># 默认off，是否开启gzip</span>
+<span class="token keyword">gzip_types</span> text<span class="token operator">/</span>plain text<span class="token operator">/</span>css application<span class="token operator">/</span>json application<span class="token operator">/</span>x<span class="token operator">-</span>javascript text<span class="token operator">/</span>xml application<span class="token operator">/</span>xml application<span class="token operator">/</span>xml<span class="token operator">+</span>rss text<span class="token operator">/</span>javascript<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>然后退出编辑模式，执行：</p>
+<pre class="line-numbers language-shell"><code class="language-shell">cd /usr/sbin
+./nginx -s reload
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>然后再到站长工具测试：</p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008i3skNgy1gt2tzbwv1kj30xb0dowfx.jpg"><img src="008i3skNgy1gt2tzbwv1kj30xb0dowfx.jpg" alt="image-20210802225044894"></a></p>
+<p>可以看到，我们成功压缩了。</p>
+<h1 id="项目部署"><a href="#项目部署" class="headerlink" title="项目部署"></a>项目部署</h1><ol>
+<li><p>准备好打包完成的项目代码</p>
+</li>
+<li><p>有两种部署方式，打包好的项目放入后端项目（打成两个jar包）， 或单独部署前端项目（nginx）</p>
+</li>
+<li><p>本次采用单独部署前端项目</p>
+</li>
+<li><p>服务器再/usr/local下创建 home目录 将项目拷进去解压</p>
+</li>
+<li><p>配置Nginx ： vim /etc/nginx/nginx.conf</p>
+<pre class="line-numbers language-apl"><code class="language-apl">配置 server中的 localtion 以及 server_name
+server <span class="token dfn builtin">{</span>
+  listen <span class="token number">80</span><span class="token punctuation">;</span>
+    server_name localhost<span class="token punctuation">;</span> <span class="token monadic-operator operator">/</span><span class="token monadic-operator operator">/</span> 本机，也可以写ip
 
-MongoClient<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span> useUnifiedTopology<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>client<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-  <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token keyword">return</span><span class="token punctuation">;</span> 
-  <span class="token punctuation">}</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"连接成功"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token comment" spellcheck="true">// 获取 db 对象 </span>
-  <span class="token keyword">const</span> db <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">db</span><span class="token punctuation">(</span>dbName<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    location <span class="token monadic-operator operator">/</span> <span class="token dfn builtin">{</span>
+        root  <span class="token monadic-operator operator">/</span>usr<span class="token monadic-operator operator">/</span>local<span class="token monadic-operator operator">/</span>html<span class="token punctuation">;</span> <span class="token monadic-operator operator">/</span><span class="token monadic-operator operator">/</span> 项目地址目录
+        index index<span class="token dyadic-operator operator">.</span>html<span class="token punctuation">;</span>  <span class="token monadic-operator operator">/</span><span class="token monadic-operator operator">/</span> 项目入口文件
+    <span class="token dfn builtin">}</span>
+<span class="token dfn builtin">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>解决跨域问题 （前台开发阶段配置了proxy代理）部署后会出现跨域</p>
+<pre><code>原因，前台配置的代理 在服务端是无法生效的，由于url问题
 
-  <span class="token comment" spellcheck="true">// 删除一条数据</span>
-  db<span class="token punctuation">.</span><span class="token function">collection</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">deleteOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"xiaoming"</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>result<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">return</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    client<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token comment" spellcheck="true">// 删除多条数据</span>
-  db<span class="token punctuation">.</span><span class="token function">collection</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">deleteMany</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"设计者"</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>result<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">return</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    client<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+修改配置文件 vim /etc/nginx/nginx.conf
+在server 配置项中追加 一个 location /api
+
+server {
+     location /api {
+         proxy_pass [前台代理的taget地址];
+      }
+}
+</code></pre>
+</li>
+<li><p>开启gzip压缩</p>
+<pre class="line-numbers language-shell"><code class="language-shell">/etc/nginx/conf.d/下新建gzip.conf
+
+cd /etc/nginx/conf.d/
+touch gzip.conf
+
+打开后编辑以下内容 保存
+vim gzip.conf
+
+gzip on; # 默认off，是否开启gzip
+gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
+
+
+// 重启nginx
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>操作完成后要重启nginx</p>
+<pre><code>nginx -t
+  
+nginx -s reload
+</code></pre>
+</li>
+<li><p>查看是否开启成功 </p>
+<pre><code>curl -I -H "Accept-Encoding:gzip,deflate" "想要查看的网址"
+
+// 如果出现如下结果则开启成功
+Content-Encoding:gzip
+
+第三方 查看
+http://tool.chinaz.com/Gzips/
+</code></pre>
+</li>
+</ol>
+<h1 id="软文推荐"><a href="#软文推荐" class="headerlink" title="软文推荐"></a>软文推荐</h1><p>关于Nginx还有很多亮点，例如：动静分离、负载均衡等等，我们就不再做更多的阐述。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904144235413512">《Nginx 从入门到实践，万字详解！》 (opens new window)</a>这篇文章给了很多启示，本文部分文字及代码参考了该文章。</p>
+<p>本文大部分内容参考B站 <code>你去单排吧</code>  </p>
+<p>B站直通链接:<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1vQ4y1f7LF">https://www.bilibili.com/video/BV1vQ4y1f7LF</a></p>
+</blockquote>
+<h2 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h2><p>Nginx主要目录做说明：</p>
+<pre class="line-numbers language-shell"><code class="language-shell">/etc/logrotate.d/nginx
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Nginx日志轮转，用于logrotate服务的日志切割，相当于java中的log4j和logback；</p>
+<pre class="line-numbers language-shell"><code class="language-shell">/etc/nginx                         
+/etc/nginx/conf.d
+/etc/nginx/conf.d/default.conf
+/etc/nginx/nginx.conf
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>为Nginx主配置文件；</p>
+<pre class="line-numbers language-shell"><code class="language-shell">/etc/nginx/koi-utf              
+/etc/nginx/koi-win
+/etc/nginx/win-utf
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>用于nginx编码转换的配置文件；</p>
+<pre class="line-numbers language-shell"><code class="language-shell">/var/log/nginx
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>为nginx的访问和错误日志目录；</p>
+<pre class="line-numbers language-shell"><code class="language-shell">/var/cache/nginx/
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>为nginx的缓存目录；</p>
+<pre class="line-numbers language-shell"><code class="language-shell">/usr/share/nginx/html
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>其下放了首页index.html，为nginx的默认首页。</p>
 
                 
             </div>
@@ -666,7 +827,7 @@ MongoClient<span class="token punctuation">.</span><span class="token function">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/10/28/node%E6%93%8D%E4%BD%9CMongo/">http://example.com/2021/10/28/node%E6%93%8D%E4%BD%9CMongo/</a>
+                    <a href="http://example.com/2022/04/11/linux-Nginx/">http://example.com/2022/04/11/linux-Nginx/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -704,8 +865,8 @@ MongoClient<span class="token punctuation">.</span><span class="token function">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">笔记</span>
+                                <a href="/tags/%E9%83%A8%E7%BD%B2/">
+                                    <span class="chip bg-color">部署</span>
                                 </a>
                             
                         </div>
@@ -749,17 +910,18 @@ MongoClient<span class="token punctuation">.</span><span class="token function">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/11/05/koa2%E8%AE%B0%E5%BD%95/">
+                <a href="/2022/04/11/linux-Nginx/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="">
+                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="linux&amp;Nginx">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">linux&amp;Nginx</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -769,9 +931,9 @@ MongoClient<span class="token punctuation">.</span><span class="token function">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -779,6 +941,15 @@ MongoClient<span class="token punctuation">.</span><span class="token function">
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%83%A8%E7%BD%B2/">
+                        <span class="chip bg-color">部署</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -790,13 +961,13 @@ MongoClient<span class="token punctuation">.</span><span class="token function">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/10/27/mongo%E9%AB%98%E7%BA%A7/">
+                <a href="/2022/04/05/%E5%AE%9E%E7%8E%B0vue%E5%91%A8%E8%BE%B9%E7%AE%80%E6%98%93%E7%89%88/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="mongo聚合管道">
+                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="实现vue周边简易版">
                         
-                        <span class="card-title">mongo聚合管道</span>
+                        <span class="card-title">实现vue周边简易版</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -807,16 +978,12 @@ MongoClient<span class="token punctuation">.</span><span class="token function">
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-05
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/mongo/" class="post-category">
-                                    mongo
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ERHA
                             
                         </span>
                     </div>
@@ -824,8 +991,8 @@ MongoClient<span class="token punctuation">.</span><span class="token function">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E7%88%AC%E6%A5%BC%E6%A2%AF/">
+                        <span class="chip bg-color">前端爬楼梯</span>
                     </a>
                     
                 </div>
