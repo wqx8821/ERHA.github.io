@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>vue3一些源码学习</title>
+      <link href="/2022/04/23/vue3%E4%B8%80%E4%BA%9B%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2022/04/23/vue3%E4%B8%80%E4%BA%9B%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Vue3的一些设计思想"><a href="#Vue3的一些设计思想" class="headerlink" title="Vue3的一些设计思想"></a>Vue3的一些设计思想</h1><ul><li>补充： Vue3项目使用monorepo的方式进行源码管理</li><li>Vue3更加注重在模块上的拆分， 在2.0无法单独使用模块，需要完整引入才能使用（但如果只想使用一部分功能是做不到的，必须完整引入），Vue3在模块之间耦合度降低（模块拆分），模块可以单独独立使用。</li><li>Vue3允许自定义渲染器，扩展性更强，更方便</li><li>Vue2很多方法是挂载到实例上的，即使没有使用也会被打包（很多组件也是）， 在Vue3中重写API（抽离出来），通过构建工具实现按需加载，减少体积</li></ul><h2 id="Vue3依然是声明式框架"><a href="#Vue3依然是声明式框架" class="headerlink" title="Vue3依然是声明式框架"></a>Vue3依然是声明式框架</h2><ul><li>声明式，关注结果，过程由Vuejs来实现</li><li>命令式，如JQ， 主要特点就是关注过程</li></ul><h2 id="使用虚拟DOM"><a href="#使用虚拟DOM" class="headerlink" title="使用虚拟DOM"></a>使用虚拟DOM</h2><h2 id="区分编译时和运行时"><a href="#区分编译时和运行时" class="headerlink" title="区分编译时和运行时"></a>区分编译时和运行时</h2><ul><li>编译时 =》 模板 转 虚拟DOM</li><li>运行时 =》 虚拟DOM 转 真实DOM</li></ul><h2 id="Monorepo-管理项目（pnpm）"><a href="#Monorepo-管理项目（pnpm）" class="headerlink" title="Monorepo 管理项目（pnpm）"></a>Monorepo 管理项目（pnpm）</h2><p>​    Monorepo是管理代码的一种方式，指的是在一个项目仓库（repo）中管理多个模块/包（package）</p><p>​    Vue3源码采用Monorepo 方式进行部署，将模块拆分到了package目录中</p><ul><li>一个仓库可维护多个模块，不用到处找仓库</li><li>方便版本管理和依赖管理，模块之间的引用，调用会非常方便</li></ul><p>Vue3采用TypeScript</p><p>​        Vue2采用Flow来进行类型检查（对TS支持不友好），Vue3采用TS重写，支持更加友好，Flow官方已经放弃该项目（传言）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端爬楼梯 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CI/CD</title>
       <link href="/2022/04/14/CI-CD/"/>
       <url>/2022/04/14/CI-CD/</url>
