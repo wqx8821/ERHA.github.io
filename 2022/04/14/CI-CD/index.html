@@ -446,9 +446,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -467,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-14
+                    2022-04-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    617
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -496,7 +500,95 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="CI-CD平台"><a href="#CI-CD平台" class="headerlink" title="CI/CD平台"></a>CI/CD平台</h1><p><code>CICD</code> 与 git 集成在一起，可理解为服务器端的 <code>git hooks</code>: 当代码 push 到远程仓库后，借助 <code>WebHooks</code> 对当前代码在构建服务器(即 CI 服务器，也称作 Runner)中进行自动构建、测试及部署等。</p>
+<p>傻瓜式平台</p>
+<p>Vercel：<a target="_blank" rel="noopener" href="https://vercel.com/">https://vercel.com/</a></p>
+<p>自定义较高 平台</p>
+<p>阿里 云效： <a target="_blank" rel="noopener" href="https://blog.csdn.net/BYvonne/article/details/120904138">https://blog.csdn.net/BYvonne/article/details/120904138</a></p>
+<h1 id="Github-Actions"><a href="#Github-Actions" class="headerlink" title="Github Actions"></a>Github Actions</h1><h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><ol>
+<li><p>购买服务器</p>
+</li>
+<li><p>远程连接</p>
+</li>
+<li><p>上传项目至服务器</p>
+</li>
+<li><p>配置密钥对</p>
+<pre><code>阿里云服务器创建密钥对
+1. 登录完毕后 进入控制台
+2. 在ECS 右侧栏 网络与安全部分点击密钥对
+3. 创建密钥对 ，创建完成后会下载pem密钥对文件（保存好）
+4. 绑定密钥对（在创建密钥对的地方，阿里控制台真心烂）
+5. 注意：绑定后需要重启服务器后才可以生效，且重启后会变成只能通过对应的公钥才可以SSH连接服务器。如果要密码和公钥同时可登录，需要在服务器管理页面重置密码。
+6. 远程连接，公钥的方式登录
+</code></pre>
+</li>
+</ol>
+<p>视频教程：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1xa411h7h9">https://www.bilibili.com/video/BV1xa411h7h9</a></p>
+<h2 id="准备工作完成后，配置工作流"><a href="#准备工作完成后，配置工作流" class="headerlink" title="准备工作完成后，配置工作流"></a>准备工作完成后，配置工作流</h2><p>在项目中新建文件夹  .github ， 然后建立workflows文件夹</p>
+<p>新建文件 /.github/workflows/pash.yml</p>
+<p>填写如下配置</p>
+<pre><code>name: 打包应用并上传阿里云
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    build:
+        # runs-on 指定job任务运行所需要的虚拟机环境(必填字段)
+        runs-on: ubuntu-latest
+        steps:
+            # 获取源码
+            - name: 迁出代码
+              # 使用action库  actions/checkout获取源码
+              uses: actions/checkout@master
+
+            # 安装Node10
+            - name: 安装node.js
+              # 使用action库  actions/setup-node安装node
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 14.0.0
+
+            # 安装依赖
+            - name: 安装依赖
+              run: npm install
+
+            # 打包
+            - name: 打包
+              run: npm run build
+
+            # 上传阿里云
+            - name: 发布到阿里
+              uses: easingthemes/ssh-deploy@v2.1.1
+              env:
+                  # 私钥
+                  SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+                  # scp参数
+                  ARGS: '-avzr --delete'
+                  # 源目录
+                  SOURCE: 'dist'
+                  # 服务器ip：换成你的服务器IP
+                  REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+                  # 用户
+                  REMOTE_USER: 'root'
+                  # 目标地址
+                  TARGET: '/usr/local/home'
+</code></pre>
+<h2 id="配置github项目"><a href="#配置github项目" class="headerlink" title="配置github项目"></a>配置github项目</h2><p>在仓库的设置中</p>
+<p>位置：settings/Security/Secrets/Actions</p>
+<ol>
+<li>新建secret</li>
+<li>命名为 REMOTE_HOST</li>
+<li>值为 服务器的公网 ip地址</li>
+<li>新建第二个 secret</li>
+<li>命名为PRIVATE_KEY</li>
+<li>值为 前边服务器绑定的密钥对 的值</li>
+</ol>
+<p>这样完成了》》》</p>
+<p>当本地仓库提交到github，会自动的跑脚本——（完成打包，上传到服务器）</p>
+
                 
             </div>
             <hr/>
@@ -559,7 +651,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -605,56 +701,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/04/23/vue3%E4%B8%80%E4%BA%9B%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="vue3一些源码学习">
-                        
-                        <span class="card-title">vue3一些源码学习</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-23
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%89%8D%E7%AB%AF%E7%88%AC%E6%A5%BC%E6%A2%AF/">
-                        <span class="chip bg-color">前端爬楼梯</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/04/11/linux-Nginx/">
+                <a href="/2022/04/17/linux-Nginx/">
                     <div class="card-image">
                         
                         
@@ -670,9 +717,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-11
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-17
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -686,6 +733,51 @@
                     
                     <a href="/tags/%E9%83%A8%E7%BD%B2/">
                         <span class="chip bg-color">部署</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/04/05/%E5%AE%9E%E7%8E%B0vue%E5%91%A8%E8%BE%B9%E7%AE%80%E6%98%93%E7%89%88/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="实现vue周边简易版">
+                        
+                        <span class="card-title">实现vue周边简易版</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ERHA
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E7%88%AC%E6%A5%BC%E6%A2%AF/">
+                        <span class="chip bg-color">前端爬楼梯</span>
                     </a>
                     
                 </div>
@@ -924,7 +1016,7 @@
             <br> -->
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">72.3k</span>&nbsp;字
+                class="white-color">74.4k</span>&nbsp;字
             
             
             

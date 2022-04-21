@@ -471,7 +471,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-02-10
+                    2022-04-21
                 </div>
                 
 
@@ -626,8 +626,6 @@ watch<span class="token punctuation">:</span> <span class="token punctuation">{<
 原因：key是唯一标识，在用户操作dom时，vue使用的是 diff算法对比虚拟dom是否改变，以key为依据。只有发生改变时才会更新视图。
 使用key时，在头部插入数据，原先的元素的key会改变，在diff比对时就会出现问题，导致后续元素的部分内容都要更新，导致页面错误
 </code></pre>
-<p><img src="image-20220112194909744.png" alt="image-20220112194909744"></p>
-<p><img src="image-20220112195354442.png" alt="image-20220112195354442"></p>
 <h2 id="vue是如何监听数据变化的"><a href="#vue是如何监听数据变化的" class="headerlink" title="vue是如何监听数据变化的"></a>vue是如何监听数据变化的</h2><p>尚硅谷vue， P34-P37 ![<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Zy4y1K7SH?p=37&amp;spm_id_from=pageDriver%5D">https://www.bilibili.com/video/BV1Zy4y1K7SH?p=37&amp;spm_id_from=pageDriver]</a></p>
 <p>1、vue会监视data中所有层次的数据，</p>
 <p>2、 如何检测对象的数据</p>
@@ -646,13 +644,10 @@ watch<span class="token punctuation">:</span> <span class="token punctuation">{<
 </code></pre>
 <p>注:<code>Vue.set和$set不能给 vm或vm的跟数据对象添加属性 ！！</code></p>
 <h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>重点： mouned  beforeDestroy</p>
-<p><img src="image-20220118151448098.png" alt="image-20220118151448098"></p>
 <p>8个 + 3个</p>
 <p>3个： nexttick </p>
 <p>​            路由： 激活时，失活时</p>
-<h2 id="vue封装的动画过度"><a href="#vue封装的动画过度" class="headerlink" title="vue封装的动画过度"></a>vue封装的动画过度</h2><p><img src="image-20220121154902741.png" alt="image-20220121154902741"></p>
-<p><img src="image-20220121154954232.png" alt="image-20220121154954232"></p>
-<h1 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h1><h2 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h2><p>使用配置对象： directives</p>
+<h2 id="vue封装的动画过度"><a href="#vue封装的动画过度" class="headerlink" title="vue封装的动画过度"></a>vue封装的动画过度</h2><h1 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h1><h2 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h2><p>使用配置对象： directives</p>
 <pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 1、函数写法</span>
 <span class="token operator">&lt;</span>div v<span class="token operator">-</span>big<span class="token operator">=</span>n<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 <span class="token comment" spellcheck="true">// big函数调用时机， 1、指令和元素成功绑定时 2、指令所在的模板被重新解析时</span>
@@ -712,7 +707,6 @@ methods: {demo(传递的数据) {}}
 
 // 相当于$emit在子组件帮忙触发父组件的回调函数（第二个参数传参）
 </code></pre>
-<p><img src="image-20220120191157055.png" alt="image-20220120191157055"></p>
 <h3 id="全局事件总线"><a href="#全局事件总线" class="headerlink" title="全局事件总线"></a>全局事件总线</h3><p>可实现任意组件间通信</p>
 <pre class="line-numbers language-js"><code class="language-js">原理： 定义一个总线qj，能够被说有组件访问，且具有$on $emit方法
 
@@ -745,7 +739,6 @@ methods: {demo(传递的数据) {}}
 <span class="token comment" spellcheck="true">// 在获取时使用 this.ref..... 进行操作</span>
 <span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>title<span class="token punctuation">.</span>innerHTML
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="image-20220118200438024.png" alt="image-20220118200438024"></p>
 <h2 id="mixin混入"><a href="#mixin混入" class="headerlink" title="mixin混入"></a>mixin混入</h2><p>抽取公共的方法暴露 共享使用</p>
 <h2 id="插槽"><a href="#插槽" class="headerlink" title="插槽"></a>插槽</h2><p>作用： 让父组件指定位置插入html结构，也是一种组件间通信的方式，父——&gt;子</p>
 <p>默认插槽</p>
@@ -768,13 +761,11 @@ methods: {demo(传递的数据) {}}
 </code></pre>
 <p>作用域插槽</p>
 <p>尚硅谷p104 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Zy4y1K7SH?p=104&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1Zy4y1K7SH?p=104&amp;spm_id_from=pageDriver</a></p>
-<p><img src="image-20220123135710342.png" alt="image-20220123135710342"></p>
 <h1 id="生态系统"><a href="#生态系统" class="headerlink" title="生态系统"></a>生态系统</h1><h2 id="vuex"><a href="#vuex" class="headerlink" title="vuex"></a>vuex</h2><p>概念： 专门在Vue中实现集中式状态（数据）管理的Vue插件，对 Vue中的的多组件的共享状态进行集中管理，也属于组件通信方式，适合任意组件通信</p>
 <p>三大组成 由stote领导</p>
 <p>State：状态</p>
 <p>Actions： 异步</p>
 <p>Mutations： 操作state（参数，state， 传递的数据）</p>
-<p><img src="vuex.png" alt="vuex"></p>
 <h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><pre class="line-numbers language-js"><code class="language-js">npm i vuex <span class="token comment" spellcheck="true">// 安装</span>
 
 <span class="token keyword">import</span> Vuex <span class="token keyword">from</span> <span class="token string">'vuex'</span>  <span class="token comment" spellcheck="true">// 引入</span>
@@ -898,7 +889,6 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-view</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-view</span><span class="token punctuation">></span></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>==页面没有被展示的组件处于销毁状态== 路由切换组件将是频繁销毁创建的过程</p>
-<p><img src="image-20220128142336410.png" alt="image-20220128142336410"></p>
 <h3 id="嵌套路由"><a href="#嵌套路由" class="headerlink" title="嵌套路由"></a>嵌套路由</h3><p>路由规则 —— 使用新配置项 children:  是一个数组</p>
 <pre class="line-numbers language-js"><code class="language-js"> routes<span class="token punctuation">:</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span>
@@ -1048,7 +1038,6 @@ beforeRouteLeave <span class="token punctuation">(</span>to<span class="token pu
 <h1 id="一些技巧"><a href="#一些技巧" class="headerlink" title="一些技巧"></a>一些技巧</h1><h2 id="1、模糊搜索排序"><a href="#1、模糊搜索排序" class="headerlink" title="1、模糊搜索排序"></a>1、模糊搜索排序</h2><pre><code>
 </code></pre>
 <h2 id="2、-表单收集技巧"><a href="#2、-表单收集技巧" class="headerlink" title="2、 表单收集技巧"></a>2、 表单收集技巧</h2><p>多个多选时， v-model中绑定的数据设为数组，并在html层增加value</p>
-<p><img src="image-20220116155355610.png" alt="image-20220116155355610"></p>
 <h2 id="3、跨域解决方案"><a href="#3、跨域解决方案" class="headerlink" title="3、跨域解决方案"></a>3、跨域解决方案</h2><p>​        原理：开启一个与<code>客服端端口号</code>相同的代理服务器，进行代理请求（这样就是两个服务器之间的交流，不存在跨域），然后本地请求<code>代理服务器</code>（本地与代理之间 协议 主机 端口）相同自然不会出现跨域问题</p>
 <p>​        开启代理服务器的方法:    nginx反向代理（学习成本较高，需了解后端）</p>
 <p>​                                                        vue-cli开启一个服务（建议的方式）</p>
@@ -1088,13 +1077,8 @@ router.afterEach((to<span class="token punctuation">,</span>from<span class="tok
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="解决页面闪现问题"><a href="#解决页面闪现问题" class="headerlink" title="解决页面闪现问题"></a>解决页面闪现问题</h2><p>1、 使用 v-cloak指令 配合 css  [cloak] {} 实现</p>
-<h2 id="本地存储"><a href="#本地存储" class="headerlink" title="本地存储"></a>本地存储</h2><p><img src="image-20220120160925095.png" alt="image-20220120160925095"></p>
 <h1 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h1><p>测试一般分为 端到端测试（一般由专业人员测试）  和 单元测试</p>
-<p><img src="image-20220120120139619.png" alt="image-20220120120139619"></p>
-<p><img src="image-20220120120259293.png" alt="image-20220120120259293"></p>
-<h3 id="测试工具-Karma-浏览器测试"><a href="#测试工具-Karma-浏览器测试" class="headerlink" title="测试工具 Karma 浏览器测试"></a>测试工具 Karma 浏览器测试</h3><p><img src="image-20220120122848400.png" alt="image-20220120122848400"></p>
-<h3 id="Mocha"><a href="#Mocha" class="headerlink" title="Mocha"></a>Mocha</h3><p>摩卡 与Vue—cli配合中  Mocha本身是不带断言库的  所以必须先引入断言库（Chai.js）</p>
-<p><img src="image-20220120123230314.png" alt="image-20220120123230314"></p>
+<h3 id="测试工具-Karma-浏览器测试"><a href="#测试工具-Karma-浏览器测试" class="headerlink" title="测试工具 Karma 浏览器测试"></a>测试工具 Karma 浏览器测试</h3><h3 id="Mocha"><a href="#Mocha" class="headerlink" title="Mocha"></a>Mocha</h3><p>摩卡 与Vue—cli配合中  Mocha本身是不带断言库的  所以必须先引入断言库（Chai.js）</p>
 
                 
             </div>
@@ -1527,7 +1511,7 @@ router.afterEach((to<span class="token punctuation">,</span>from<span class="tok
             <br> -->
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">72.3k</span>&nbsp;字
+                class="white-color">74.4k</span>&nbsp;字
             
             
             

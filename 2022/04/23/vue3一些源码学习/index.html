@@ -480,21 +480,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-19
+                    2022-04-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    393
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    7 分
                 </div>
                 
 
@@ -531,6 +531,284 @@
 </ul>
 <p>Vue3采用TypeScript</p>
 <p>​        Vue2采用Flow来进行类型检查（对TS支持不友好），Vue3采用TS重写，支持更加友好，Flow官方已经放弃该项目（传言）</p>
+<h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><h2 id="初始环境搭建"><a href="#初始环境搭建" class="headerlink" title="初始环境搭建"></a>初始环境搭建</h2><h3 id="安装pnpm"><a href="#安装pnpm" class="headerlink" title="安装pnpm"></a>安装pnpm</h3><pre><code>npm i pnpm -G
+</code></pre>
+<h3 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h3><pre><code>pnpm init -y
+</code></pre>
+<h3 id="添加配置文件-npmrc"><a href="#添加配置文件-npmrc" class="headerlink" title="添加配置文件 .npmrc"></a>添加配置文件 .npmrc</h3><pre><code>写入如下配置 安装依赖时将依赖打平
+shamefully-hoist - true
+</code></pre>
+<h3 id="添加配置文件-pnpm-workspace-yaml"><a href="#添加配置文件-pnpm-workspace-yaml" class="headerlink" title="添加配置文件 pnpm-workspace.yaml"></a>添加配置文件 pnpm-workspace.yaml</h3><pre><code>// 写入如下配置 声明源码目录为 packages文件下
+packages:
+  - 'packages/*'
+</code></pre>
+<h3 id="新建packagss文件夹"><a href="#新建packagss文件夹" class="headerlink" title="新建packagss文件夹"></a>新建packagss文件夹</h3><h3 id="安装依赖各项依赖"><a href="#安装依赖各项依赖" class="headerlink" title="安装依赖各项依赖"></a>安装依赖各项依赖</h3><pre><code>pnpm install typescript rollup rollup-plugin-typescript2 @rollup/plugin-json @rollup/plugin-node-resolve @rollup/plugin-commonjs minimist execa@4 -D -w
+</code></pre>
+<h3 id="声明项目为私有"><a href="#声明项目为私有" class="headerlink" title="声明项目为私有"></a>声明项目为私有</h3><pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"v3tt"</span><span class="token punctuation">,</span>
+  <span class="token property">"private"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> // 添加这行 声明项目为私有
+  <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"1.0.0"</span><span class="token punctuation">,</span>
+  <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+  <span class="token property">"main"</span><span class="token operator">:</span> <span class="token string">"index.js"</span><span class="token punctuation">,</span>
+  <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"test"</span><span class="token operator">:</span> <span class="token string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"keywords"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"author"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+  <span class="token property">"license"</span><span class="token operator">:</span> <span class="token string">"ISC"</span><span class="token punctuation">,</span>
+  <span class="token property">"devDependencies"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"@rollup/plugin-commonjs"</span><span class="token operator">:</span> <span class="token string">"^21.1.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"@rollup/plugin-json"</span><span class="token operator">:</span> <span class="token string">"^4.1.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"@rollup/plugin-node-resolve"</span><span class="token operator">:</span> <span class="token string">"^13.2.1"</span><span class="token punctuation">,</span>
+    <span class="token property">"execa"</span><span class="token operator">:</span> <span class="token string">"4"</span><span class="token punctuation">,</span>
+    <span class="token property">"minimist"</span><span class="token operator">:</span> <span class="token string">"^1.2.6"</span><span class="token punctuation">,</span>
+    <span class="token property">"rollup"</span><span class="token operator">:</span> <span class="token string">"^2.70.2"</span><span class="token punctuation">,</span>
+    <span class="token property">"rollup-plugin-typescript2"</span><span class="token operator">:</span> <span class="token string">"^0.31.2"</span><span class="token punctuation">,</span>
+    <span class="token property">"typescript"</span><span class="token operator">:</span> <span class="token string">"^4.6.3"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>生成ts配置</p>
+<pre><code>pnpm tsc --init
+</code></pre>
+<p>生成的tsconfig.json 替换为如下配置</p>
+<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"compilerOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"outDir"</span><span class="token operator">:</span> <span class="token string">"dist"</span><span class="token punctuation">,</span> // 输出目录
+    <span class="token property">"sourceMap"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> // 使用sourcemap
+    <span class="token property">"target"</span><span class="token operator">:</span> <span class="token string">"es2016"</span><span class="token punctuation">,</span> // 目标语法
+    <span class="token property">"module"</span><span class="token operator">:</span> <span class="token string">"esnext"</span><span class="token punctuation">,</span>  // 模块格式    
+    <span class="token property">"esModuleInterop"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> // 允许通过es6语法引入commonjs模块
+    <span class="token property">"moduleResolution"</span><span class="token operator">:</span> <span class="token string">"node"</span><span class="token punctuation">,</span> // 模块解析方式     
+    <span class="token property">"resolveJsonModule"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> // 解析json模块 
+    <span class="token property">"strict"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>  // 严格模式    
+    <span class="token property">"jsx"</span><span class="token operator">:</span> <span class="token string">"preserve"</span><span class="token punctuation">,</span> // jsx不转义
+    <span class="token property">"lib"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"ESNext"</span><span class="token punctuation">,</span> <span class="token string">"DOM"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> // 支持的类库           
+    <span class="token property">"skipLibCheck"</span><span class="token operator">:</span> <span class="token boolean">true</span>                  
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="项目创建"><a href="#项目创建" class="headerlink" title="项目创建"></a>项目创建</h2><h3 id="创建模块——响应式"><a href="#创建模块——响应式" class="headerlink" title="创建模块——响应式"></a>创建模块——响应式</h3><ul>
+<li><p>创建目录/packages/reactivify</p>
+</li>
+<li><p>创建package.json 写入配置</p>
+</li>
+<li><pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"@vue/reactivity"</span><span class="token punctuation">,</span>
+  <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"1.0.0"</span><span class="token punctuation">,</span>
+  <span class="token property">"main"</span><span class="token operator">:</span> <span class="token string">"index.js"</span><span class="token punctuation">,</span>
+  <span class="token property">"module"</span><span class="token operator">:</span> <span class="token string">"dist/reactivity.esm-bundler.js"</span><span class="token punctuation">,</span>
+  <span class="token property">"unpkg"</span><span class="token operator">:</span> <span class="token string">"dist/reactivity.global.js"</span><span class="token punctuation">,</span>
+  <span class="token property">"buildOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"VueReactivity"</span><span class="token punctuation">,</span>
+    <span class="token property">"formats"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"esm-bundler"</span><span class="token punctuation">,</span>
+      <span class="token string">"cjs"</span><span class="token punctuation">,</span>
+      <span class="token string">"global"</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>创建src目录 以及入口文件 index.ts</p>
+</li>
+</ul>
+<h3 id="创建公共模块——同理"><a href="#创建公共模块——同理" class="headerlink" title="创建公共模块——同理"></a>创建公共模块——同理</h3><ul>
+<li><p>创建目录/packages/shared/</p>
+</li>
+<li><p>创建packags.json</p>
+<pre><code>{
+  "name": "@vue/shared",
+  "version": "1.0.0",
+  "main": "index.js",
+  "module": "dist/shared.esm-bundler.js",
+  "buildOptions": {
+    "formats": [
+      "esm-bundler",
+      "cjs"
+    ]
+  }
+}
+</code></pre>
+</li>
+<li><p>创建src目录 index.ts 文件</p>
+</li>
+</ul>
+<h2 id="依赖处理"><a href="#依赖处理" class="headerlink" title="依赖处理"></a>依赖处理</h2><p>因为采用 monmorepo方式，在依赖方面不能直接全局安装。</p>
+<p><code>在上文中 reactivify模块依赖于shared 因此要进行特别操作</code></p>
+<pre><code>// 将shared 安装进 reactivify 中 --将shared作为reactivity的依赖
+
+// @vue/shared - @vue/reactivity ——包名（package.json内的name）
+// --filter 选择一个精确的包， 只用指定它的名称 (@scope/pkg) 或使用 通配符选择一组包 (@scope/*)
+
+
+pnpm install @vue/shared@workspace --filter @vue/reactivity
+</code></pre>
+<p>现在测试下reactivity是否能引用shared暴漏的方法，在shared/src/index.ts中暴露一个方法</p>
+<pre><code>export const isObject = (val: Record&lt;any, any&gt;) =&gt; {
+    return val !== null &amp;&amp; typeof val === 'object';
+};
+</code></pre>
+<p> 在reactivity/src/index.ts中引入isObject方法</p>
+<p>此时会报找不到模块，我们对项目根目录下的tsconfig.json做修改，增加baseUrl，paths配置，增加如下配置项：</p>
+<pre><code>{
+    "compilerOptions": {
+        ...
+        "baseUrl": ".", //以当前路径为基准进行查找
+        "paths": {
+            "@vue/*": [//以@vue/开头的依赖都去packages下去查找
+                "packages/*/src"
+            ]
+        }
+    }
+}
+</code></pre>
+<p>此时项目根目录下的tsconfig.json完整内容为：</p>
+<pre><code>{
+    "compilerOptions": {
+        "outDir": "dist", //输出的目录
+        "sourceMap": true, //开启sourceMap
+        "target": "es2016", //目标语法
+        "module": "esnext", //模块格式
+        "moduleResolution": "node", //模块解析方式
+        "strict": true, //开启严格模式
+        "resolveJsonModule": true, //解析json模块
+        "esModuleInterop": true, //允许通过es6语法引入commonjs模块
+        "jsx": "preserve", //jsx不转义
+        "lib": [
+            "esnext",
+            "dom"
+        ], //支持的类库 esnext及dom
+        "baseUrl": ".", //以当前路径为基准进行查找
+        "paths": {
+            "@vue/*": [//以@vue/开头的依赖都去packages下去查找
+                "packages/*/src"
+            ]
+        }
+    }
+}
+</code></pre>
+<p>这样reactivity/src/index.ts引入isObject方法时就不会再报错了。</p>
+<p>vue3的环境已经搭建至此已经从0搭建完了。</p>
+<h1 id="打包处理"><a href="#打包处理" class="headerlink" title="打包处理"></a>打包处理</h1><p>流程： - 用户 pnpm run dev</p>
+<p>​              —&gt; 走package.json脚本 </p>
+<p>​              —&gt; 执行 scripts/dev.js 脚本文件</p>
+<p>​               —&gt;  使用rollup打包方式</p>
+<p>​               —&gt; 进入rollup配置文件 rollup.config.js </p>
+<p><code>新建文件夹 scripts 以后所有的脚本文件存放在此处</code></p>
+<h2 id="package-json文件添加脚本文件"><a href="#package-json文件添加脚本文件" class="headerlink" title="package.json文件添加脚本文件"></a>package.json文件添加脚本文件</h2><pre><code>// node scripts/dev.js node执行文件
+// 后面的全为参数
+// reactivity 打包入口文件
+// -f global 打包方式为全局
+// -s 开启Sourcemap
+ 
+ "scripts": {
+    "dev": "node scripts/dev.js reactivity -f global -s"
+  },
+</code></pre>
+<h2 id="script文件夹下建立-dev-js"><a href="#script文件夹下建立-dev-js" class="headerlink" title="script文件夹下建立 dev.js"></a>script文件夹下建立 dev.js</h2><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 引入解析参数模块</span>
+<span class="token keyword">const</span> minimist <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'minimist'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// execa是可以调用shell和本地外部程序的javascript封装。会启动子进程执行</span>
+<span class="token keyword">const</span> execa <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'execa'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment" spellcheck="true">// 拿到脚本数据处理 (忽略前两个，前两个为node执行命令， 后面的才是需要的参数)</span>
+<span class="token comment" spellcheck="true">// process.argv 属性返回数组，其中包含启动 Node.js 进程时传入的命令行参数</span>
+<span class="token keyword">const</span> args <span class="token operator">=</span> <span class="token function">minimist</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>argv<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 根据参数拿到 目标文件名, 打包方式, sourcemap</span>
+<span class="token keyword">const</span> target <span class="token operator">=</span> args<span class="token punctuation">.</span>_<span class="token punctuation">.</span>length <span class="token operator">?</span> args<span class="token punctuation">.</span>_<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token punctuation">:</span><span class="token string">'reactivity'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> sourcemap <span class="token operator">=</span> args<span class="token punctuation">.</span>s <span class="token operator">||</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> formats <span class="token operator">=</span> args<span class="token punctuation">.</span>f <span class="token operator">||</span> <span class="token string">'global'</span>
+
+
+<span class="token comment" spellcheck="true">// 打包 内部开启进程执行</span>
+<span class="token comment" spellcheck="true">// 指定执行的脚本 rollup</span>
+<span class="token function">execa</span><span class="token punctuation">(</span><span class="token string">'rollup'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
+  <span class="token string">'-wc'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// ---watch --config 可以使用配置文件（建立rollup.config.js） 并能观测变化</span>
+  <span class="token string">'--environment'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 传入环境变量</span>
+  <span class="token punctuation">[</span>
+    <span class="token template-string"><span class="token string">`TARGET: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>target<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">,</span>
+    <span class="token template-string"><span class="token string">`FORMATS': </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>formats<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">,</span>
+    sourcemap <span class="token operator">?</span> <span class="token string">'SOURCE_MAP'</span> <span class="token punctuation">:</span> <span class="token string">''</span>
+  <span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>Boolean<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  stdio<span class="token punctuation">:</span> <span class="token string">'inherit'</span> <span class="token comment" spellcheck="true">// 子进程的输出是在我们的当前的命令行中输出</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// 测试</span>
+<span class="token comment" spellcheck="true">// console.log(args);</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="根目录下创建-rollup-配置文件"><a href="#根目录下创建-rollup-配置文件" class="headerlink" title="根目录下创建 rollup 配置文件"></a>根目录下创建 rollup 配置文件</h2><p>·<code>rollup.config.js</code></p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">import</span> path <span class="token keyword">from</span> <span class="token string">'path'</span><span class="token punctuation">;</span>
+
+
+<span class="token comment" spellcheck="true">// 获取 script/dev.js 内的配置文件 通过环境变量拿</span>
+<span class="token keyword">const</span> packagesFrom <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span>FORMATS<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> sourcemap <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span>SOURCE_MAP<span class="token punctuation">;</span>
+<span class="token keyword">const</span> target <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span>TARGET<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 需要根据 target 找到要打包的对象</span>
+<span class="token keyword">const</span> packagesDir <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'packages'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// packages的绝对路径</span>
+<span class="token keyword">const</span> packageDir <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>packagesDir<span class="token punctuation">,</span> target<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 要打包的目录</span>
+<span class="token keyword">const</span> name <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">basename</span><span class="token punctuation">(</span>packageDir<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 获取打包的名字</span>
+<span class="token comment" spellcheck="true">// 以打包的目录解析文件</span>
+<span class="token keyword">const</span> resolve <span class="token operator">=</span> p <span class="token operator">=</span><span class="token operator">></span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>packageDir<span class="token punctuation">,</span> p<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> pkg <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'package.json'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// 打包配置</span>
+<span class="token keyword">const</span> outputConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token string">'esm-bundler'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    file<span class="token punctuation">:</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`dist/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.esm-bundler.js`</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    format<span class="token punctuation">:</span> <span class="token string">'es'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">'cjs'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    file<span class="token punctuation">:</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`dist/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.cjs.js`</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    format<span class="token punctuation">:</span> <span class="token string">'cjs'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">'global'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    file<span class="token punctuation">:</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`dist/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.global.js`</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    format<span class="token punctuation">:</span> <span class="token string">'iife'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> packageConfigs <span class="token operator">=</span> packagesFrom <span class="token operator">||</span> pkg<span class="token punctuation">.</span>buildOptions<span class="token punctuation">.</span>formats
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>packageConfigs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ts <span class="token keyword">from</span> <span class="token string">'rollup-plugin-typescript2'</span>
+<span class="token keyword">import</span> json <span class="token keyword">from</span> <span class="token string">'@rollup/plugin-json'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>nodeResolve<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@rollup/plugin-node-resolve'</span>
+<span class="token keyword">import</span> commonjs <span class="token keyword">from</span> <span class="token string">'@rollup/plugin-commonjs'</span>
+
+
+<span class="token comment" spellcheck="true">// 生成配置文件</span>
+<span class="token keyword">function</span> <span class="token function">createConfig</span><span class="token punctuation">(</span>format<span class="token punctuation">,</span> output<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  output<span class="token punctuation">.</span>sourcemap <span class="token operator">=</span> sourcemap
+  output<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token string">'named'</span> <span class="token comment" spellcheck="true">// 开启命名</span>
+  <span class="token keyword">let</span> external <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>  <span class="token comment" spellcheck="true">// 外部模块 哪些模块不需要打包</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>format <span class="token operator">===</span> <span class="token string">'global'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 是全局是就加上名字</span>
+    output<span class="token punctuation">.</span>name <span class="token operator">=</span> pkg<span class="token punctuation">.</span>buildOptions<span class="token punctuation">.</span>name
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    external <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>pkg<span class="token punctuation">.</span>dependencies<span class="token punctuation">)</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    input<span class="token punctuation">:</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'index.ts'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    output<span class="token punctuation">,</span>
+    external<span class="token punctuation">,</span>
+    plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token function">ts</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token function">commonjs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token function">nodeResolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 返回数组会依次打包</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> packageConfigs<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>format <span class="token operator">=</span><span class="token operator">></span> <span class="token function">createConfig</span><span class="token punctuation">(</span>format<span class="token punctuation">,</span>outputConfig<span class="token punctuation">[</span>format<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="模块学习"><a href="#模块学习" class="headerlink" title="模块学习"></a>模块学习</h1><h2 id="响应式——reactivity"><a href="#响应式——reactivity" class="headerlink" title="响应式——reactivity"></a>响应式——reactivity</h2><pre><code>大苏打
+</code></pre>
 
                 
             </div>
@@ -695,13 +973,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/14/CI-CD/">
+                <a href="/2022/04/17/linux-Nginx/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="CI/CD">
+                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="linux&amp;Nginx">
                         
-                        <span class="card-title">CI/CD</span>
+                        <span class="card-title">linux&amp;Nginx</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -712,7 +990,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-17
                             </span>
                         <span class="publish-author">
                             
@@ -721,6 +999,14 @@
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%83%A8%E7%BD%B2/">
+                        <span class="chip bg-color">部署</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -957,7 +1243,7 @@
             <br> -->
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">72.3k</span>&nbsp;字
+                class="white-color">74.4k</span>&nbsp;字
             
             
             

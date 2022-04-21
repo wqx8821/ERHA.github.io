@@ -464,14 +464,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-11
+                    2022-04-17
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-11
+                    2022-04-21
                 </div>
                 
 
@@ -696,8 +696,7 @@ yum install git   # git 安装
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h2 id="开启-gzip-压缩"><a href="#开启-gzip-压缩" class="headerlink" title="==开启 gzip 压缩=="></a>==开启 gzip 压缩==</h2><p>gzip 是一种常用的网页压缩技术，传输的网页经过 gzip 压缩之后大小通常可以变为原来的一半甚至更小。更小的网页体积也就意味着带宽的节约和传输速度的提升，特别是对于访问量巨大大型网站来说，每一个静态资源体积的减小，都会带来可观的流量与带宽的节省。</p>
 <p>这里可以使用 <a target="_blank" rel="noopener" href="http://tool.chinaz.com/Gzips/Default.aspx">站长工具 (opens new window)</a>对一个网站查询是否进行过gzip压缩。</p>
-<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008i3skNgy1gt2ttzxq27j30x70cdgmt.jpg"><img src="008i3skNgy1gt2ttzxq27j30x70cdgmt.jpg" alt="image-20210802224537379"></a></p>
-<p>可以看到我的这个ip目前是没有进行过gzip压缩的。然后我们如下操作：</p>
+<p>然后我们如下操作：</p>
 <pre class="line-numbers language-shell"><code class="language-shell">cd /etc/nginx/conf.d/
 touch gzip.conf
 vim gzip.conf
@@ -710,9 +709,7 @@ vim gzip.conf
 <pre class="line-numbers language-shell"><code class="language-shell">cd /usr/sbin
 ./nginx -s reload
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>然后再到站长工具测试：</p>
-<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008i3skNgy1gt2tzbwv1kj30xb0dowfx.jpg"><img src="008i3skNgy1gt2tzbwv1kj30xb0dowfx.jpg" alt="image-20210802225044894"></a></p>
-<p>可以看到，我们成功压缩了。</p>
+<p>然后再到站长工具测试</p>
 <h1 id="项目部署"><a href="#项目部署" class="headerlink" title="项目部署"></a>项目部署</h1><ol>
 <li><p>准备好打包完成的项目代码</p>
 </li>
@@ -837,7 +834,7 @@ http://tool.chinaz.com/Gzips/
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/04/11/linux-Nginx/">http://example.com/2022/04/11/linux-Nginx/</a>
+                    <a href="http://example.com/2022/04/17/linux-Nginx/">http://example.com/2022/04/17/linux-Nginx/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -924,6 +921,55 @@ http://tool.chinaz.com/Gzips/
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2022/04/23/vue3%E4%B8%80%E4%BA%9B%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="vue3一些源码学习">
+                        
+                        <span class="card-title">vue3一些源码学习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-23
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E7%88%AC%E6%A5%BC%E6%A2%AF/">
+                        <span class="chip bg-color">前端爬楼梯</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2022/04/14/CI-CD/">
                     <div class="card-image">
                         
@@ -940,45 +986,8 @@ http://tool.chinaz.com/Gzips/
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-14
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            ERHA
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/04/05/%E5%AE%9E%E7%8E%B0vue%E5%91%A8%E8%BE%B9%E7%AE%80%E6%98%93%E7%89%88/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://cdn.seovx.com/d/?mom=302" class="responsive-img" alt="实现vue周边简易版">
-                        
-                        <span class="card-title">实现vue周边简易版</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-14
                             </span>
                         <span class="publish-author">
                             
@@ -991,8 +1000,8 @@ http://tool.chinaz.com/Gzips/
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%89%8D%E7%AB%AF%E7%88%AC%E6%A5%BC%E6%A2%AF/">
-                        <span class="chip bg-color">前端爬楼梯</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
                     </a>
                     
                 </div>
@@ -1231,7 +1240,7 @@ http://tool.chinaz.com/Gzips/
             <br> -->
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">72.3k</span>&nbsp;字
+                class="white-color">74.4k</span>&nbsp;字
             
             
             
