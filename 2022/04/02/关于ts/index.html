@@ -1,0 +1,1515 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="重学TS, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="description" content="若有诗书藏在心，岁月从不败美人">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>重学TS | 小羊站</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <!-- 今日诗词特效 -->
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+
+   <style>
+    body{
+       background-image: url(https://cdn.jsdelivr.net/gh/520ck/cdnseovx/1/I/l/1/I/seovx-com-2d%20%20(73).jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">小羊站</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">小羊站</div>
+        <div class="logo-desc">
+            
+            若有诗书藏在心，岁月从不败美人
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/wqx8821" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>ERHA
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/wqx8821" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="ERHA" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">重学TS</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+        background-color: rgb(255, 255, 255,0.7);
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-04-02
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-04-02
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.1k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    12 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>tip：尚硅谷课件文档<a target="_blank" rel="noopener" href="https://24kcs.github.io/vue3_study/">https://24kcs.github.io/vue3_study/</a></p>
+<h1 id="1、TS初见"><a href="#1、TS初见" class="headerlink" title="1、TS初见"></a>1、TS初见</h1><h2 id="1-1、为什么要有-TypeScript"><a href="#1-1、为什么要有-TypeScript" class="headerlink" title="1.1、为什么要有 TypeScript"></a>1.1、为什么要有 TypeScript</h2><p>TypeScript是JavaScript的超集，因为它扩展了JavaScript，有JavaScript没有的东西。硬要以父子类关系来说的话，TypeScript是JavaScript子类，继承的基础上去扩展。</p>
+<p>`TypeScript的初衷就是为了做类型检查，提早发现错误，所以「类型」是其最核心的特性。当然它只是给出你代码可能不会按预期执行的警告，比如你未按照声明的类型传参，你的代码还是可以运行的。这一点与强类型语言还是有本质的区别，强类型语言会直接导致编译不通过，因为TypeScript只是转译。跟JavaScript不同，TypeScript文件后缀使用 .ts扩展名。浏览器是不识别 .ts 文件，所以使用时必须提前把 TS 代码转换成 JavaScript 代码。这个转换过程被称为转译，编译和转译的微小差别在于：</p>
+<p>编译是把源码转变成另一种语言<br>转译是把源码转变另一个相同抽象层级的语言</p>
+<h2 id="1-2、前提准备"><a href="#1-2、前提准备" class="headerlink" title="1.2、前提准备"></a>1.2、前提准备</h2><ul>
+<li>安装 node环境下安装 npm install -g typescript</li>
+<li>手动编译 tsc  **.ts</li>
+<li>vscode自动编译 tsc –init 在tsconfig.js中配置，在终端打开tsc监视即可</li>
+<li>ts语法提示错误，不影响js的编译，因为js是弱类型语言（如类型注解不通过）</li>
+</ul>
+<pre class="line-numbers language-tsx"><code class="language-tsx">// 类型注解 一种轻量级的为函数或变量添加约束
+(() => {
+    function showMsg(str:String) {
+        return str + '123214'
+    }
+    let str = "woshi"
+    console.log(showMsg(str));
+    
+})()
+
+// 接口演示 定义接口
+(() => {
+    interface Iperson{
+        fristName:string,
+        lastName:string
+    }
+    // 输出对象
+    function showFullName(person:Iperson) {
+        return person.fristName + person.lastName
+    }
+    // 定义对象
+    const person = {
+        fristName: 'dongfnag',
+        lastName: 'yuechu'
+    }
+    // 打印
+    console.log(showFullName(person))
+})()
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="1-3、基础类型"><a href="#1-3、基础类型" class="headerlink" title="1.3、基础类型"></a>1.3、基础类型</h2><h3 id="1、布尔-数字-字符串"><a href="#1、布尔-数字-字符串" class="headerlink" title="1、布尔 数字 字符串"></a>1、布尔 数字 字符串</h3><pre class="line-numbers language-tsx"><code class="language-tsx">    let a:boolean = true
+    let b:number = 1010
+    let c:string = '字符串'
+    
+    //字符串可与数字拼接 TS中变量一开始是什么类型就只能用这个类型，不允许混用
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2、undefined-amp-null"><a href="#2、undefined-amp-null" class="headerlink" title="2、undefined &amp; null"></a>2、undefined &amp; null</h3><pre class="line-numbers language-tsx"><code class="language-tsx">    let und:undefined = undefined
+    let nul:null = null
+    // 给其他类型赋予
+    let num:number = null
+    let num:number = undefined
+    
+    // undefined和null 可以作为其他类型的子类型，可以将undef和null赋予其他类型（需关闭ts严格模式）
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="3、-数组和元组"><a href="#3、-数组和元组" class="headerlink" title="3、 数组和元组"></a>3、 数组和元组</h3><pre class="line-numbers language-tsx"><code class="language-tsx">数组定义方式1
+let arr:number[] = [10,20,30]
+数组定义方式2(泛型写法)
+let arr:Array<number> = [1,2,3]
+
+元组Tuple
+let arr:[string,boolean] = ['字符串', true]
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="4、Enum枚举-（ts补充）void"><a href="#4、Enum枚举-（ts补充）void" class="headerlink" title="4、Enum枚举 （ts补充）void"></a>4、Enum枚举 （ts补充）void</h3><p>使用枚举类型可以为一组赋值赋予友好的名字</p>
+<p>void没有返回值的类型，打印undefined</p>
+<h3 id="5、any-amp-unknown"><a href="#5、any-amp-unknown" class="headerlink" title="5、any &amp; unknown"></a>5、any &amp; unknown</h3><p><code>unknown</code>与<code>any</code>的最大区别是：</p>
+<p>unknown是 top type(任何类型都是它的 subtype) , 而 <code>any</code> 既是 <code>top type</code>, 又是 <code>bottom type</code> (它是任何类型的 <code>subtype</code> ) , 这导致 <code>any</code> 基本上就是放弃了任何类型检查。因为<code>any</code>既是<code>top type</code>, 又是 <code>bottom type</code>，所以任何类型的值可以赋值给<code>any</code>，同时<code>any</code>类型的值也可以赋值给任何类型。但<code>unknown</code> 只是 <code>top type</code>，任何类型的值都可以赋值给它，但它只能赋值给<code>unknown</code>和<code>any</code>，因为只有它俩是<code>top type</code>。</p>
+<pre class="line-numbers language-tsx"><code class="language-tsx">// any`会跳过类型检查器对值的检查，任何值都可以赋值给`any`类型，它通常被称为`top type
+let notSure: any = 4;
+notSure = "maybe a string instead"; // OK
+notSure = false; // OK
+// unknown与any一样，所有类型都可以分配给unknown:
+let notSure: unknown = 4;
+notSure = "maybe a string instead"; // OK
+notSure = false; // OK
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="6、object-amp-never"><a href="#6、object-amp-never" class="headerlink" title="6、object &amp; never"></a>6、object &amp; never</h3><p><code>never</code>类型表示的是那些永不存在的值的类型。</p>
+<p>==<code>never</code>与其他类型的联合后，是没有<code>never</code>的==</p>
+<p>值会永不存在的两种情况：</p>
+<ol>
+<li><p>如果一个函数执行时抛出了<strong>异常</strong>，那么这个函数永远不存在返回值（因为抛出异常会直接中断程序运行，这使得程序运行不到返回值那一步，即具有不可达的终点，也就永不存在返回了）；</p>
+</li>
+<li><p>函数中执行无限循环的代码（<strong>死循环</strong>），使得程序永远无法运行到函数返回值那一步，永不存在返回。</p>
+</li>
+<li><p><code>never</code>类型同<code>null</code>和<code>undefined</code>一样，也是任何类型的子类型，也可以赋值给任何类型：</p>
+</li>
+<li><p>但是没有类型是<code>never</code>的子类型或可以赋值给<code>never</code>类型（除了<code>never</code>本身之外），即使<code>any</code>也不可以赋值给<code>never</code>：</p>
+</li>
+</ol>
+<pre class="line-numbers language-tsx"><code class="language-tsx">object
+    function getobj(obj:object):object {
+        console.log(obj)
+        return {
+            name: 'kakaxi'
+        }
+    }
+    console.log(getobj({name: '213'}));
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="1-4、类型（联合-断言-交叉-推断）"><a href="#1-4、类型（联合-断言-交叉-推断）" class="headerlink" title="1.4、类型（联合 断言 交叉 推断）"></a>1.4、类型（联合 断言 交叉 推断）</h2><h3 id="1-1、联合类型"><a href="#1-1、联合类型" class="headerlink" title="1.1、联合类型"></a>1.1、联合类型</h3><p>联合类型表示取值可以为多种类型中的一种，使用 <code>|</code> 分隔每个类型。当任意属性使用联合类型且属性中存在可选属性时，需要联合<code>undefined</code>类型，否则编译报错，原因显而易见，因为可选属性可有可无</p>
+<pre class="line-numbers language-tsx"><code class="language-tsx">    let a: string | number
+    a = 'ok',
+    a = 11
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="1-2、类型断言"><a href="#1-2、类型断言" class="headerlink" title="1.2、类型断言"></a>1.2、类型断言</h3><p>类型断言好比其它语言里的类型转换，类型转换通常发生在你比<code>TS</code>更了解某个值的详细信息的时候。==(相当于告诉编译器，我知道我是什么类型，知道在干什莫，相信我！按我说的处理)==</p>
+<pre class="line-numbers language-tsx"><code class="language-tsx">// 类型断言两种方法<> he as
+// 例：<>断定变量str为字符串类型
+(<string>str)
+// as方法
+(str as string)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="1-3、类型推断"><a href="#1-3、类型推断" class="headerlink" title="1.3、类型推断"></a>1.3、类型推断</h3><p>如果没有指定明确的类型，那么TS会按照类型推论的规则推断出一个类型，如果定义的时候没有赋值，不管之后有没有赋值，都会被推断成 <code>any</code> 类型而完全不被类型检查</p>
+<h3 id="1-4、交叉类型"><a href="#1-4、交叉类型" class="headerlink" title="1.4、交叉类型"></a>1.4、交叉类型</h3><p>==交叉类型取的多个类型的并集，但是如果<code>key</code>相同但是类型不同，则该<code>key</code>为<code>never</code>类型==</p>
+<p>交叉类型是将多个类型合并为一个类型。 这让我们可以把现有的多种类型叠加到一起成为一种类型，它包含了所需的所有类型的特性，使用<code>&amp;</code>定义交叉类型。</p>
+<pre class="line-numbers language-tsx"><code class="language-tsx">interface A {
+  name: string,
+  age: number
+}
+interface B {
+  name: string,
+  gender: string
+}
+
+let a: A & B = { // OK
+    name: "兔兔",
+    age: 18,
+    gender: "男"
+};
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="1-5、接口"><a href="#1-5、接口" class="headerlink" title="1.5、接口"></a>1.5、接口</h2><p>接口是对象状态（属性）和行为（方法）的抽象（描述）</p>
+<p>（接口是一种类型 规范 规则 约束 能力）</p>
+<p>可选属性readonly 只读属性？</p>
+<pre class="line-numbers language-tsx"><code class="language-tsx">interface Props { 
+  readonly name: string; 
+  age: number; 
+  money?: number;
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>对于数组，<code>TS</code>还有<code>ReadonlyArray&lt;T&gt;</code>类型，此类型将数组的所有可变方法去掉了，因此可以确保数组创建后再也不能被修改：</p>
+<p>==<code>readonly</code>声明的只读数组类型与<code>ReadonlyArray</code>声明的只读数组类型，二者等价==</p>
+<h3 id="接口的继承"><a href="#接口的继承" class="headerlink" title="接口的继承"></a>接口的继承</h3><p>接口继承接口使用关键字extends ，继承的本质是复制，抽出共同的代码，所以子接口拥有父接口的类型定义</p>
+<pre class="line-numbers language-tsx"><code class="language-tsx">interface Shape {
+    name: string
+}
+interface Square extends Shape {
+    age: number
+}
+let square: Square = {name: '雷'， age: 18} 
+接口可以多继承，大部分语言是不支持多继承的，原因是会引发混乱
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="image-20210907172322403.png" alt="image-20210907172322403"></p>
+<h3 id="接口定义函数"><a href="#接口定义函数" class="headerlink" title="接口定义函数"></a>接口定义函数</h3><p>采用函数表达式接口定义函数的方式时，对等号左侧进行类型限制，可以保证以后对函数名赋值时保证参数个数、参数类型、返回值类型不变。</p>
+<pre class="line-numbers language-tsx"><code class="language-tsx">interface SearchFunc {
+    (source: string, subString:string): boolean
+}
+// 左侧进行限制 限制参数为两个且必须为字符串类型，返回值必须为布尔型
+let mySearch: SearchFunc = function(source: string, subString:string) {
+  let result = source.search(subString);
+  return result >-1;
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="1-6、函数"><a href="#1-6、函数" class="headerlink" title="1.6、函数"></a>1.6、函数</h2><h3 id="1-1、-函数声明-amp-函数表达式"><a href="#1-1、-函数声明-amp-函数表达式" class="headerlink" title="1.1、 函数声明 &amp; 函数表达式"></a>1.1、 函数声明 &amp; 函数表达式</h3><pre class="line-numbers language-tsx"><code class="language-tsx">// 声明
+function sum(x:number, y:number) {
+    return x + y
+}
+// 表达式
+let mysum:(x:number, y:number) => number = function(x;number, y:number):number {
+    return x + y
+}
+// 在 TypeScript 的类型定义中，=> 用来表示函数的定义，左边是输入类型，需要用括号括起来，右边是输出类型。切忌与ES6的箭头函数混淆了。
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="1-2、函数中的this声明"><a href="#1-2、函数中的this声明" class="headerlink" title="1.2、函数中的this声明"></a>1.2、函数中的<code>this</code>声明</h3><p>ts会通过代码流分析出this是属于什么类型，，当然我们也可以明确的指定函数中的this是什么类型，==this类型变量必须放在参数的首位==</p>
+<pre class="line-numbers language-tsx"><code class="language-tsx">interface Obj {
+    fn: (this: Obj, name: string) => void;
+}
+
+let obj: Obj = {
+    fn(name: string) {}
+}
+
+let rab: Obj ={
+    fn(name: string) {}
+}
+
+obj.fn("兔兔"); // OK
+obj.fn.call(rab, "兔兔"); // OK
+obj.fn.call(window, "兔兔"); // Error: this 应该为 Obj 类型
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="1-3、参数"><a href="#1-3、参数" class="headerlink" title="1.3、参数"></a>1.3、参数</h3><p><code>可选参数</code></p>
+<p>​    参数后加问号（？）注：==可选参数后面不允许再出现必需参数==</p>
+<p><code>参数默认值</code></p>
+<p>​    在函数定义时，参数内直接赋值</p>
+<pre class="line-numbers language-tsx"><code class="language-tsx">function buildName(firstName: string, lastName: string = 'Cat') {
+    return firstName + ' ' + lastName;
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p> <code>剩余参数</code></p>
+<p>同js，用 … 表示</p>
+<pre><code>function push(array: any[], ...items: any[]) {
+    items.forEach(function(item) {
+        array.push(item);
+    });
+}
+
+let a = [];
+push(a, 1, 2, 3);
+</code></pre>
+<h3 id="1-4、重载"><a href="#1-4、重载" class="headerlink" title="1.4、重载"></a>1.4、重载</h3><p>重载允许一个函数接受不同数量或类型的参数时，作出不同的处理。</p>
+<p><code>重载</code>的概念在学<code>JAVA</code>（<a href="https://link.juejin.cn/?target=https://www.runoob.com/java/java-override-overload.html"><code>JAVA中的重载</code></a>）的时候接触到的，<code>JS</code>是没有这个概念的，<code>TS</code>的重载感觉更应该称之为<code>函数签名重载</code>。因为最后函数实现的内部还是依赖判断类型来处理，前面的函数定义只是为了精确表达输入类型对应的输出类型。</p>
+<pre class="line-numbers language-tsx"><code class="language-tsx">function reverse(x: number | string): number | string | void {
+    if (typeof x === 'number') {
+        return Number(x.toString().split('').reverse().join(''));
+    } else if (typeof x === 'string') {
+        return x.split('').reverse().join('');
+    }
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="1-7、-类"><a href="#1-7、-类" class="headerlink" title="1.7、 类"></a>1.7、 类</h2><h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h3><ul>
+<li>public  属性修饰符默认为<code>public</code>公共的，即类的属性、方法可以在外部访问</li>
+<li>private  与<code>public</code>相对，私有修饰符，即类的属性、方法不可以在外部访问</li>
+<li>protected 修饰符与<code>private</code>修饰符的行为很相似，但有一点不同，<code>protected</code>成员在<strong>派生类</strong>中仍然可以访问。注意，这里是<strong>派生类中</strong>，而不是<strong>实例、子类实例</strong>。</li>
+<li>readonly 只读属性修饰符 构造函数中可以对只读属性进行修改  <img src="image-20210910114715199.png" alt="image-20210910114715199"></li>
+<li>发生继承关系后类与类的叫法<img src="image-20210909200925647.png" alt="image-20210909200925647"></li>
+</ul>
+<h3 id="参数属性"><a href="#参数属性" class="headerlink" title="参数属性"></a>参数属性</h3><p>我们也可以在类的内部方法上对参数使用<code>public、private、protected</code>修饰符，它的作用是可以更方便地让我们在一个地方定义并初始化一个成员。</p>
+<pre class="line-numbers language-tsx"><code class="language-tsx">class Animal {
+    constructor(public name: string, private age: number, protected sex: string) {}
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="接口实现类"><a href="#接口实现类" class="headerlink" title="接口实现类"></a>接口实现类</h3><p><code>TypeScript</code> 也能够用接口来明确的强制一个类去符合某种契约。类去实现接口，这里使用关键字<code>implements</code></p>
+<pre class="line-numbers language-tsx"><code class="language-tsx">// 一个类可以实现多个接口
+interface Age {
+  age: number;
+}
+
+interface Title{
+  title: string;
+}
+class title implements Title, Age{
+  title: string = '兔兔';
+  age: number = 18;
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h3><p>抽象类做为其它派生类的基类使用, 不允许被实例化。 不同于接口，抽象类可以包含成员的实现细节。 </p>
+<p>抽象类中的抽象方法不包含具体实现并且必须在派生类中实现。 抽象方法的语法与接口方法相似。 两者都是定义方法签名但不包含方法体。 然而，抽象方法必须包含<code>abstract</code>关键字并且可以包含访问修饰符。</p>
+<p><code>abstract</code>关键字是用于定义抽象类和在抽象类内部定义抽象方法。</p>
+<pre class="line-numbers language-tsx"><code class="language-tsx">abstract class Department {
+    constructor(public name: string) {
+    }
+    printName(): void {
+        console.log('Department name: ' + this.name);
+    }
+    abstract printMeeting(): void; // 必须在派生类中实现
+}
+class AccountingDepartment extends Department {
+    constructor() {
+        super('Accounting and Auditing'); // 在派生类的构造函数中必须调用 super()
+    }
+    printMeeting(): void {
+        console.log('The Accounting Department meets each Monday at 10am.');
+    }
+    generateReports(): void {
+        console.log('Generating accounting reports...');
+    }
+}
+let department: Department; // OK：允许创建一个对抽象类型的引用
+department = new Department(); // Error: 不能创建一个抽象类的实例
+department = new AccountingDepartment(); // OK：允许对一个抽象子类进行实例化和赋值
+department.printName(); // OK
+department.printMeeting(); // OK
+department.generateReports(); // Error: 方法在声明的抽象类中不存在
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="1-8、-泛型-lt-gt"><a href="#1-8、-泛型-lt-gt" class="headerlink" title="1.8、 泛型<>"></a>1.8、 泛型&lt;&gt;</h2><p>泛型是指在定义函数、接口或类的时候，不预先指定具体的类型，而在使用的时候再指定类型的一种特性。</p>
+<pre class="line-numbers language-tsx"><code class="language-tsx">  function min<K> (x:k) {
+    return x
+  }
+  min<number>(3)
+  
+  // 一个函数可以有多个泛型
+  function min<K，V> (x:k， y：V) {
+    return [x,y]
+  }
+  min<number,string>(3, '3')
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="泛型接口"><a href="#泛型接口" class="headerlink" title="泛型接口"></a>泛型接口</h3><p>定义接口时，为接口的属性或方法定义泛型类型，使用时再具体的指定类型</p>
+<pre class="line-numbers language-tsx"><code class="language-tsx">  // 定义一个泛型接口
+  interface IBase<T> {
+    data:Array<T>
+    add:(t:T) => T
+  }
+  // 定义信息的类
+  class User {
+    id?: number
+    name: string | undefined
+    age!: number
+  }
+  // 操作用户信息
+  class UserCRUD implements IBase<User> {
+    data:Array<User> = []
+    add(user:User):User {
+      this.data.push(user)
+      return user
+    }
+  }
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">Generic</span><span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token punctuation">{</span>
+    defaultValue<span class="token punctuation">:</span> T
+    add<span class="token punctuation">:</span> <span class="token punctuation">(</span>T<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> T
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> genneric<span class="token punctuation">:</span> Generic<span class="token operator">&lt;</span>string<span class="token operator">></span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Generic</span><span class="token operator">&lt;</span>string<span class="token operator">></span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+genneric<span class="token punctuation">.</span>defaultValue <span class="token operator">=</span> <span class="token number">10</span>  <span class="token comment" spellcheck="true">// err</span>
+genneric<span class="token punctuation">.</span>defaultValue <span class="token operator">=</span> <span class="token string">'10'</span>  <span class="token comment" spellcheck="true">// √</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="泛型约束"><a href="#泛型约束" class="headerlink" title="泛型约束"></a>泛型约束</h3>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">ERHA</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2022/04/02/%E5%85%B3%E4%BA%8Ets/">http://example.com/2022/04/02/%E5%85%B3%E4%BA%8Ets/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">ERHA</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="google,qq,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/04/05/%E5%AE%9E%E7%8E%B0vue%E5%91%A8%E8%BE%B9%E7%AE%80%E6%98%93%E7%89%88/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/4f6bb6dd573d422ea9e798ecf62d4e1a.png" class="responsive-img" alt="实现vue周边简易版">
+                        
+                        <span class="card-title">实现vue周边简易版</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-05
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ERHA
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E7%88%AC%E6%A5%BC%E6%A2%AF/">
+                        <span class="chip bg-color">前端爬楼梯</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/03/30/%E5%8E%9F%E7%94%9F%E4%B8%8E%E5%8A%A8%E7%94%BB/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/4f6bb6dd573d422ea9e798ecf62d4e1a.png" class="responsive-img" alt="原生与动画">
+                        
+                        <span class="card-title">原生与动画</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ERHA
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 小羊站<br />'
+            + '文章作者: ERHA<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="2257381805"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2022</span>
+            
+            <!-- <span id="year">2021</span>
+            <a href="/about" target="_blank">ERHA</a>
+            |&nbsp;lcywqx&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">1314</a>
+            <br> -->
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">74.4k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <!-- <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span> -->
+            
+            
+            <!-- <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span> -->
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2021";
+                    var startMonth = "9";
+                    var startDate = "27";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <!-- <br>
+             -->
+        </div>
+        <!-- <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/wqx8821" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:930707472@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=930707472" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 930707472" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div> -->
+    </div>
+</footer>
+
+<!-- <div class="progress-bar"></div> -->
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+    <script src="/js/cursor.js"></script>
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+      <!-- 动态标题 -->
+    <script type="text/javascript"> var OriginTitile = document.title, st; 
+        document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ啊呀！你咋走了", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪哼，还知道回来！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
+    </script>
+
+</body>
+
+</html>
