@@ -480,21 +480,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-21
+                    2022-04-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    9 分
                 </div>
                 
 
@@ -720,7 +720,6 @@ pnpm install @vue/shared@workspace --filter @vue/reactivity
 <span class="token keyword">const</span> sourcemap <span class="token operator">=</span> args<span class="token punctuation">.</span>s <span class="token operator">||</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> formats <span class="token operator">=</span> args<span class="token punctuation">.</span>f <span class="token operator">||</span> <span class="token string">'global'</span>
 
-
 <span class="token comment" spellcheck="true">// 打包 内部开启进程执行</span>
 <span class="token comment" spellcheck="true">// 指定执行的脚本 rollup</span>
 <span class="token function">execa</span><span class="token punctuation">(</span><span class="token string">'rollup'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
@@ -737,7 +736,7 @@ pnpm install @vue/shared@workspace --filter @vue/reactivity
 
 <span class="token comment" spellcheck="true">// 测试</span>
 <span class="token comment" spellcheck="true">// console.log(args);</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="根目录下创建-rollup-配置文件"><a href="#根目录下创建-rollup-配置文件" class="headerlink" title="根目录下创建 rollup 配置文件"></a>根目录下创建 rollup 配置文件</h2><p>·<code>rollup.config.js</code></p>
 <pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">import</span> path <span class="token keyword">from</span> <span class="token string">'path'</span><span class="token punctuation">;</span>
 
@@ -807,8 +806,76 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token comment" spellcheck="true">// 返回数组会依次打包</span>
 <span class="token keyword">export</span> <span class="token keyword">default</span> packageConfigs<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>format <span class="token operator">=</span><span class="token operator">></span> <span class="token function">createConfig</span><span class="token punctuation">(</span>format<span class="token punctuation">,</span>outputConfig<span class="token punctuation">[</span>format<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="模块学习"><a href="#模块学习" class="headerlink" title="模块学习"></a>模块学习</h1><h2 id="响应式——reactivity"><a href="#响应式——reactivity" class="headerlink" title="响应式——reactivity"></a>响应式——reactivity</h2><pre><code>大苏打
-</code></pre>
+<h1 id="模块学习"><a href="#模块学习" class="headerlink" title="模块学习"></a>模块学习</h1><h2 id="响应式——reactivity"><a href="#响应式——reactivity" class="headerlink" title="响应式——reactivity"></a>响应式——reactivity</h2><p>与Vue2的defineproperty不同 在Vue3使用Proxy进行数据劫持</p>
+<p>src建立 <code>reactive.ts</code> <code>effrct.ts</code> <code>index.ts</code>  文件来实现响应式</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// `reactive.ts` 基本响应式实现</span>
+
+<span class="token comment" spellcheck="true">// 引入判断是否为对象的 方法</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>isObject<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@vue/shared'</span>
+
+<span class="token comment" spellcheck="true">// 用来标识是否已经是响应式的</span>
+<span class="token keyword">const</span> <span class="token keyword">enum</span> ReactiveFlags <span class="token punctuation">{</span>
+  IS_REACTIVE <span class="token operator">=</span> <span class="token string">"__v_isReactive"</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 抽离proxy代理内部参数</span>
+<span class="token keyword">const</span> mutableHandles<span class="token punctuation">:</span>ProxyHandler<span class="token operator">&lt;</span>Record<span class="token operator">&lt;</span>any<span class="token punctuation">,</span> any<span class="token operator">></span><span class="token operator">></span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 1.操作的对象 2.具体的属性 3.代理本身</span>
+  <span class="token keyword">get</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> key<span class="token punctuation">,</span> receiver<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>key <span class="token operator">===</span> ReactiveFlags<span class="token punctuation">.</span>IS_REACTIVE<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">// 读取时，就可以收集在那个Reflect中</span>
+    <span class="token keyword">const</span> res <span class="token operator">=</span> Reflect<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> key<span class="token punctuation">,</span> receiver<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">// 1.操作的对象 2.操作的属性 3.修改为的值 4.代理本身</span>
+  <span class="token keyword">set</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">,</span> receiver<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 修改值就可以驱动进行更新</span>
+
+    <span class="token keyword">const</span> res <span class="token operator">=</span> Reflect<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">,</span> receiver<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 给目标对象属性key赋值 值为value</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 映射表 处理已经是响应式的数据，是响应式的就可以直接返回</span>
+<span class="token keyword">const</span> reactiveMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WeakMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// WeakMap 弱引用，键必须为key，key没有被引用会自动回收</span>
+
+
+<span class="token comment" spellcheck="true">// 工厂函数</span>
+<span class="token keyword">function</span> <span class="token function">createReactiveObject</span><span class="token punctuation">(</span>target<span class="token punctuation">:</span> object<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// reactive只针对对象</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isObject</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> target
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// 判断是否已经代理过，代理过就直接返回</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>target <span class="token keyword">as</span> any<span class="token punctuation">)</span><span class="token punctuation">[</span>ReactiveFlags<span class="token punctuation">.</span>IS_REACTIVE<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> target<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// 如果已经存在代理 就直接返回这个代理</span>
+  <span class="token keyword">const</span> existingProxy <span class="token operator">=</span> reactiveMap<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>existingProxy<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> existingProxy
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// 是对象就进行proxy代理 进行数据劫持</span>
+  <span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span>mutableHandles<span class="token punctuation">)</span>
+  <span class="token comment" spellcheck="true">// 源对象与代理对象创建出映射表</span>
+  reactiveMap<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> proxy<span class="token punctuation">)</span>
+
+  <span class="token comment" spellcheck="true">// 返回代理</span>
+  <span class="token keyword">return</span> proxy
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 导出 reactive</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">reactive</span><span class="token punctuation">(</span>target<span class="token punctuation">:</span>object<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">createReactiveObject</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="响应式——effect"><a href="#响应式——effect" class="headerlink" title="响应式——effect"></a>响应式——effect</h2><p>effect 函数我们也称作 <code>副作用函数</code>,<code>就是当 effect 函数被执行的时候它可能会直接或者间接的影响其他函数的执行</code>，这就是产生了副作用</p>
+<p>当我们调用 effect 函数的时候 需要<code>传入一个 执行函数 fn</code> __内部生成一个 <code>ReactiveEffect</code> 实例后<code>执行 这个 fn</code></p>
 
                 
             </div>
@@ -918,18 +985,17 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/04/23/vue3%E4%B8%80%E4%BA%9B%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/">
+                <a href="/2022/05/01/sourceCode/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/4f6bb6dd573d422ea9e798ecf62d4e1a.png" class="responsive-img" alt="vue3一些源码学习">
+                        <img src="https://cdn.jsdelivr.net/gh/wqx8821/image-host/blogimg/4f6bb6dd573d422ea9e798ecf62d4e1a.png" class="responsive-img" alt="本来不想发的sourcecode">
                         
-                        <span class="card-title">vue3一些源码学习</span>
+                        <span class="card-title">本来不想发的sourcecode</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -939,22 +1005,17 @@ console<span class="token punctuation">.</span><span class="token function">log<
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-23
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-01
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ERHA
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1243,7 +1304,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <br> -->
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">74.4k</span>&nbsp;字
+                class="white-color">87.1k</span>&nbsp;字
             
             
             
