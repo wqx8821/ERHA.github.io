@@ -40,7 +40,8 @@ body {
     overflow-x: hidden;
     overflow-y: auto; */
     /* https://ae01.alicdn.com/kf/H21b5f6b8496141a1979a33666e1074d9x.jpg */
-    background: linear-gradient(60deg, rgba(255, 166, 150, 0.04) 5%, rgba(0, 229, 255, 0.037)) 0% 0% / cover, url("https://cdn.seovx.com/d/?mom=302") 0px 0px;
+    /* background: linear-gradient(60deg, rgba(255, 166, 150, 0.04) 5%, rgba(0, 229, 255, 0.037)) 0% 0% / cover, url("https://cdn.seovx.com/d/?mom=302") 0px 0px; */
+		background: linear-gradient(60deg, rgba(255, 166, 150, 0.04) 5%, rgba(0, 229, 255, 0.037)) 0% 0% / cover, url("https://www.dmoe.cc/random.php") 0px 0px;
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
